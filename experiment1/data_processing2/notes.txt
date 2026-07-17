@@ -1,0 +1,71 @@
+DATA PROCESSIG
+----------------------------------------------
+
+create columns in excel: 
+1. calculate actual gaze dir based on the results 
+2. calculate wanted gaze dir - based on the response in action conditions (4,6,a,d) or the procedure in static conditions (controlLEft, controlRight) 
+3. calculate action consistency and gaze congruency
+for gaze - congruent  
+for action - consistent
+action-consistency (levels - consistent, inconsistent, control) in 1 column 
+add gaze congruency (congruent and incongruent) where is the gaze and where the target appears - in another column
+
+4.merge ACC and RT in their own columns 
+5. fix subject 12
+6. remove error trials (477) 
+7. created the file for spss to remove the outliers with scripts (real_exp_data_for_spss)
+
+8. prepared the file real_exp_data_for_spss - change names of vars and code levels with numbers
+-incongruent -0 
+-congruent - 1
+
+inconsistent - 0
+consistent - 1
+control - 2
+
+9. save the file as data.sav in C://trim (use SPSS)
+
+10. Use SPSS CUTOFFS to cut outliers; choose a script baced on the experimental design; There was a problem with the acript and one more row was created after aggregation for mean. 
+I trimed the data (add SELECT IF NOT (SYSMIS(mean)).) in order to delete it. 
+
+get
+file='c:\trim\means.sav'.
+SELECT IF NOT (SYSMIS(mean)).
+execute.
+SAVE OUTFILE='c:\trim\means.sav'
+/keep=mean,n
+/COMPRESSED.
+
+
+more useful things for the script to list data: 
+LIST sub w1 w2 N sd.
+
+DESCRIPTIVES ALL.
+FREQUENCIES ALL /MISSING=INCLUDE.
+
+
+
+11. I created average_MEAN_RT.sav to be used in anova. var names and values should be returned back to normal strings before that. (I used excel)
+
+12. Calculated rANOVA 2x3 results in word file.
+
+13. I calculated effect size (effects mean) for action consistency by substract congruent cons/incons/control from incongruent cons/incons/control. (3 substraction numbers per person in average_MEAN_RT_RESTRUCTURED.xls) with this data a 3 level rANOVA will be condusted. Why is this done - chech the word file. 
+
+14. I created 5 time bins (look at the recording) in spss. restructured the data (identifiers are subject and bin (rows) and iv are ics (columns)) rename the columns and prepare 5 tables in average mean rt bin restructured file - to make 5 anovas - one per bin. 
+the resulta sre i jasp bin files; 
+	14.I did second attemped with the bins, baced on armina's email - the bins are not analysed properly. you have to have the bins as an independent variable, this way you can hardly understand what's going on. for instance, you will have 5x2 (bins by congruency) for consistent action, then for inconsistent, then control. the same way i did for the paper. it would be good if you read a (couple of) paper that explains the bins (again, in the paper i think i have a ref). 
+	
+	Do exactly what is recorded in the video - then i have 5.av_bin_renamed_restructured.sav that to be used for the anova. From it i will do 3 anovas (for consistent, inconsistent and control) with congruency and bins as factors. results in data_bin_analisys_correct.jasp
+
+
+15. Including the start time of the movement (after how much ms does the movement started). It is stored in XeroDur column for control condition (and is number between 350 and 550ms) and in SlideXeroA.RT colun for the action condition. Merging those two columns in action_startTime_merged column.
+	15.1. using both times in corelation analisys (data from action_Time_Data sheet; Done several correlations, saved as jasp files; 
+	Calculating mean per person. Adding it to jap main file and conducting ANCOVA with initiation time as confouncing. 
+	again - have the data, but dont know how to do the analysis. 
+	Armina: - the action and control times: 1. correlation with the RTs, (you will get it with the initiation time) and then running ancova with the initiation time as a covariate - you will reduce the influence of the prediction. i have not done it in the paper but i will, for this edition.
+
+17. About the Qs - Armina: - questions: 3 (Q type) x 3 (action consistency) - make a table, it has to be a continuation of your rt rpt table, the way i showed in an example. 1. you will run a separate anova on the rating; 2. you look at the data and decide - for instance, you decide to choose (exclude) particular ss based on their reports.
+
+18. exclude participsnts that mean rt is above general mean + 2 * SD(general) 
+
+

@@ -1,0 +1,230 @@
+PROCEDURE NOTES - DATA PROCESSING ROADMAP
+==========================================
+Applies to: Experiment 1 reprocessing (data_processing3/) — same pipeline structure as Exp 2/3,
+adapted for Exp 1's keypress-action design and this dataset's known issues (technical-exclusion
+subjects, ss12's button reversal).
+For data results and exclusion outcomes, see: data_notes_exp1_v2.txt
+For the original manual Excel/SPSS processing, see: ../data_processing1/, ../data_processing2/
+
+==========================================================================
+STEP 0 — RAW DATA (human, one-time)
+==========================================================================
+raw_data.xlsx dropped directly into data_processing3/ (93392 rows x 78 cols, already merged —
+no manual E-DataAid/remap step needed this time, unlike Exp 2).
+
+Each pipeline notebook does its own Step 00 split from raw_data.xlsx:
+  - exp_data/00_raw.xlsx   <- Procedure[SubTrial] == 'pro'      (85904 rows)
+  - questions/00_raw.xlsx  <- Procedure[SubTrial] == 'question' (7488 rows)
+
+==========================================================================
+KNOWN ISSUES WITH THIS RAW FILE — READ BEFORE RUNNING
+==========================================================================
+1. ss1, ss17, ss45 were excluded before this raw export for technical problems during collection.
+   Already absent from raw_data.xlsx — exp_data Step 01b (and questions Step 01) filter for them
+   explicitly anyway, for self-documentation. See SS_list.xlsx notes for detail per subject.
+
+2. ss12 reversed which key they used for which color for virtually the entire session (RESP==corR
+   matched in only 1/168 trials). Fixed in exp_data Step 01b by inverting their acc. Confirmed against
+   the experimenter's live session note in ../../SS_list.xlsx (recorded ~99% accuracy, matches the
+   post-fix 99.4%). Do this fix BEFORE Step 02's accuracy exclusion, or ss12 gets wrongly dropped.
+   ss12 still gets excluded at the very last step (Step 07, RT outlier) by a 3.5ms margin — a
+   genuine RT-based exclusion, unrelated to this fix. Accepted as final.
+
+3. RT trimming uses Python ±2SD, same as Exp 2/3 — SPSS's 2w.SPS script has a confirmed bug (see
+   SPSS_2w_script_bug_summary.txt in the project root): its last line, `FiltRT = filt*rt`, relies on
+   multiplication to propagate the exclusion flag, but SPSS treats SYSMIS*0 as 0 (not SYSMIS) — so
+   genuine RT=0 trials that the script's own filter logic flags for exclusion get silently kept.
+   Python trimming is correct and stricter, and is canonical for all three experiments now.
+
+==========================================================================
+PROCESSING ORDER — READ BEFORE STARTING (changed 2026-07-16)
+==========================================================================
+The two pipelines are no longer coupled through accuracy — questions doesn't need anything from
+exp_data anymore. Only one file flows between them (questions' Likert-excluded-subject list, needed
+by exp_data), so the clean order is:
+
+  1. questions/pipeline.ipynb  Steps 00-04, run to completion — produces
+                                03_likert_excluded_subjects.txt and 04_aggregated.xlsx
+  2. exp_data/pipeline.ipynb   Steps 00-11, run to completion — Step 03 reads questions'
+                                03_likert_excluded_subjects.txt; Step 10 reads questions'
+                                04_aggregated.xlsx
+
+No more interleaving required. (Previously questions Step 01 needed exp_data's accuracy-excluded
+list first, forcing a back-and-forth; that dependency was removed — see the note under Step 02
+below.)
+
+==========================================================================
+QUESTIONS PIPELINE — questions/pipeline.ipynb
+==========================================================================
+
+Step 00 — Split raw_data.xlsx to question rows only
+  - Filter: Procedure[SubTrial] == 'question'
+  - Save: 00_raw.xlsx
+
+Step 01 — Filter to QuestionsList rows, select columns, recover condition + question_type
+  - Filter: Running[SubTrial] == 'QuestionsList'
+  - Keep columns: Subject, Age, Sex, Handedness, Procedure[Trial], QuestionsList,
+                  QuestionsList.Cycle, Qs, QControl.RESP, QControl.RT
+  - Strip '1' suffix from Procedure[Trial] (e.g. 'actionC1' -> 'actionC') -> condition column
+  - Map QuestionsList -> question_type: 1=predict, 2=control, 3=caused (verified against Bulgarian
+    question text, same mapping as Exp 2/3)
+  - Filter technical-exclusion subjects (ss1, ss17, ss45) — Exp1-specific, already absent from this
+    raw export, kept explicit for documentation
+  - NO accuracy exclusion here (changed 2026-07-16) — accuracy can only be computed in exp_data,
+    and there's no need for questions to know about it: low-accuracy subjects naturally disappear
+    from the final analysis when exp_data's Step 10 merge (left join on exp_data's subject list)
+    doesn't include them. This pipeline has no dependency on exp_data at all.
+  - Save: 01_cleaned.xlsx
+  - Expected: 52 subjects x 144 rows = 7488 (no exclusions applied yet)
+
+Step 02 — Likert response quality check
+  - Same formula as Exp 2/3: dominant_% (most frequent rating) and
+    range = max(condition mean) - min(condition mean) across the 4-level condition
+  - Computed on all 52 subjects (individual dominant_%/range per subject is unaffected by who else
+    is in the pool, so this gives identical exclusion decisions whether or not low-accuracy
+    subjects are included here)
+  - Save report: 02_likert_report.xlsx (sheets: scale_distribution, condition_means)
+  - Do NOT exclude yet
+
+Step 03 — Exclude careless Likert responders + write the excluded-subjects list
+  - Rule: dominant_% > 75 AND range <= 0.5 -> EXCLUDE; range > 0.5 -> KEEP
+  - Save: 03_excl_likert.xlsx
+  - Save: 03_likert_excluded_subjects.txt (plain comma-separated subject IDs) — this is the ONE
+    file exp_data reads from this pipeline, read dynamically there (never hardcoded)
+
+Step 04 — Aggregate ratings per subject x action_consistency x question_type
+  - Map condition -> action_consistency: actionC=consistent, actionNC=inconsistent,
+    controlLeft/controlRight=control
+  - Aggregate: mean(QControl.RESP) per subject x action_consistency x question_type
+  - Save: 04_aggregated.xlsx (sheets: long, wide)
+  - Expected: 50 subjects (52 minus ss18, ss23 Likert exclusion) — this pipeline's own final N is
+    larger than the 40-subject exp_data/merged final N, since accuracy and RT-outlier exclusions
+    aren't applied here; see data_notes_exp1_v2.txt "Pipeline architecture" note
+
+==========================================================================
+EXP DATA PIPELINE — exp_data/pipeline.ipynb
+==========================================================================
+
+Step 00 — Split raw_data.xlsx to experimental rows only
+  - Filter: Procedure[SubTrial] == 'pro'
+  - Save: 00_raw.xlsx
+
+Step 01 — Filter to one row per trial, select columns, add acc/rt
+  - Filter 1: Procedure[SubTrial] = 'pro'
+  - Filter 2: Running[Trial] = 'Exp'  (excludes practice trials AND question-replay rows)
+  - Filter 3: pic in ['6L', '6R']     (last gaze-shift frame, where response was captured)
+  - acc/rt: select via Running[SubTrial] (ListLeft -> ColorSlideLeft.*, ListRight -> ColorSlideRight.*)
+    using np.where — do NOT use combine_first, the inactive side's ACC defaults to 0 (not null) and
+    will silently pick the wrong value
+  - Save: 01_filtered.xlsx
+  - Expected: 52 subjects x 168 trials = 8736 rows
+
+Step 01b — Data quality fixes: technical exclusions + ss12 button-reversal
+          *** DO THIS BEFORE STEP 02 ***
+  - ss1, ss17, ss45: filter out (technical problems during collection; already absent from this
+    raw export, kept explicit for self-documentation)
+  - ss12: invert acc for their rows (acc = 1 - acc). Verify: RESP==corR crosstab should show
+    near-total reversal before the fix, ~99% accuracy after
+  - Both fixes combined into one step since both are pre-Step-02 data-quality corrections
+  - Save: 01b_fixed.xlsx
+  - Questions pipeline Step 01 applies the same technical-exclusion filter
+
+Step 02 — Exclude subjects below accuracy threshold
+  - Threshold: 85% (confirmed with Armina — same as Exp 2/3, all three experiments use 85%)
+  - Save: 02_excl_acc.xlsx
+  - No longer writes a subject list for questions to read (changed 2026-07-16) — questions doesn't
+    need it, see questions pipeline Step 01 note
+
+Step 03 — Exclude careless Likert responders
+  *** REQUIRES questions/pipeline.ipynb Steps 00-03 to be completed first ***
+  - Reads the excluded-subject list questions Step 03 writes directly
+    (questions/03_likert_excluded_subjects.txt) — no recomputation from the report, no hardcoded
+    list (changed 2026-07-16, was: recompute dominant_%/range from questions/02_likert_report.xlsx)
+  - Save: 03_excl_likert.xlsx
+
+Step 04 — Remove error trials
+  - Remove rows where acc = 0 (post ss12-fix)
+  - Save: 04_excl_errors.xlsx
+
+Step 05 — Calculate gaze_congruency, action_consistency, initiation_time
+  Same logic as Exp 2/3 — action_consistency IS a direct map from Procedure[Trial].
+  - actual_color_location: colorLeft == 'white' -> 'right', else 'left'
+  - actual_gaze_dir: Running[SubTrial] == 'ListLeft' -> 'left', else 'right'
+  - gaze_congruency: actual_color_location == actual_gaze_dir -> 'congruent', else 'incongruent'
+  - action_consistency: direct map from Procedure[Trial]:
+      actionC       -> consistent
+      actionNC      -> inconsistent
+      controlLeft   -> control
+      controlRight  -> control
+    (The original Exp1 Excel formula in ../data_processing2/raw+processed.xlsx sheet "cleaned"
+    instead computed this from an actual-vs-wanted-gaze comparison using SlideXeroA.RESP. Verified
+    empirically identical to the direct map on this dataset, so the direct map is used here for
+    exact parity with Exp 2/3. SlideXeroA.RESP is not needed anywhere in this pipeline.)
+  - initiation_time: SlideXeroA.RT.fillna(XeroDur)
+  - Save: 05_gaze_congruency.xlsx
+
+Step 06 — RT outlier trimming (Python ±2SD)
+  - For each Subject x gaze_congruency x action_consistency cell: drop trials outside cell mean
+    +/- 2SD, then take the cell mean of what remains
+  - No SPSS, no numeric w1/w2 recoding — grouping is done directly on the string labels
+  - Save: 06_trimmed.xlsx (columns: sub, gaze_congruency, action_consistency, rt_mean)
+
+Step 07 — Participant-level mean RT outlier removal
+  - Criterion: overall mean RT (mean of the 6 cell means) > grand mean + 2 SD -> exclude
+  - Save: 07_no_outliers.xlsx
+  - NOTE: ss12 gets excluded here by a 3.5ms margin — unrelated to the button-reversal fix
+    (accepted as final, see known issues above)
+
+Step 08 — Reshape to long + wide
+  - Already string-labeled and one-row-per-cell after Step 06/07 — just a pivot to wide format
+  - Save: 08_ranova_input.xlsx (sheets: long, wide)
+
+Step 09 — Mean initiation time per subject (ANCOVA covariate)
+  - initiation_time is SlideXeroA.RT on action trials (real behavioral measure) but XeroDur on
+    control trials (arbitrary experimenter delay) — averaging across both would mix a genuine
+    measure with noise, and there's no comparable "prediction" construct for control trials
+  - Mean computed ONLY across action trials (consistent + inconsistent)
+  - Save: 09_initiation_time.xlsx (columns: sub, mean_initiation_time)
+  - Any ANCOVA using this covariate should itself be restricted to the 4 action-condition cells
+    (cong_cons, cong_incons, incong_cons, incong_incons) — do not include the *_ctrl columns
+
+Step 10 — Merge question ratings + initiation time into wide RT data
+  *** Requires questions/pipeline.ipynb Step 04 to be completed first ***
+  - Left join on sub (RT wide + questions wide + initiation time) — keeps only subjects present in
+    exp data
+  - Save: 10_questions_data_added.xlsx
+
+Step 11 — Export to JASP
+  - Save: jasp/analysis.csv (canonical, overwritten every run)
+  - Save: 11_merged_initTime_for_ANCOVA.xlsx (in exp_data/, not jasp/ — follows the numbered
+    checkpoint naming convention; identical content to jasp/analysis.csv, kept as a stable xlsx
+    copy for opening in JASP or continuing a Python analysis without worrying it'll change if the
+    pipeline re-runs)
+
+==========================================================================
+VARIABLE REFERENCE
+==========================================================================
+Subject          participant ID (1-55 collected; 1,17,45 excluded pre-export for technical problems)
+Procedure[Trial] condition: actionC, actionNC, controlLeft, controlRight (question rows: same + '1' suffix)
+Running[Trial]   'Exp' for experimental trials, 'Questions' for question trials, 'PracticeL' practice
+Running[SubTrial]last slide shown: ListLeft or ListRight; also 'QuestionsList' for question rows
+pic              '1L'..'6L' / '1R'..'6R' = gaze-shift animation frames; 6L/6R = last frame (response captured)
+ColorSlideLeft.ACC/RESP/RT   response data when Running[SubTrial] = ListLeft
+ColorSlideRight.ACC/RESP/RT  response data when Running[SubTrial] = ListRight
+corR             correct response key for the color-identification task (depends on blue/green counterbalance)
+blue / green     which key ('a' or 'd') is assigned to each color for this subject's session
+SlideXeroA.RESP  key pressed to choose gaze direction (action trials): '4'/'a'=left, '6'/'d'=right —
+                 NOT used by this pipeline (action_consistency is a direct Procedure[Trial] map,
+                 see Step 05); listed here for reference only
+SlideXeroA.RT / XeroDur   initiation time (action / control trials respectively)
+QControl.RESP    Likert rating response (1-7)
+QuestionsList    which question (1=predict/предвидихте, 2=control/контролирахте, 3=caused/предизвикахте)
+
+==========================================================================
+CARELESS RESPONDING CRITERIA (Likert quality check)
+==========================================================================
+Reference: Meade & Craig (2012) — Psychological Methods, 17(3), 437-455 — same as Exp 2/3
+Flag:    dominant_% > 75
+Exclude: flagged AND range <= 0.5
+Keep:    flagged AND range >  0.5
+range = max(condition mean) - min(condition mean) across actionC, actionNC, controlLeft, controlRight

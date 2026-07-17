@@ -1,0 +1,78 @@
+DATA NOTES — EXPERIMENT 3
+==========================
+For processing steps and how-to, see: procedure_notes.txt
+
+==========================================================================
+EXCLUSION SEQUENCE — EXP DATA
+==========================================================================
+Initial N: 62 subjects, 10,416 trials (168 per subject)
+
+Step 02 — Accuracy exclusion (threshold: 85%)
+  Excluded (8 subjects, 12.9%): ss 10, 15, 21, 24, 26, 31, 40, 68
+  Remaining: 54 subjects, 9,072 trials
+
+Step 03 — Careless Likert responders
+  Excluded (3 subjects, 5.6%): ss 14, 53, 69
+  Kept despite flag (range > 0.5): ss 2, 20, 29, 41, 46, 55, 65
+  Remaining: 51 subjects, 8,568 trials
+
+Step 04 — Error trials (acc = 0)
+  Removed: 428 trials (5.00%)
+  Remaining: 51 subjects, 8,140 trials
+
+Step 06 — RT trimming — Python ±2SD per sub × gaze_congruency × action_consistency (canonical)
+  Valid N: 8,140 → 7,743 (397 removed, 4.88%)
+  SPSS's `2w.SPS` script was used originally (375 removed, 4.61%, Valid N 7,765) but has a
+  confirmed bug: see `SPSS_2w_script_bug_summary.txt` in the project root. Its last line,
+  `FiltRT = filt*rt`, relies on multiplication to propagate the exclusion flag, but SPSS treats
+  `SYSMIS * 0` as `0` — so genuine RT=0 trials (missing-response codes) that the script's own
+  filter logic flags for exclusion get silently kept as literal zeros. Python trimming is correct
+  and — per Armina's rule (keep whichever cuts more) — canonical for all three experiments now.
+
+Step 07 — Participant-level RT outlier (overall mean RT > grand mean + 2 SD)
+  Grand mean: 529.5 ms  |  Grand SD: 96.9 ms  |  Cutoff: 723.2 ms
+  Excluded (2 subjects): ss 11 (790.4 ms, +67.2 over cutoff), ss 32 (748.1 ms, +24.9 over cutoff)
+  Remaining: 49 subjects
+  Note: with Python trimming, only 2 subjects are excluded here instead of the earlier SPSS-based
+  run's 3 (ss11, ss32, ss48) — final N moves from 48 to 49. ss48's mean RT no longer crosses the
+  cutoff once the phantom-zero trials are correctly removed from the pool feeding into these means.
+
+==========================================================================
+FINAL N
+==========================================================================
+Exp data:       49 subjects
+Questions data: 59 subjects (Likert exclusion only now — see "Pipeline architecture" below; was 51
+when accuracy pre-filtering was also applied here)
+
+==========================================================================
+PIPELINE ARCHITECTURE (changed 2026-07-16)
+==========================================================================
+questions/pipeline.ipynb no longer reads anything from exp_data — the accuracy-exclusion dependency
+was removed (accuracy can only be computed in exp_data anyway, and low-accuracy subjects naturally
+disappear from the final merged analysis via exp_data Step 10's left join). Questions' own final N
+is therefore larger now (59) than before (51) — expected, not a regression.
+
+The one thing that still flows between the two pipelines is the Likert exclusion — a whole-subject
+judgment, so it removes RT data too, not just ratings. This is now a direct file: questions Step 03
+writes `03_likert_excluded_subjects.txt`; exp_data Step 03 reads it directly (previously exp_data
+recomputed the same dominant_%/range formula itself from the report).
+
+==========================================================================
+ANCOVA COVARIATE
+==========================================================================
+09_initiation_time.xlsx: mean `initiation_time` (renamed from `timing_covariate` 2026-07-16;
+SlideXeroA.RT) per subject, computed only across action trials (consistent + inconsistent) —
+control trials use XeroDur (an arbitrary experimenter delay) and are excluded from this average
+entirely. Merged into 10_questions_data_added.xlsx as `mean_initiation_time`. Any ANCOVA using this
+covariate should itself be restricted to the 4 action-condition cells — do not include the *_ctrl
+columns in that analysis.
+
+==========================================================================
+STALE ANALYSIS WARNING
+==========================================================================
+Any existing `.jasp` file built on the old SPSS-trimmed data (48 subjects, ss48 excluded) is now
+stale. `jasp/analysis.csv` has been re-exported with the corrected Python-trimmed data (49
+subjects, also now includes `mean_initiation_time`) — analyses need to be re-run against it. A
+second stable copy, `exp_data/11_merged_initTime_for_ANCOVA.xlsx` (xlsx, follows the numbered
+checkpoint naming convention — not in `jasp/`), is also written for continuing analysis work
+without it changing under you if the pipeline re-runs.

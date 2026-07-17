@@ -1,0 +1,139 @@
+DATA NOTES — EXPERIMENT 2 (SoA_Gaze_Mouse)
+===========================================
+
+SAMPLE
+------
+Total collected:  61 subjects (30 A script + 31 B script)
+Missing:          ss 53 (Martina Stefova) — no .edat2 file
+In raw data:      60 subjects (30 A + 30 B)
+Trials/subject:   168 experimental + 144 question rows (48 sets × 3 questions)
+
+PARTICIPANT ID MAPPING
+----------------------
+A script (IDs 1–30):
+ 1  Viktoria Koteva        11  Nina Cholakova         21  Anastasiia Razborova
+ 2  Natalie Ivanova        12  Mihail Dimitrov        22  Nevena Borisova
+ 3  Iva Pushkarova         13  Sofia Kaucheva         23  Daria Koleva
+ 4  Dilyana Petrova        14  Denitsa Georgieva      24  Nikolai Shentsev
+ 5  Radina Spasova         15  Sofia Simeonova        25  Daniela Masarlieva
+ 6  Iana Tsinko            16  Giorgia Matteo         26  Bogdana Boncheva
+ 7  Denis Traichev         17  Maria Lobocheva        27  Yoanna Angelcheva
+ 8  Dayana Pavlova         18  Stella Ivanova         28  Melany Karshakova
+ 9  Diyora Ivanova         19  Radina Ivanova         29  Devora Peneva
+10  Beloslava Tsareva      20  Kristina Popova        30  Blagovest Kolev
+
+B script (IDs 40–70, missing 53):
+40  Olga Ivanova           51  Jana Damyanova         61  Amelia Dimitrova
+41  Raya Zarkova           52  Martin Danielov        62  Tsvetalina Ivanova
+42  Nikoleta Kamburova     53  MISSING                63  Nadezda Katelieva
+43  Elitsa Dialkova        54  Maria Lobachova        64  Magdalena Valcheva
+44  Daria Georgieva        55  Desislava Borisova     65  Nikolaya Nikolova
+45  Boris Filipov          56  Atanas Atanasov        66  Dana Genkova
+46  Ivalina Petrova        57  Mykhailo Zhyzhka       67  Denitsa Dimitrova
+47  Patrisia Tsolova       58  Lyuben Mishev          68  Radina Tsvetkova
+48  Viktoria Kostova       59  Sophia Hadjiiska       69  Mila Nikolova
+49  Julia Nenova           60  Ryutaro Yamamoto       70  Radostina Stoyanova
+50  Todor Savin
+
+COUNTERBALANCING
+----------------
+Odd sessions:   blue = 'a' key, green = 'd' key
+Even sessions:  blue = 'd' key, green = 'a' key
+Both A and B scripts use the same counterbalancing scheme.
+
+==========================================================================
+EXCLUSIONS
+==========================================================================
+
+1. Accuracy < 85%
+   Excluded 4 of 60 (6.7%):
+     ss  1  (Viktoria Koteva, A)    50.00%
+     ss  2  (Natalie Ivanova, A)    70.83%
+     ss 45  (Boris Filipov, B)      66.07%
+     ss 59  (Sophia Hadjiiska, B)   81.55%
+   → 56 subjects remaining | exp: 9408 trials | questions: 8064 rows
+
+2. Careless Likert responding (>75% dominant response AND condition range ≤ 0.5)
+   Flagged 9; excluded 7 of 56 (12.5%):
+     ss  9  (Diyora Ivanova, A)      77.8% dominant, range 0.18
+     ss 15  (Sofia Simeonova, A)     98.6% dominant, range 0.17
+     ss 22  (Nevena Borisova, A)     81.2% dominant, range 0.42
+     ss 42  (Nikoleta Kamburova, B)  77.1% dominant, range 0.50
+     ss 49  (Julia Nenova, B)        86.8% dominant, range 0.48
+     ss 65  (Nikolaya Nikolova, B)   90.3% dominant, range 0.19
+     ss 66  (Dana Genkova, B)        93.8% dominant, range 0.10
+   Kept despite flag (range > 0.5):
+     ss 41  (Raya Zarkova, B)        75.7% dominant, range 1.98
+     ss 54  (Maria Lobachova, B)     79.9% dominant, range 2.00
+   → 49 subjects remaining | exp: 8232 trials | questions: 7056 rows
+
+3. Error trials (acc = 0) — exp data only
+   Removed 319 of 8232 (3.88%)
+   → 49 subjects, 7913 trials
+
+4. RT trimming — Python ±2SD per subject × condition (canonical — see note below)
+   Removed 363 of 7913 (4.59%)
+   → 7550 valid trials
+   SPSS's `2w.SPS` script was used originally (326 removed, 4.12%) but has a confirmed bug: see
+   `SPSS_2w_script_bug_summary.txt` in the project root. Its last line, `FiltRT = filt*rt`, relies
+   on multiplication to propagate the exclusion flag, but SPSS treats `SYSMIS * 0` as `0` — so any
+   trial with a genuine RT of exactly 0 (a missing-response code) that the script's own filter
+   logic flags for exclusion gets silently kept as a literal zero instead. 37 such trials were
+   affected here. Python trimming is correct and — per Armina's rule (keep whichever cuts more) —
+   canonical for all three experiments now.
+
+5. Subject-level RT outlier (mean RT > grand mean + 2 SD)
+   Grand mean 519.2 ms | SD 95.2 ms | cutoff 709.6 ms
+   Excluded 1 of 49 (2.0%):
+     ss 17  mean RT 714.9 ms (+5.3 ms over cutoff)
+   Note: with Python trimming, the excluded subject changes from ss67 (the SPSS-based result,
+   0.9ms over a 700.2ms cutoff) to ss17 — individual trials shifting between the two trimming
+   methods moves each subject's mean RT slightly, which flips who crosses a margin this thin.
+   Final N (48) is unchanged, but the excluded individual is not the same person.
+   → 48 subjects, 288 condition cells (48 × 6)
+
+==========================================================================
+FINAL SAMPLE
+==========================================================================
+Exp data (08_ranova_input.xlsx):   48 subjects, 6 conditions
+Questions data (04_aggregated.xlsx): 53 subjects, 3 conditions × 3 question types
+  (questions applies ONLY the Likert exclusion now, not accuracy or RT-outlier — see "Pipeline
+  architecture" note below. 56-7=49 was the count when accuracy pre-filtering was still applied
+  here; the merged file, 10_questions_data_added.xlsx, is what matters for analysis — it's
+  exp_data's 48 subjects with ratings attached, so the extra questions-only subjects never appear
+  in it.)
+
+==========================================================================
+PIPELINE ARCHITECTURE (changed 2026-07-16)
+==========================================================================
+questions/pipeline.ipynb no longer reads anything from exp_data. It previously excluded exp_data's
+low-accuracy subjects too (via a hardcoded list, `EXCLUDED = [1, 2, 45, 59]`) — this was removed:
+accuracy can only be computed in exp_data anyway, and low-accuracy subjects naturally disappear
+from the final merged analysis (Step 10's left join keeps only exp_data's subjects). Questions'
+own final N is therefore larger now (53) than it used to be (49) — expected, not a regression.
+
+The one thing that still flows between the two pipelines is the Likert exclusion — a whole-subject
+judgment, so it removes RT data too, not just ratings. This is now a direct file: questions Step 03
+writes `03_likert_excluded_subjects.txt`; exp_data Step 03 reads it directly (previously exp_data
+recomputed the same dominant_%/range formula itself from the report — now centralized in one place).
+
+==========================================================================
+ANCOVA COVARIATE
+==========================================================================
+09_initiation_time.xlsx: mean `initiation_time` (renamed from `timing_covariate` 2026-07-16;
+SlideXeroA.RT) per subject, computed only across action trials (consistent + inconsistent) —
+control trials use XeroDur (an arbitrary experimenter delay, not a real behavioral measure) and are
+excluded from this average entirely. Merged into 10_questions_data_added.xlsx as
+`mean_initiation_time`. Any ANCOVA using this covariate should itself be restricted to the 4
+action-condition cells (cong_cons, cong_incons, incong_cons, incong_incons) — do not include the
+*_ctrl columns in that analysis.
+
+==========================================================================
+STALE ANALYSIS WARNING
+==========================================================================
+The rANOVA results previously reported from `jasp/analysis_exp2.jasp` were based on the old
+SPSS-trimmed data (ss67 excluded, not ss17) — that file is now stale. `jasp/analysis.csv` has been
+re-exported with the corrected Python-trimmed data (also now includes `mean_initiation_time`);
+analyses need to be re-run against it. A second stable copy, `exp_data/11_merged_initTime_for_ANCOVA.xlsx`
+(xlsx, follows the numbered checkpoint naming convention — not in `jasp/`), is also written for
+continuing analysis work without it changing under you if the pipeline re-runs.

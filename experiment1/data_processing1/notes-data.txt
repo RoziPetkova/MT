@@ -1,0 +1,21 @@
+Data notes
+-----------------------------------
+ - 55 ss in total 
+ - 168 trials per subject (28 trials per condition if 6 conditions, but the control should be counted as one.)
+ - 3 participant removed because of thechnical problems 
+ - 7 removed because their ACC < 80% or 85% - ASK ARMINA 
+ 
+ - this leads to data from 45 participants (45 x 168 = 7560 trials in total) 
+ - ACC = 1 -> 7083 trials 
+ - ACC = 0 -> 477
+
+FROM SPSS
+ Valid N
+ N=7083
+ N=6732 (trials after cut outliers) 
+
+
+
+
+ 
+ 

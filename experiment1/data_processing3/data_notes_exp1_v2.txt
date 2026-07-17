@@ -1,0 +1,118 @@
+DATA NOTES — EXPERIMENT 1 (SoA_Color_Gaze) — REPROCESSED via Python pipeline
+=============================================================================
+For processing steps and how-to, see: procedure_notes.txt
+This is a reprocessing of Experiment 1 through the Exp2/Exp3-style Python pipeline
+(data_processing3/), using a fresh raw export (raw_data.xlsx). Supersedes data_processing1/ and
+data_processing2/'s manual Excel/SPSS workflow for anyone who wants a reproducible re-run.
+
+SAMPLE
+------
+Total collected:  55 subjects
+Excluded pre-export (technical problems): ss 1 (Constantin Iordanov), ss 17 (Rada Ruski),
+                                           ss 45 (Veselin Semerdzhiev)
+In raw data:       52 subjects
+Trials/subject:    168 experimental + 144 question rows (48 sets × 3 questions)
+
+NOTE — ss12 (Cveteslava Petrova): physically reversed which key they used for which color for
+virtually the entire session (RESP == corR matched in only 1/168 trials). Accuracy corrected
+(0.6% → 99.4%) in exp_data pipeline Step 01b before any exclusion step — confirmed against the
+experimenter's live session note (SS_list.xlsx, ~99% recorded). Retained through accuracy, Likert,
+and error-trial exclusion on their corrected accuracy — but see exclusion 5 below, they are excluded
+at the very last (RT-outlier) step regardless, by a 3.5ms margin.
+
+==========================================================================
+EXCLUSIONS
+==========================================================================
+
+1. Accuracy < 85%
+   Excluded 8 of 52 (15.4%):
+     ss 10  (Radina Spasova)          0.00%
+     ss  6  (Gergana Pavlova)        47.62%
+     ss 15  (Rositsa Markova)        48.21%
+     ss  8  (Mihail Kodzhabashev)    61.90%
+     ss  3  (Viktoria Kostova)       64.88%
+     ss 21  (Kalina Kraeva)          67.26%
+     ss 19  (Gloriya Mineva)         77.38%
+     ss 40                           84.52%
+   Threshold: 85%, same as Exp 2/3 — confirmed with Armina, all three experiments use 85%.
+   → 44 subjects remaining | exp: 7392 trials | questions: 6336 rows
+
+2. Careless Likert responding (>75% dominant response AND condition range ≤ 0.5)
+   Excluded 2 of 44 (4.5%):
+     ss 18  (Presian Nikolov)    96.53% dominant, range 0.06
+     ss 23  (Dimitar Aleksov)   100.00% dominant, range 0.00
+   Kept despite flag (range > 0.5):
+     ss 55  (Dariana Stoyanova)  77.78% dominant, range 1.88
+   → 42 subjects remaining | exp: 7056 trials | questions: 6048 rows
+   (this exclusion is computed once, in the questions pipeline, and shared with exp_data — see
+   "Pipeline architecture" note below. It is NOT applied on top of accuracy exclusion within
+   questions itself — see that note for why the questions-only final N differs from this count.)
+
+3. Error trials (acc = 0, post ss12-fix) — exp data only
+   Removed 413 of 7056 (5.85%)
+   → 42 subjects, 6643 trials
+
+4. RT trimming — Python ±2SD per subject × condition (canonical for all three experiments)
+   6643 → 6325 (318 removed, 4.79%)
+   SPSS's `2w.SPS` script is NOT used — confirmed bug (see `SPSS_2w_script_bug_summary.txt` in the
+   project root): its last line multiplies the exclusion flag by the raw RT, and SPSS's
+   SYSMIS*0=0 rule means genuine RT=0 trials that the script's own logic flags for exclusion get
+   silently kept as literal zeros. Python trimming is correct and stricter, and per Armina's rule
+   (keep whichever cuts more) it is the canonical method throughout.
+
+5. Subject-level RT outlier (mean RT > grand mean + 2 SD)
+   Grand mean 522.7 ms | SD 89.7 ms | cutoff 702.1 ms
+   Excluded 2 of 42 (4.8%):
+     ss 2   mean RT 747.4 ms (+45.4 ms over cutoff)
+     ss 12  mean RT 705.6 ms (+3.5 ms over cutoff)
+   ss12 is excluded here — a genuine, if marginal, RT-based exclusion, unrelated to the accuracy fix
+   (which was correctly applied; ss12 passed every earlier step on their true ~99% accuracy).
+   Accepted: if it drops at this final step, it drops.
+   → 40 subjects, 240 condition cells (40 × 6)
+
+==========================================================================
+FINAL SAMPLE
+==========================================================================
+Exp data (08_ranova_input.xlsx):     40 subjects, 6 conditions
+Questions data (04_aggregated.xlsx): 50 subjects, 3 conditions × 3 question types
+  (questions applies ONLY the Likert exclusion, not accuracy or RT-outlier — see "Pipeline
+  architecture" below. The merged file, 10_questions_data_added.xlsx, is what actually matters for
+  analysis: it's exp_data's 40 subjects with ratings attached, so the extra 10 questions-only
+  subjects — those who failed accuracy or the RT-outlier check — never appear in it.)
+
+==========================================================================
+PIPELINE ARCHITECTURE (changed 2026-07-16)
+==========================================================================
+The two pipelines are no longer coupled through accuracy. Previously questions/pipeline.ipynb read
+exp_data's accuracy-excluded subject list and dropped them from its own data too — this dependency
+was removed: accuracy can only be computed in exp_data anyway, and low-accuracy subjects naturally
+disappear from the final analysis when exp_data's Step 10 merge (left join on exp_data's subject
+list) leaves them out. Questions' own final N is therefore now larger (50) than it used to be (42)
+— that's expected, not a regression; it only reflects Likert exclusion, same as always.
+
+The one thing that still flows between the two pipelines is the Likert exclusion itself — a
+whole-subject judgment (not attending to the rating questions is a proxy for not attending to the
+task), so it has to remove the RT data too, not just the ratings. This is now a direct file:
+questions/pipeline.ipynb Step 03 writes `03_likert_excluded_subjects.txt` (plain comma-separated
+IDs); exp_data Step 03 reads it directly. No more recomputing the exclusion formula on the exp_data
+side, and nothing hardcoded.
+
+ANCOVA COVARIATE
+================
+09_initiation_time.xlsx: mean `initiation_time` (SlideXeroA.RT) per subject, computed only across
+action trials (consistent + inconsistent) — control trials use XeroDur (an arbitrary experimenter
+delay, not a real behavioral measure) and are excluded from this average entirely, since there's no
+comparable "temporal prediction" construct to represent for them. Merged into
+10_questions_data_added.xlsx as `mean_initiation_time`. Any ANCOVA using this covariate should
+itself be restricted to the 4 action-condition cells (cong_cons, cong_incons, incong_cons,
+incong_incons) — do not include the *_ctrl columns in that analysis.
+
+MINOR FIXES (2026-07-16)
+========================
+- Step 01's printed accuracy-flag table had a copy-paste bug (both branches checked "< 80%",
+  so the 80-85% band was mislabeled). Display-only — the actual Step 02 threshold was always
+  correctly 85%, no exclusion changed. Fixed.
+- Step 11 now also saves `11_merged_initTime_for_ANCOVA.xlsx` in `exp_data/` (not `jasp/`, following
+  the numbered checkpoint naming convention) — a stable xlsx copy meant for opening in JASP (or
+  continuing in Python) without worrying it'll change if the pipeline is re-run later; `jasp/analysis.csv`
+  remains the always-fresh canonical export.

@@ -1,0 +1,1764 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
+    <bib:Article rdf:about="http://link.springer.com/10.3758/BF03208827">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1069-9384,%201531-5320"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Friesen</foaf:surname>
+                        <foaf:givenName>Chris Kelland</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kingstone</foaf:surname>
+                        <foaf:givenName>Alan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_545"/>
+        <link:link rdf:resource="#item_87"/>
+        <dc:subject>GC_GENERAL</dc:subject>
+        <dc:title>The eyes have it! Reflexive orienting is triggered by nonpredictive gaze</dc:title>
+        <dc:date>9/1998</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://link.springer.com/10.3758/BF03208827</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-27 12:37:49</dcterms:dateSubmitted>
+        <dc:rights>http://www.springer.com/tdm</dc:rights>
+        <bib:pages>490-495</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1069-9384,%201531-5320">
+        <prism:volume>5</prism:volume>
+        <dc:title>Psychonomic Bulletin &amp; Review</dc:title>
+        <dc:identifier>DOI 10.3758/BF03208827</dc:identifier>
+        <prism:number>3</prism:number>
+        <dcterms:alternative>Psychonomic Bulletin &amp; Review</dcterms:alternative>
+        <dc:identifier>ISSN 1069-9384, 1531-5320</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_545">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;GC&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_87">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://link.springer.com/content/pdf/10.3758/BF03208827.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-27 12:37:50</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.frontiersin.org/article/10.3389/fpsyg.2019.01000/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1664-1078"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Capellini</foaf:surname>
+                        <foaf:givenName>Roberta</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Riva</foaf:surname>
+                        <foaf:givenName>Paolo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ricciardelli</foaf:surname>
+                        <foaf:givenName>Paola</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sacchi</foaf:surname>
+                        <foaf:givenName>Simona</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_134"/>
+        <dc:subject>characteristics of the Observer</dc:subject>
+        <dc:title>Turning Away From Averted Gazes: The Effect of Social Exclusion on Gaze Cueing</dc:title>
+        <dc:date>2019-5-16</dc:date>
+        <z:shortTitle>Turning Away From Averted Gazes</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/article/10.3389/fpsyg.2019.01000/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-27 19:19:00</dcterms:dateSubmitted>
+        <bib:pages>1000</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1664-1078">
+        <prism:volume>10</prism:volume>
+        <dc:title>Frontiers in Psychology</dc:title>
+        <dc:identifier>DOI 10.3389/fpsyg.2019.01000</dc:identifier>
+        <dcterms:alternative>Front. Psychol.</dcterms:alternative>
+        <dc:identifier>ISSN 1664-1078</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_134">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/articles/10.3389/fpsyg.2019.01000/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-27 19:19:02</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://dx.plos.org/10.1371/journal.pone.0114077">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1932-6203"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cui</foaf:surname>
+                        <foaf:givenName>Gege</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zhang</foaf:surname>
+                        <foaf:givenName>Shen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Geng</foaf:surname>
+                        <foaf:givenName>Haiyan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zalla</foaf:surname>
+                        <foaf:givenName>Tiziana</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <link:link rdf:resource="#item_136"/>
+        <dc:subject>characteristics of the Observer</dc:subject>
+        <dc:title>The Impact of Perceived Social Power and Dangerous Context on Social Attention</dc:title>
+        <dc:date>2014-12-2</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dx.plos.org/10.1371/journal.pone.0114077</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-27 19:19:28</dcterms:dateSubmitted>
+        <bib:pages>e114077</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1932-6203">
+        <prism:volume>9</prism:volume>
+        <dc:title>PLoS ONE</dc:title>
+        <dc:identifier>DOI 10.1371/journal.pone.0114077</dc:identifier>
+        <prism:number>12</prism:number>
+        <dcterms:alternative>PLoS ONE</dcterms:alternative>
+        <dc:identifier>ISSN 1932-6203</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_136">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0114077&amp;type=printable</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-27 19:19:29</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://journals.sagepub.com/doi/10.1177/1747021820973954">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1747-0218,%201747-0226"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Talipski</foaf:surname>
+                        <foaf:givenName>Louisa A</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bell</foaf:surname>
+                        <foaf:givenName>Emily</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Goodhew</foaf:surname>
+                        <foaf:givenName>Stephanie C</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dawel</foaf:surname>
+                        <foaf:givenName>Amy</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Edwards</foaf:surname>
+                        <foaf:givenName>Mark</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_210"/>
+        <dc:subject>chars_NO_RES</dc:subject>
+        <dc:title>Examining the effects of social anxiety and other individual differences on gaze-directed attentional shifts</dc:title>
+        <dcterms:abstract>Gaze direction is a powerful social cue, and there is considerable evidence that we preferentially direct our attentional resources to gaze-congruent locations. While a number of individual differences have been claimed to modulate gaze-cueing effects (e.g., trait anxiety), the modulation of gaze cueing for different emotional expressions of the cue has not been investigated in social anxiety, which is characterised by a range of attentional biases for stimuli perceived to be socially threatening. Therefore, in this study, we examined whether social anxiety modulates gaze-cueing effects for angry, fearful, and neutral expressions, while controlling for other individual-differences variables that may modulate gaze cueing: trait anxiety, depression, and autistic-like traits. In a sample of 100 female participants, we obtained large and reliable gaze-cueing effects; however, these effects were not modulated by social anxiety, or by any of the other individual-differences variables. These findings attest to the social importance of gaze cueing, and also call into question the replicability of individual differences in the effect.</dcterms:abstract>
+        <dc:date>04/2021</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://journals.sagepub.com/doi/10.1177/1747021820973954</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-28 13:42:56</dcterms:dateSubmitted>
+        <bib:pages>771-785</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1747-0218,%201747-0226">
+        <prism:volume>74</prism:volume>
+        <dc:title>Quarterly Journal of Experimental Psychology</dc:title>
+        <dc:identifier>DOI 10.1177/1747021820973954</dc:identifier>
+        <prism:number>4</prism:number>
+        <dcterms:alternative>Quarterly Journal of Experimental Psychology</dcterms:alternative>
+        <dc:identifier>ISSN 1747-0218, 1747-0226</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_210">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Accepted Version</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://openresearch-repository.anu.edu.au/bitstreams/ba00e49e-ad70-4dae-97bb-6ddfecd23127/download</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2025-06-28 13:43:17</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="https://osf.io/w68qz_v1">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>PsyArXiv</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McKay</foaf:surname>
+                        <foaf:givenName>Kate T</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Grainger</foaf:surname>
+                        <foaf:givenName>Sarah</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Coundouris</foaf:surname>
+                        <foaf:givenName>Sarah</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Skorich</foaf:surname>
+                        <foaf:givenName>Daniel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Phillips</foaf:surname>
+                        <foaf:givenName>Louise H</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Henry</foaf:surname>
+                        <foaf:givenName>Julie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_363"/>
+        <link:link rdf:resource="#item_237"/>
+        <dc:subject>GC_GENERAL</dc:subject>
+        <dc:subject>gc modifiers</dc:subject>
+        <dc:subject>gc neural mechanisms</dc:subject>
+        <dc:subject>gc paradigm</dc:subject>
+        <dc:title>Visual Attentional Orienting by Eye Gaze: A Meta-Analytic Review of the Gaze-Cueing Effect</dc:title>
+        <dcterms:abstract>Given limitations in the amount of visual information that a person can simultaneously process through to conscious perception, selective visual attention is necessary. Visual signals in the environment aid this selection process by triggering reflexive shifts of covert attention to locations of potential importance. One such signal appears to be others’ eye gaze. Indeed, a gaze-cueing effect, whereby healthy adults respond faster to targets presented at locations cued rather than miscued by eye gaze, has been consistently observed in the empirical literature. Critically though, the influences of task and cue features on this effect are not well understood. To address this gap, we report a meta-analytic integration of 423 gaze-cueing effects using a multi-level approach. A gaze-cueing effect emerged across all levels of all assessed task and cue features, indicating that others’ eye gaze reliably directs observers’ attention. We found that the magnitude of the gaze-cueing effect was moderated by whether direct gaze cues preceded directional gaze cues or not; the cue-target Stimulus Onset Asynchrony, whether participants had to detect, localize, or categorize targets; and the cue’s facial expression. Whether or not the gaze cue remained on screen after the target appeared, and whether schematic faces, computer-generated faces, or images of real faces were used as cues, did not appear to reliably function as moderators. The theoretical implications of these findings are discussed, particularly in relation to the social attention system.</dcterms:abstract>
+        <dc:date>2022-02-12</dc:date>
+        <z:shortTitle>Visual Attentional Orienting by Eye Gaze</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://osf.io/w68qz_v1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-01-21 20:50:49</dcterms:dateSubmitted>
+        <dc:rights>https://creativecommons.org/licenses/by/4.0/legalcode</dc:rights>
+        <dc:identifier>DOI 10.31234/osf.io/w68qz</dc:identifier>
+    </rdf:Description>
+    <bib:Memo rdf:about="#item_363">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;Information about modulators. To check the discussion if I need more information about modulators. and to use when describing the design of the paradigmn. Also, can use to describe changes in second experiment.&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_237">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>2. Meta-analytic evidence on gaze cueing.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S1053810019300960">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:10538100"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ulloa</foaf:surname>
+                        <foaf:givenName>José Luis</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Vastano</foaf:surname>
+                        <foaf:givenName>Roberta</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>George</foaf:surname>
+                        <foaf:givenName>Nathalie</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Brass</foaf:surname>
+                        <foaf:givenName>Marcel</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_362"/>
+        <dc:title>The impact of eye contact on the sense of agency</dc:title>
+        <dc:date>09/2019</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S1053810019300960</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-01-24 21:10:56</dcterms:dateSubmitted>
+        <bib:pages>102794</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:10538100">
+        <prism:volume>74</prism:volume>
+        <dc:title>Consciousness and Cognition</dc:title>
+        <dc:identifier>DOI 10.1016/j.concog.2019.102794</dc:identifier>
+        <dcterms:alternative>Consciousness and Cognition</dcterms:alternative>
+        <dc:identifier>ISSN 10538100</dc:identifier>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_362">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>3.The impact of eye contact on the sense of agency.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S0010027707002144">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:00100277"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Engbert</foaf:surname>
+                        <foaf:givenName>Kai</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wohlschläger</foaf:surname>
+                        <foaf:givenName>Andreas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Haggard</foaf:surname>
+                        <foaf:givenName>Patrick</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_464"/>
+        <link:link rdf:resource="#item_469"/>
+        <dc:subject>SofA motor movement</dc:subject>
+        <dc:title>Who is causing what? The sense of agency is relational and efferent-triggered</dc:title>
+        <dc:date>5/2008</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Who is causing what?</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S0010027707002144</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-09 17:39:26</dcterms:dateSubmitted>
+        <dc:rights>https://www.elsevier.com/tdm/userlicense/1.0/</dc:rights>
+        <bib:pages>693-704</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:00100277">
+        <prism:volume>107</prism:volume>
+        <dc:title>Cognition</dc:title>
+        <dc:identifier>DOI 10.1016/j.cognition.2007.07.021</dc:identifier>
+        <prism:number>2</prism:number>
+        <dcterms:alternative>Cognition</dcterms:alternative>
+        <dc:identifier>ISSN 00100277</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_464">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;“Because no such temporal attraction occurred for involuntary movements evoked by transcranial magnetic stimulation, the effect was called intentional binding, and taken as an implicit measure of agency.”&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_469">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Who is causing what.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://link.springer.com/10.1007/s00221-021-06087-8">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0014-4819,%201432-1106"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Antusch</foaf:surname>
+                        <foaf:givenName>S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Custers</foaf:surname>
+                        <foaf:givenName>R.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marien</foaf:surname>
+                        <foaf:givenName>H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Aarts</foaf:surname>
+                        <foaf:givenName>H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_483"/>
+        <dcterms:isReferencedBy rdf:resource="#item_467"/>
+        <link:link rdf:resource="#item_466"/>
+        <link:link rdf:resource="#item_470"/>
+        <dc:subject>SofA motor movement</dc:subject>
+        <dc:title>Studying the sense of agency in the absence of motor movement: an investigation into temporal binding of tactile sensations and auditory effects</dc:title>
+        <dcterms:abstract>Abstract
+            People form coherent representations of goal-directed actions. Such agency experiences of intentional action are reflected by a shift in temporal perception: self-generated motor movements and subsequent sensory effects are perceived to occur closer together in time—a phenomenon termed intentional binding. Building on recent research suggesting that temporal binding occurs without intentionally performing actions, we further examined whether such perceptual compression occurs when motor action is fully absent. In three experiments, we used a novel sensory-based adaptation of the Libet clock paradigm to assess how a brief tactile sensation on the index finger and a resulting auditory stimulus perceptually bind together in time. Findings revealed robust temporal repulsion (instead of binding) between tactile sensation and auditory effect. Temporal repulsion was attenuated when participants could anticipate the identity and temporal onset (two crucial components of intentional action) of the tactile sensation. These findings are briefly discussed in the context of differences between intentional movement and anticipated bodily sensations in shaping action coherence and agentic experiences.</dcterms:abstract>
+        <dc:date>06/2021</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Studying the sense of agency in the absence of motor movement</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://link.springer.com/10.1007/s00221-021-06087-8</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-09 17:42:04</dcterms:dateSubmitted>
+        <bib:pages>1795-1806</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0014-4819,%201432-1106">
+        <prism:volume>239</prism:volume>
+        <dc:title>Experimental Brain Research</dc:title>
+        <dc:identifier>DOI 10.1007/s00221-021-06087-8</dc:identifier>
+        <prism:number>6</prism:number>
+        <dcterms:alternative>Exp Brain Res</dcterms:alternative>
+        <dc:identifier>ISSN 0014-4819, 1432-1106</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_483">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;Check also those for motor movement Antusch S, Aarts H, Custers R (2019) The role of intentional strength &lt;/p&gt;
+&lt;p&gt;in shaping the sense of agency. Front Psychol 10:1124&lt;/p&gt;
+&lt;p&gt;Antusch S, Custers R, Marien H, Aarts H (2020) Intentionality and &lt;/p&gt;
+&lt;p&gt;temporal binding: do causality beliefs increase the perceived &lt;/p&gt;
+&lt;p&gt;temporal attraction between events? Conscious Cogn 77:102835&lt;/p&gt;
+&lt;p&gt;Antusch S, Custers R, Marien H, Aarts H (2021) Intentional action &lt;/p&gt;
+&lt;p&gt;and limitation of personal autonomy. Do restrictions of action &lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_467">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;…we further examined whether such perceptual compression occurs when motor action is fully absent… [and] found that temporal binding was not observed when motor action was absent.&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_466">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://link.springer.com/content/pdf/10.1007/s00221-021-06087-8.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-09 17:42:06</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_470">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Studying the sense of agency in the absence of motor.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://link.springer.com/10.1007/s00426-005-0033-3">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0340-0727,%201430-2772"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Fagioli</foaf:surname>
+                        <foaf:givenName>Sabrina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hommel</foaf:surname>
+                        <foaf:givenName>Bernhard</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schubotz</foaf:surname>
+                        <foaf:givenName>Ricarda Ines</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_516"/>
+        <dc:subject>SofA motor movement</dc:subject>
+        <dc:title>Intentional control of attention: action planning primes action-related stimulus dimensions</dc:title>
+        <dc:date>2007-1-11</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Intentional control of attention</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://link.springer.com/10.1007/s00426-005-0033-3</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-10 18:24:14</dcterms:dateSubmitted>
+        <dc:rights>http://www.springer.com/tdm</dc:rights>
+        <bib:pages>22-29</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0340-0727,%201430-2772">
+        <prism:volume>71</prism:volume>
+        <dc:title>Psychological Research</dc:title>
+        <dc:identifier>DOI 10.1007/s00426-005-0033-3</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>Psychological Research</dcterms:alternative>
+        <dc:identifier>ISSN 0340-0727, 1430-2772</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_516">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not read; used in discussion for RT;&lt;br&gt;&lt;br&gt;&lt;strong&gt;What they tested&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;They investigated whether &lt;strong&gt;planning an action influences attention and perception&lt;/strong&gt;, even before the action is actually executed. Specifically, participants prepared for either a &lt;strong&gt;reaching action&lt;/strong&gt; or a &lt;strong&gt;grasping action&lt;/strong&gt;. While they kept that action plan active (before doing it), they were presented with &lt;strong&gt;stimulus events&lt;/strong&gt; that varied in &lt;strong&gt;perceptual features&lt;/strong&gt; (like location or size). The question was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Does preparing to move in a particular way make the brain process certain stimulus dimensions more effectively?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;What they found&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+While participants were preparing a &lt;strong&gt;reaching action&lt;/strong&gt;, they detected changes in &lt;strong&gt;location-based stimuli&lt;/strong&gt; more quickly.
+&lt;/li&gt;
+&lt;li&gt;
+When preparing a &lt;strong&gt;grasping action&lt;/strong&gt;, they detected changes in &lt;strong&gt;size-based stimuli&lt;/strong&gt; more quickly.
+&lt;/li&gt;
+&lt;li&gt;
+This effect happened &lt;strong&gt;before actual movement execution&lt;/strong&gt;, suggesting that merely &lt;strong&gt;planning the action biased perception&lt;/strong&gt; toward action-related perceptual dimensions.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;What it means (in simple terms)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Planning an action doesn’t just prepare the muscles — it also changes how your brain &lt;strong&gt;allocates attention&lt;/strong&gt; to the world. If you plan to reach for something, you become better at noticing where things are. If you plan to grasp something, you become better at noticing &lt;em&gt;what size&lt;/em&gt; things are. This suggests that &lt;strong&gt;action plans and attention/perception share processing resources&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Why it matters for your work&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Although this study is &lt;strong&gt;not about sense of agency per se&lt;/strong&gt;, it shows a key principle that is relevant for agency research:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Action preparation influences cognitive and perceptual processes even before action execution.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This supports the idea that in your experiment, &lt;strong&gt;active movement&lt;/strong&gt; (even just planning it) can change how participants process subsequent stimuli and make judgments — including &lt;em&gt;how they experience agency&lt;/em&gt;. This fits well with theoretical frameworks like the &lt;strong&gt;Theory of Event Coding (TEC)&lt;/strong&gt; and &lt;strong&gt;intentional weighting mechanisms&lt;/strong&gt;, which argue that action and perception are tightly coupled at early stages of processing.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="http://journal.frontiersin.org/article/10.3389/fpsyg.2011.00218/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>2</prism:volume>
+                <dc:title>Frontiers in Psychology</dc:title>
+                <dc:identifier>DOI 10.3389/fpsyg.2011.00218</dc:identifier>
+                <dcterms:alternative>Front. Psychology</dcterms:alternative>
+                <dc:identifier>ISSN 1664-1078</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Brown</foaf:surname>
+                        <foaf:givenName>Harriet</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Friston</foaf:surname>
+                        <foaf:givenName>Karl</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bestmann</foaf:surname>
+                        <foaf:givenName>Sven</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_519"/>
+        <link:link rdf:resource="#item_518"/>
+        <dc:subject>SofA motor movement</dc:subject>
+        <dc:title>Active Inference, Attention, and Motor Preparation</dc:title>
+        <dc:date>2011</dc:date>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/article/10.3389/fpsyg.2011.00218/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-10 18:26:59</dcterms:dateSubmitted>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_519">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not red; used in discussion of RT; &lt;br&gt;&lt;br&gt;&lt;strong&gt;What they tested:&lt;/strong&gt;&lt;br&gt;The study examined how &lt;strong&gt;motor preparation and attention are linked&lt;/strong&gt; when planning and executing movements. They used adapted versions of a reaction-time paradigm (similar to a Posner cueing task) to see whether cues about a forthcoming movement could speed up reaction times and how &lt;strong&gt;attention in motor preparation&lt;/strong&gt; interacts with prediction of sensory consequences of action. The framework they tested is based on &lt;strong&gt;active inference and predictive coding&lt;/strong&gt;, which proposes that motor control and attention share mechanisms for predicting and preparing movements.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it worked:&lt;/strong&gt;&lt;br&gt;Participants were given cues about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+what type of movement to prepare
+&lt;/li&gt;
+&lt;li&gt;
+which hand to use&lt;br&gt;The researchers then measured &lt;strong&gt;reaction times&lt;/strong&gt; to these movements under different cueing conditions.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Main results (RT findings):&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+They found that &lt;strong&gt;valid cues about the movement and effector (hand)&lt;/strong&gt; led to &lt;strong&gt;faster RTs&lt;/strong&gt; than invalid cues.
+&lt;/li&gt;
+&lt;li&gt;
+There was a significant interaction between the type of cue and movement execution: valid preparation sped responses more than invalid preparation.
+&lt;/li&gt;
+&lt;li&gt;
+This suggests that &lt;strong&gt;attention and prediction in motor preparation improve RTs&lt;/strong&gt;, similar to how visual attention speeds perception in classic Posner tasks.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Conceptual conclusion:&lt;/strong&gt;&lt;br&gt;These findings support the idea that &lt;strong&gt;motor planning and attention are deeply intertwined&lt;/strong&gt;, and that preparing a movement (i.e., planning a voluntary action) is not just about issuing a command — it also mobilizes attentional systems that &lt;em&gt;reduce reaction times&lt;/em&gt; for expected movements. This fits within predictive coding and active inference theories, where the brain continually predicts sensory and motor consequences to optimize performance.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;&lt;strong&gt;In short (plain language)&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This study shows that when people are told &lt;em&gt;what movement to prepare&lt;/em&gt;, they react faster if the cues are correct. This means &lt;strong&gt;attention and motor planning work together&lt;/strong&gt; to make actions quicker and more efficient, supporting theories that action preparation influences how fast we respond.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Why this is relevant for your experiment&lt;/h2&gt;
+&lt;p&gt;Although this study does &lt;strong&gt;not&lt;/strong&gt; directly measure &lt;em&gt;sense of agency&lt;/em&gt;, it demonstrates that:&lt;br&gt;✔ Motor preparation speeds reaction time&lt;br&gt;✔ Attention is involved when planning voluntary movement&lt;br&gt;✔ Valid motor predictions improve performance (faster RT)&lt;/p&gt;
+&lt;p&gt;This complements your results showing that &lt;strong&gt;active conditions&lt;/strong&gt; (with an action to execute) are behaviorally different (often faster RTs) compared to passive control conditions, because active trials engage &lt;strong&gt;motor prediction and attention mechanisms&lt;/strong&gt; that reduce reaction times.&lt;/p&gt;
+&lt;p&gt;If you want, I can also find &lt;strong&gt;agency studies that explicitly link agency judgments with RT facilitation effects&lt;/strong&gt;. Just let me know!&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_518">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/articles/10.3389/fpsyg.2011.00218/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-10 18:27:01</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/article/10.3389/fnhum.2013.00514/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1662-5161"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barlas</foaf:surname>
+                        <foaf:givenName>Zeynep</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Obhi</foaf:surname>
+                        <foaf:givenName>Sukhvinder S.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_527"/>
+        <link:link rdf:resource="#item_524"/>
+        <dc:title>Freedom, choice, and the sense of agency</dc:title>
+        <dc:date>2013</dc:date>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/article/10.3389/fnhum.2013.00514/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 17:20:20</dcterms:dateSubmitted>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1662-5161">
+        <prism:volume>7</prism:volume>
+        <dc:title>Frontiers in Human Neuroscience</dc:title>
+        <dc:identifier>DOI 10.3389/fnhum.2013.00514</dc:identifier>
+        <dcterms:alternative>Front. Hum. Neurosci.</dcterms:alternative>
+        <dc:identifier>ISSN 1662-5161</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_527">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not red; used for free choice and agency in discussion&lt;br&gt;&lt;br&gt;&lt;strong&gt;Study context:&lt;/strong&gt;&lt;br&gt;Participants made actions with different numbers of possible choices (one, three, seven buttons) and measured intentional binding — a classic implicit index of sense of agency.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Quote:&lt;/strong&gt;&lt;br&gt;&lt;em&gt;“We found that the binding effect was strongest when participants had the maximum number of alternatives, intermediate when they had medium level of action choice and lowest when they had no choice.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Quote (interpretation):&lt;/strong&gt;&lt;br&gt;&lt;em&gt;“Our results provide support for the notion that a high degree of choice is associated with greater action–effect binding than lower degrees of choice.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Meaning:&lt;/strong&gt;&lt;br&gt;More choice (freedom to decide what action to make) increases implicit agency measures.&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_524">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/articles/10.3389/fnhum.2013.00514/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 17:20:22</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://linkinghub.elsevier.com/retrieve/pii/S0010027717300343">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>162</prism:volume>
+                <dc:title>Cognition</dc:title>
+                <dc:identifier>DOI 10.1016/j.cognition.2017.02.002</dc:identifier>
+                <dcterms:alternative>Cognition</dcterms:alternative>
+                <dc:identifier>ISSN 00100277</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Beck</foaf:surname>
+                        <foaf:givenName>Brianna</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Di Costa</foaf:surname>
+                        <foaf:givenName>Steven</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Haggard</foaf:surname>
+                        <foaf:givenName>Patrick</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_528"/>
+        <link:link rdf:resource="#item_526"/>
+        <dc:title>Having control over the external world increases the implicit sense of agency</dc:title>
+        <dc:date>05/2017</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://linkinghub.elsevier.com/retrieve/pii/S0010027717300343</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 17:20:40</dcterms:dateSubmitted>
+        <bib:pages>54-60</bib:pages>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_528">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not red; used for free choice and agency in discussion&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Study context:&lt;/strong&gt;&lt;br&gt;This paper compared conditions where action selection &lt;em&gt;meaningfully affected outcomes&lt;/em&gt; versus conditions where choice was irrelevant.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Quote:&lt;/strong&gt;&lt;br&gt;&lt;em&gt;“Our study shows that the ability to control outcomes by discriminative action selection is another key element of implicit sense of agency.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Meaning:&lt;/strong&gt;&lt;br&gt;Choosing an action &lt;em&gt;that has meaningful control over outcomes&lt;/em&gt; strengthens implicit sense of agency.&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_526">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://discovery.ucl.ac.uk/1542862/1/Bracey_Haggard_1-s2.0-S0010027717300343-main.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 17:20:51</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://journal.frontiersin.org/Article/10.3389/fpsyg.2016.01165/abstract">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>7</prism:volume>
+                <dc:title>Frontiers in Psychology</dc:title>
+                <dc:identifier>DOI 10.3389/fpsyg.2016.01165</dc:identifier>
+                <dcterms:alternative>Front. Psychol.</dcterms:alternative>
+                <dc:identifier>ISSN 1664-1078</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Minohara</foaf:surname>
+                        <foaf:givenName>Rin</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wen</foaf:surname>
+                        <foaf:givenName>Wen</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hamasaki</foaf:surname>
+                        <foaf:givenName>Shunsuke</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Maeda</foaf:surname>
+                        <foaf:givenName>Takaki</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kato</foaf:surname>
+                        <foaf:givenName>Motoichiro</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yamakawa</foaf:surname>
+                        <foaf:givenName>Hiroshi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Yamashita</foaf:surname>
+                        <foaf:givenName>Atsushi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Asama</foaf:surname>
+                        <foaf:givenName>Hajime</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_531"/>
+        <link:link rdf:resource="#item_530"/>
+        <dc:title>Strength of Intentional Effort Enhances the Sense of Agency</dc:title>
+        <dc:date>2016-08-03</dc:date>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/Article/10.3389/fpsyg.2016.01165/abstract</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 17:33:59</dcterms:dateSubmitted>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_531">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not red used for strenght of intentionality and SOA in discussion&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_530">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/articles/10.3389/fpsyg.2016.01165/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 17:34:01</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/nn827">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1097-6256,%201546-1726"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Haggard</foaf:surname>
+                        <foaf:givenName>Patrick</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Clark</foaf:surname>
+                        <foaf:givenName>Sam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kalogeras</foaf:surname>
+                        <foaf:givenName>Jeri</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_533"/>
+        <dc:title>Voluntary action and conscious awareness</dc:title>
+        <dc:date>4/2002</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.nature.com/articles/nn827</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 17:36:30</dcterms:dateSubmitted>
+        <dc:rights>http://www.springer.com/tdm</dc:rights>
+        <bib:pages>382-385</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1097-6256,%201546-1726">
+        <prism:volume>5</prism:volume>
+        <dc:title>Nature Neuroscience</dc:title>
+        <dc:identifier>DOI 10.1038/nn827</dc:identifier>
+        <prism:number>4</prism:number>
+        <dcterms:alternative>Nat Neurosci</dcterms:alternative>
+        <dc:identifier>ISSN 1097-6256, 1546-1726</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_533">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not read - classic paper on intentional binding. Used in discussion in exp 1 for intersectionality and SOA &lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="#item_534">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pacherie</foaf:surname>
+                        <foaf:givenName>Elisabeth</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>The Sense of Control and the Sense of Agency</dc:title>
+        <dc:date>April 2007</dc:date>
+    </bib:Article>
+    <bib:Article rdf:about="https://www.frontiersin.org/article/10.3389/fpsyg.2019.00650/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>10</prism:volume>
+                <dc:title>Frontiers in Psychology</dc:title>
+                <dc:identifier>DOI 10.3389/fpsyg.2019.00650</dc:identifier>
+                <dcterms:alternative>Front. Psychol.</dcterms:alternative>
+                <dc:identifier>ISSN 1664-1078</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bart</foaf:surname>
+                        <foaf:givenName>Victoria K. E.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sharavdorj</foaf:surname>
+                        <foaf:givenName>Erdenechimeg</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bazarvaani</foaf:surname>
+                        <foaf:givenName>Khishignyam</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Munkhbat</foaf:surname>
+                        <foaf:givenName>Tegshbuyan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wenke</foaf:surname>
+                        <foaf:givenName>Dorit</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rieger</foaf:surname>
+                        <foaf:givenName>Martina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_537"/>
+        <link:link rdf:resource="#item_536"/>
+        <dc:title>It Was Me: The Use of Sense of Agency Cues Differs Between Cultures</dc:title>
+        <dc:date>2019-3-22</dc:date>
+        <z:shortTitle>It Was Me</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/article/10.3389/fpsyg.2019.00650/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 18:43:39</dcterms:dateSubmitted>
+        <bib:pages>650</bib:pages>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_537">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not red; used in discussion of linguistical differences in SOA &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_536">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00650/pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 18:43:41</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://www.nature.com/articles/s44271-023-00020-1">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:2731-9121"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Simchon</foaf:surname>
+                        <foaf:givenName>Almog</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hadar</foaf:surname>
+                        <foaf:givenName>Britt</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Gilead</foaf:surname>
+                        <foaf:givenName>Michael</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_540"/>
+        <link:link rdf:resource="#item_539"/>
+        <dc:title>A computational text analysis investigation of the relation between personal and linguistic agency</dc:title>
+        <dcterms:abstract>Abstract
+            Previous psycholinguistic findings showed that linguistic framing – such as the use of passive voice - influences the level of agency attributed to other people. To investigate whether passive voice use relates to people’s personal sense of agency, we conducted three studies in which we analyzed existing experimental and observational data. In Study 1 (N = 835) we show that sense of personal agency, operationalized between participants as recalling instances of having more or less power over others, affects the use of agentive language. In Study 2 (N = 2.7 M) we show that increased personal agency (operationalized as one’s social media followership) is associated with more agentive language. In Study 3 and its two replications (N = 43,140) we demonstrate using Reddit data that the language of individuals who post on the r/depression subreddit is less agentive. Together, these findings advance our understanding of the nuanced relationship between personal and linguistic agency.</dcterms:abstract>
+        <dc:date>2023-09-25</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s44271-023-00020-1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 18:45:19</dcterms:dateSubmitted>
+        <bib:pages>23</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:2731-9121">
+        <prism:volume>1</prism:volume>
+        <dc:title>Communications Psychology</dc:title>
+        <dc:identifier>DOI 10.1038/s44271-023-00020-1</dc:identifier>
+        <prism:number>1</prism:number>
+        <dcterms:alternative>Commun Psychol</dcterms:alternative>
+        <dc:identifier>ISSN 2731-9121</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_540">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;not red; used in discussion of linguistical differences in SOA &lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_539">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.nature.com/articles/s44271-023-00020-1.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 18:45:21</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://dx.plos.org/10.1371/journal.pone.0110118">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>9</prism:volume>
+                <dc:title>PLoS ONE</dc:title>
+                <dc:identifier>DOI 10.1371/journal.pone.0110118</dc:identifier>
+                <prism:number>10</prism:number>
+                <dcterms:alternative>PLoS ONE</dcterms:alternative>
+                <dc:identifier>ISSN 1932-6203</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dewey</foaf:surname>
+                        <foaf:givenName>John A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Knoblich</foaf:surname>
+                        <foaf:givenName>Günther</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kotz</foaf:surname>
+                        <foaf:givenName>Sonja</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <link:link rdf:resource="#item_542"/>
+        <dc:subject>SofA measurements</dc:subject>
+        <dc:title>Do Implicit and Explicit Measures of the Sense of Agency Measure the Same Thing?</dc:title>
+        <dc:date>2014-10-16</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://dx.plos.org/10.1371/journal.pone.0110118</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 18:53:10</dcterms:dateSubmitted>
+        <bib:pages>e110118</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_542">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0110118&amp;type=printable</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 18:53:12</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="http://www.tandfonline.com/doi/abs/10.1080/135062899394920">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1350-6285,%201464-0716"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Driver</foaf:surname>
+                        <foaf:givenName>Jon</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Davis</foaf:surname>
+                        <foaf:givenName>Greg</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ricciardelli</foaf:surname>
+                        <foaf:givenName>Paola</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kidd</foaf:surname>
+                        <foaf:givenName>Polly</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Maxwell</foaf:surname>
+                        <foaf:givenName>Emma</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Baron-Cohen</foaf:surname>
+                        <foaf:givenName>Simon</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_544"/>
+        <dc:subject>GC_GENERAL</dc:subject>
+        <dc:title>Gaze Perception Triggers Reflexive Visuospatial Orienting</dc:title>
+        <dc:date>10/1999</dc:date>
+        <z:language>en</z:language>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.tandfonline.com/doi/abs/10.1080/135062899394920</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-11 19:00:37</dcterms:dateSubmitted>
+        <bib:pages>509-540</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1350-6285,%201464-0716">
+        <prism:volume>6</prism:volume>
+        <dc:title>Visual Cognition</dc:title>
+        <dc:identifier>DOI 10.1080/135062899394920</dc:identifier>
+        <prism:number>5</prism:number>
+        <dcterms:alternative>Visual Cognition</dcterms:alternative>
+        <dc:identifier>ISSN 1350-6285, 1464-0716</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_544">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;GC&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="https://doi.apa.org/doi/10.1037/0033-2909.116.2.220">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1939-1455,%200033-2909"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pashler</foaf:surname>
+                        <foaf:givenName>Harold</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_547"/>
+        <dc:title>Dual-task interference in simple tasks: Data and theory.</dc:title>
+        <dc:date>1994</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Dual-task interference in simple tasks</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://doi.apa.org/doi/10.1037/0033-2909.116.2.220</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-12 09:01:00</dcterms:dateSubmitted>
+        <bib:pages>220-244</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1939-1455,%200033-2909">
+        <prism:volume>116</prism:volume>
+        <dc:title>Psychological Bulletin</dc:title>
+        <dc:identifier>DOI 10.1037/0033-2909.116.2.220</dc:identifier>
+        <prism:number>2</prism:number>
+        <dcterms:alternative>Psychological Bulletin</dcterms:alternative>
+        <dc:identifier>ISSN 1939-1455, 0033-2909</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_547">
+        <rdf:value>&lt;div data-schema-version=&quot;9&quot;&gt;&lt;p&gt;Dual task and multitasking&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="http://link.springer.com/10.3758/s13423-020-01730-x">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>27</prism:volume>
+                <dc:title>Psychonomic Bulletin &amp; Review</dc:title>
+                <dc:identifier>DOI 10.3758/s13423-020-01730-x</dc:identifier>
+                <prism:number>5</prism:number>
+                <dcterms:alternative>Psychon Bull Rev</dcterms:alternative>
+                <dc:identifier>ISSN 1069-9384, 1531-5320</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Dalmaso</foaf:surname>
+                        <foaf:givenName>Mario</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Castelli</foaf:surname>
+                        <foaf:givenName>Luigi</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Galfano</foaf:surname>
+                        <foaf:givenName>Giovanni</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_549"/>
+        <dc:subject>gc modifiers</dc:subject>
+        <dc:title>Social modulators of gaze-mediated orienting of attention: A review</dc:title>
+        <dc:date>10/2020</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Social modulators of gaze-mediated orienting of attention</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://link.springer.com/10.3758/s13423-020-01730-x</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-12 11:42:08</dcterms:dateSubmitted>
+        <bib:pages>833-855</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_549">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Full Text</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://link.springer.com/content/pdf/10.3758/s13423-020-01730-x.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-12 11:42:10</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Data rdf:about="http://www.facegen.com">
+        <z:itemType>computerProgram</z:itemType>
+        <prism:edition>Demo 3.34</prism:edition>
+        <dc:title>FaceGen Modeller</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.facegen.com</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+    </bib:Data>
+    <bib:Data rdf:about="#item_551">
+        <z:itemType>computerProgram</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Psychology Software Tools Inc.</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <z:programmers>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schneider</foaf:surname>
+                        <foaf:givenName>Walter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Eschman</foaf:surname>
+                        <foaf:givenName>Amy</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Zuccolotto</foaf:surname>
+                        <foaf:givenName>Anthony</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </z:programmers>
+        <prism:edition>2.0</prism:edition>
+        <dc:title>E-Prime</dc:title>
+        <dc:date>2002</dc:date>
+    </bib:Data>
+    <bib:Article rdf:about="http://journal.frontiersin.org/article/10.3389/fpsyg.2018.00535/full">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>9</prism:volume>
+                <dc:title>Frontiers in Psychology</dc:title>
+                <dc:identifier>DOI 10.3389/fpsyg.2018.00535</dc:identifier>
+                <dcterms:alternative>Front. Psychol.</dcterms:alternative>
+                <dc:identifier>ISSN 1664-1078</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Braun</foaf:surname>
+                        <foaf:givenName>Niclas</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Debener</foaf:surname>
+                        <foaf:givenName>Stefan</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Spychala</foaf:surname>
+                        <foaf:givenName>Nadine</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bongartz</foaf:surname>
+                        <foaf:givenName>Edith</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Sörös</foaf:surname>
+                        <foaf:givenName>Peter</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Müller</foaf:surname>
+                        <foaf:givenName>Helge H. O.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Philipsen</foaf:surname>
+                        <foaf:givenName>Alexandra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_553"/>
+        <dc:title>The Senses of Agency and Ownership: A Review</dc:title>
+        <dc:date>2018-4-16</dc:date>
+        <z:shortTitle>The Senses of Agency and Ownership</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://journal.frontiersin.org/article/10.3389/fpsyg.2018.00535/full</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-02-17 16:19:01</dcterms:dateSubmitted>
+        <bib:pages>535</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_553">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Broun_Sense of agency and ownership.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_571">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Edwards</foaf:surname>
+                        <foaf:givenName>Salina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_570"/>
+        <dc:title>SOCIAL INFLUENCES ON THE SENSE OF AGENCY: THE EFFECTS OF ACUTE PSYCHOSOCIAL STRESS AND ACTION INSTRUCTION ON PERCEIVED AND IMPLICIT CONTROL</dc:title>
+        <dcterms:abstract>The experience of control is referred to as the sense of agency (SoA). Most healthy individuals experience agency for their actions however, this can be disrupted under specific contexts. Intriguingly, there is little research about how SoA is affected by stress, a common everyday experience, or action instruction by external agents. Across two empirical chapters and four studies, we employ both implicit (intentional binding; IB) and explicit (self-reported control ratings) measures to provide a multidimensional account of how agency is shaped in these social contexts.</dcterms:abstract>
+        <z:language>en</z:language>
+        <z:libraryCatalog>Zotero</z:libraryCatalog>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_570">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>PDF</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://doi.apa.org/doi/10.1037/0033-2909.133.4.694">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>133</prism:volume>
+                <dc:title>Psychological Bulletin</dc:title>
+                <dc:identifier>DOI 10.1037/0033-2909.133.4.694</dc:identifier>
+                <prism:number>4</prism:number>
+                <dcterms:alternative>Psychological Bulletin</dcterms:alternative>
+                <dc:identifier>ISSN 1939-1455, 0033-2909</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Frischen</foaf:surname>
+                        <foaf:givenName>Alexandra</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bayliss</foaf:surname>
+                        <foaf:givenName>Andrew P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Tipper</foaf:surname>
+                        <foaf:givenName>Steven P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_576"/>
+        <dc:title>Gaze cueing of attention: Visual attention, social cognition, and individual differences.</dc:title>
+        <dc:date>07/2007</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Gaze cueing of attention</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://doi.apa.org/doi/10.1037/0033-2909.133.4.694</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-03-01 15:31:38</dcterms:dateSubmitted>
+        <bib:pages>694-724</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_576">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>frischen gaze cueing review 2007.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <bib:Article rdf:about="https://journals.sagepub.com/doi/10.1177/1745691620953773">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:1745-6916,%201745-6924"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stephenson</foaf:surname>
+                        <foaf:givenName>Lisa J.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Edwards</foaf:surname>
+                        <foaf:givenName>S. Gareth</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bayliss</foaf:surname>
+                        <foaf:givenName>Andrew P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>From Gaze Perception to Social Cognition: The Shared-Attention System</dc:title>
+        <dcterms:abstract>When two people look at the same object in the environment and are aware of each other’s attentional state, they find themselves in a shared-attention episode. This can occur through intentional or incidental signaling and, in either case, causes an exchange of information between the two parties about the environment and each other’s mental states. In this article, we give an overview of what is known about the building blocks of shared attention (gaze perception and joint attention) and focus on bringing to bear new findings on the initiation of shared attention that complement knowledge about gaze following and incorporate new insights from research into the sense of agency. We also present a neurocognitive model, incorporating first-, second-, and third-order social cognitive processes (the shared-attention system, or SAS), building on previous models and approaches. The SAS model aims to encompass perceptual, cognitive, and affective processes that contribute to and follow on from the establishment of shared attention. These processes include fundamental components of social cognition such as reward, affective evaluation, agency, empathy, and theory of mind.</dcterms:abstract>
+        <dc:date>05/2021</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>From Gaze Perception to Social Cognition</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://journals.sagepub.com/doi/10.1177/1745691620953773</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-03-01 15:31:59</dcterms:dateSubmitted>
+        <bib:pages>553-576</bib:pages>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:1745-6916,%201745-6924">
+        <prism:volume>16</prism:volume>
+        <dc:title>Perspectives on Psychological Science</dc:title>
+        <dc:identifier>DOI 10.1177/1745691620953773</dc:identifier>
+        <prism:number>3</prism:number>
+        <dcterms:alternative>Perspect Psychol Sci</dcterms:alternative>
+        <dc:identifier>ISSN 1745-6916, 1745-6924</dc:identifier>
+    </bib:Journal>
+    <bib:Article rdf:about="https://doi.apa.org/doi/10.1037/bul0000353">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>147</prism:volume>
+                <dc:title>Psychological Bulletin</dc:title>
+                <dc:identifier>DOI 10.1037/bul0000353</dc:identifier>
+                <prism:number>12</prism:number>
+                <dcterms:alternative>Psychological Bulletin</dcterms:alternative>
+                <dc:identifier>ISSN 1939-1455, 0033-2909</dc:identifier>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McKay</foaf:surname>
+                        <foaf:givenName>Kate T.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Grainger</foaf:surname>
+                        <foaf:givenName>Sarah A.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Coundouris</foaf:surname>
+                        <foaf:givenName>Sarah P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Skorich</foaf:surname>
+                        <foaf:givenName>Daniel P.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Phillips</foaf:surname>
+                        <foaf:givenName>Louise H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Henry</foaf:surname>
+                        <foaf:givenName>Julie D.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_680"/>
+        <dc:title>Visual attentional orienting by eye gaze: A meta-analytic review of the gaze-cueing effect.</dc:title>
+        <dc:date>12/2021</dc:date>
+        <z:language>en</z:language>
+        <z:shortTitle>Visual attentional orienting by eye gaze</z:shortTitle>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://doi.apa.org/doi/10.1037/bul0000353</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-03-22 18:16:47</dcterms:dateSubmitted>
+        <bib:pages>1269-1289</bib:pages>
+    </bib:Article>
+    <z:Attachment rdf:about="#item_680">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Submitted Version</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://openresearch-repository.anu.edu.au/bitstreams/7794ec12-545c-4225-b71c-115df9373073/download</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2026-03-22 18:16:54</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Collection rdf:about="#collection_6">
+        <dc:title>classic papers</dc:title>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.3758/BF03208827"/>
+        <dcterms:hasPart rdf:resource="http://www.tandfonline.com/doi/abs/10.1080/135062899394920"/>
+        <dcterms:hasPart rdf:resource="https://doi.apa.org/doi/10.1037/0033-2909.116.2.220"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_4">
+        <dc:title>exp. 1</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_8"/>
+        <dcterms:hasPart rdf:resource="https://osf.io/w68qz_v1"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S1053810019300960"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0010027707002144"/>
+        <dcterms:hasPart rdf:resource="https://link.springer.com/10.1007/s00221-021-06087-8"/>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.1007/s00426-005-0033-3"/>
+        <dcterms:hasPart rdf:resource="http://journal.frontiersin.org/article/10.3389/fpsyg.2011.00218/abstract"/>
+        <dcterms:hasPart rdf:resource="http://journal.frontiersin.org/article/10.3389/fnhum.2013.00514/abstract"/>
+        <dcterms:hasPart rdf:resource="https://linkinghub.elsevier.com/retrieve/pii/S0010027717300343"/>
+        <dcterms:hasPart rdf:resource="http://journal.frontiersin.org/Article/10.3389/fpsyg.2016.01165/abstract"/>
+        <dcterms:hasPart rdf:resource="https://www.nature.com/articles/nn827"/>
+        <dcterms:hasPart rdf:resource="#item_534"/>
+        <dcterms:hasPart rdf:resource="https://www.frontiersin.org/article/10.3389/fpsyg.2019.00650/full"/>
+        <dcterms:hasPart rdf:resource="https://www.nature.com/articles/s44271-023-00020-1"/>
+        <dcterms:hasPart rdf:resource="https://dx.plos.org/10.1371/journal.pone.0110118"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_8">
+        <dc:title>GC_modulators</dc:title>
+        <dcterms:hasPart rdf:resource="https://www.frontiersin.org/article/10.3389/fpsyg.2019.01000/full"/>
+        <dcterms:hasPart rdf:resource="https://dx.plos.org/10.1371/journal.pone.0114077"/>
+        <dcterms:hasPart rdf:resource="https://journals.sagepub.com/doi/10.1177/1747021820973954"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_9">
+       <dc:title>MT examples</dc:title><dcterms:hasPart rdf:resource="#item_571"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_7">
+        <dc:title>reviews</dc:title>
+        <dcterms:hasPart rdf:resource="#collection_10"/>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.3758/s13423-020-01730-x"/>
+        <dcterms:hasPart rdf:resource="http://journal.frontiersin.org/article/10.3389/fpsyg.2018.00535/full"/>
+        <dcterms:hasPart rdf:resource="https://doi.apa.org/doi/10.1037/0033-2909.133.4.694"/>
+        <dcterms:hasPart rdf:resource="https://journals.sagepub.com/doi/10.1177/1745691620953773"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_10">
+        <dc:title>GC</dc:title>
+        <dcterms:hasPart rdf:resource="http://link.springer.com/10.3758/s13423-020-01730-x"/>
+        <dcterms:hasPart rdf:resource="https://doi.apa.org/doi/10.1037/0033-2909.133.4.694"/>
+        <dcterms:hasPart rdf:resource="https://doi.apa.org/doi/10.1037/bul0000353"/>
+    </z:Collection>
+</rdf:RDF>

@@ -1,0 +1,69 @@
+BUG IN 2w.SPS — RT TRIMMING SCRIPT
+=====================================
+File: C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\SPSS CUTOFF\2w.SPS
+Found while cross-checking SPSS's ±2SD trimming output against an independent Python
+re-implementation of the same ±2SD-per-condition-cell rule (Experiment 2 data).
+
+SUMMARY
+-------
+The script under-trims. Some trials that its own filter logic correctly identifies as
+outliers end up being kept in the final output anyway, because of how the very last
+line computes the filtered RT column. On Experiment 2's data this affected 37 trials
+(silently retained, all of them trials with a genuine RT of exactly 0ms).
+
+WHERE
+-----
+Lines 123-130:
+
+    compute high=col1+(2*col2).
+    compute low=col1-(2*col2).
+    compute hlessr=high-rt.
+    compute rlessl=rt-low.
+    RECODE
+      hlessr rlessl
+      (-100000 thru 0=SYSMIS)  (ELSE=1)  INTO  filt1  filt2 .
+
+    compute filt=filt1*filt2.
+    compute FiltRT = filt*rt.          <-- the bug is here
+
+WHY
+---
+`filt1` and `filt2` are coded as either 1 (trial passes that bound) or SYSMIS (trial
+fails). `filt = filt1*filt2` is fine — multiplying two values that are only ever 1 or
+SYSMIS propagates missingness correctly.
+
+`FiltRT = filt*rt` is the problem. SPSS has a special rule for multiplication: if
+EITHER operand is exactly 0, the result is 0 — even if the other operand is
+SYSMIS. (Normally SYSMIS propagates through arithmetic; the zero case is an
+exception.) So for any trial where the raw RT happens to be exactly 0 — which in
+this data marks a trial where no response was captured, not a real reaction time —
+`FiltRT` comes out as 0 regardless of what `filt` says, instead of being left
+system-missing. The trial reads as "kept, value 0" instead of "excluded."
+
+This matters at the aggregation step (`AGGREGATE ... /filtrt_1 = MEAN(filtrt)`):
+`MEAN()` only ignores true SYSMIS values, not literal 0s, so any subject × condition
+cell containing one of these should-have-been-excluded 0ms trials gets its mean RT
+pulled down by including a false zero.
+
+Confirmed by checking `filt1`/`filt2`/`filt` directly for every RT=0 trial: in 37 of
+43 cases, `filt` is correctly SYSMIS (the trial should be excluded) but `FiltRT` is 0
+anyway. In the remaining 6 cases (all one subject/condition cell with unusually high
+variance), `filt1=filt2=1` genuinely — RT=0 is legitimately within that cell's ±2SD
+range — so `FiltRT=1*0=0` is correct there. The two situations produce an identical
+FiltRT value and can only be told apart by checking filt/filt1/filt2.
+
+SUGGESTED FIX
+-------------
+Replace the last line with an explicit conditional instead of a multiplication, so
+the zero-multiplication rule can't interfere:
+
+    compute FiltRT = $SYSMIS.
+    if (filt = 1) FiltRT = rt.
+
+IMPACT ON RESULTS ALREADY REPORTED
+-----------------------------------
+Because of this, SPSS's ±2SD trim under-removes trials on any dataset that contains
+genuine RT=0 entries (missing-response codes). For Experiment 2, SPSS reported
+7913 -> 7587 (326 removed); the corrected/Python-equivalent trim removes 363 (7913 ->
+7550). Experiment 3 should be checked the same way if a comparison hasn't been run
+yet — same script.

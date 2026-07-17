@@ -1,0 +1,176 @@
+=== CELL 1 ===
+import os
+import pandas as pd
+
+base = r'C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\questions'
+raw_master = r'C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\raw_data.xlsx'
+
+=== CELL 3 ===
+df = pd.read_excel(raw_master)
+print(f'Master raw: {df.shape[0]} rows × {df.shape[1]} cols')
+
+q_rows = df[df['Procedure[SubTrial]'] == 'question'].copy()
+print(f'question rows: {len(q_rows)}')
+
+out = f'{base}\\00_raw.xlsx'
+q_rows.to_excel(out, index=False)
+print(f'Saved: {out}')
+OUTPUT:
+Master raw: 93392 rows × 78 cols
+question rows: 7488
+Saved: C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\questions\00_raw.xlsx
+
+
+=== CELL 5 ===
+df = pd.read_excel(f'{base}\\00_raw.xlsx')
+print(f'Loaded: {df.shape[0]} rows × {df.shape[1]} cols')
+
+df = df[df['Running[SubTrial]'] == 'QuestionsList'].copy()
+print(f'After Running[SubTrial]=QuestionsList: {len(df)} rows')
+
+keep = ['Subject', 'Age', 'Sex', 'Handedness', 'Procedure[Trial]',
+        'QuestionsList', 'QuestionsList.Cycle', 'Qs', 'QControl.RESP', 'QControl.RT']
+df = df[keep].copy()
+
+df['condition'] = df['Procedure[Trial]'].str.rstrip('1')
+print('condition values:', df['condition'].value_counts().to_dict())
+
+df['question_type'] = df['QuestionsList'].map({1.0: 'predict', 2.0: 'control', 3.0: 'caused'})
+print('question_type values:', df['question_type'].value_counts().to_dict())
+if True:  # Exp1 only
+    TECHNICAL_EXCLUDED = [1, 17, 45]
+    present = [s for s in TECHNICAL_EXCLUDED if s in df['Subject'].unique()]
+    print(f'Technical-exclusion subjects found: {present if present else "none (already absent)"}')
+    df = df[~df['Subject'].isin(TECHNICAL_EXCLUDED)].copy()
+
+n_subjects = df['Subject'].nunique()
+n_rows = len(df)
+print(f'Subjects: {n_subjects}  |  Rows: {n_rows}  ({n_subjects} x 144 = {n_subjects*144})')
+
+trial_counts = df.groupby('Subject').size()
+bad = trial_counts[trial_counts != 144]
+print('Subjects with != 144 rows:', 'none' if bad.empty else bad.to_dict())
+
+out = f'{base}\\01_cleaned.xlsx'
+df.to_excel(out, index=False)
+print(f'Saved: {out}')
+OUTPUT:
+Loaded: 7488 rows × 78 cols
+After Running[SubTrial]=QuestionsList: 7488 rows
+condition values: {'actionC': 2496, 'actionNC': 2496, 'controlLeft': 1248, 'controlRight': 1248}
+question_type values: {'predict': 2496, 'control': 2496, 'caused': 2496}
+Technical-exclusion subjects found: none (already absent)
+Subjects: 52  |  Rows: 7488  (52 x 144 = 7488)
+Subjects with != 144 rows: none
+Saved: C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\questions\01_cleaned.xlsx
+
+
+=== CELL 7 ===
+df = pd.read_excel(f'{base}\\01_cleaned.xlsx')
+print(f'Loaded: {df.shape[0]} rows × {df.shape[1]} cols')
+
+def dominant_pct(s):
+    return s.value_counts(normalize=True).iloc[0] * 100
+
+dist = df.groupby('Subject')['QControl.RESP'].apply(dominant_pct).reset_index()
+dist.columns = ['Subject', 'dominant_%']
+
+cond_means = df.groupby(['Subject', 'condition'])['QControl.RESP'].mean().unstack()
+cond_means['range'] = cond_means.max(axis=1) - cond_means.min(axis=1)
+cond_means = cond_means.reset_index()
+
+with pd.ExcelWriter(f'{base}\\02_likert_report.xlsx', engine='openpyxl') as writer:
+    dist.to_excel(writer, sheet_name='scale_distribution', index=False)
+    cond_means.to_excel(writer, sheet_name='condition_means', index=False)
+print(f'Saved: {base}\\02_likert_report.xlsx  (sheets: scale_distribution, condition_means)')
+
+quality = dist.merge(cond_means[['Subject', 'range']], on='Subject')
+flagged = quality[(quality['dominant_%'] > 75) & (quality['range'] <= 0.5)].sort_values('Subject')
+print(f'Flagged careless (dominant% > 75 AND range <= 0.5): {len(flagged)}')
+print(flagged[['Subject', 'dominant_%', 'range']].round(2).to_string(index=False))
+
+kept_flagged = quality[(quality['dominant_%'] > 75) & (quality['range'] > 0.5)].sort_values('Subject')
+print(f'Kept despite dominant%>75 flag (range > 0.5): {len(kept_flagged)}')
+print(kept_flagged[['Subject', 'dominant_%', 'range']].round(2).to_string(index=False))
+OUTPUT:
+Loaded: 7488 rows × 12 cols
+Saved: C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\questions\02_likert_report.xlsx  (sheets: scale_distribution, condition_means)
+Flagged careless (dominant% > 75 AND range <= 0.5): 2
+ Subject  dominant_%  range
+      18       96.53   0.06
+      23      100.00   0.00
+Kept despite dominant%>75 flag (range > 0.5): 1
+ Subject  dominant_%  range
+      55       77.78   1.88
+
+
+=== CELL 9 ===
+dist = pd.read_excel(f'{base}\\02_likert_report.xlsx', sheet_name='scale_distribution')
+cond = pd.read_excel(f'{base}\\02_likert_report.xlsx', sheet_name='condition_means')
+quality = dist[['Subject', 'dominant_%']].merge(cond[['Subject', 'range']], on='Subject')
+
+LIKERT_EXCLUDED = sorted(quality.loc[(quality['dominant_%'] > 75) & (quality['range'] <= 0.5), 'Subject'].tolist())
+print(f'Excluded (dominant% > 75 AND range <= 0.5): {LIKERT_EXCLUDED}')
+
+df = pd.read_excel(f'{base}\\01_cleaned.xlsx')
+df3 = df[~df['Subject'].isin(LIKERT_EXCLUDED)].copy()
+n_subjects = df3['Subject'].nunique()
+n_rows = len(df3)
+print(f'Remaining: {n_subjects} subjects, {n_rows} rows ({n_subjects} x 144 = {n_subjects*144})')
+
+out = f'{base}\\03_excl_likert.xlsx'
+df3.to_excel(out, index=False)
+print(f'Saved: {out}')
+
+list_out = f'{base}\\03_likert_excluded_subjects.txt'
+with open(list_out, 'w') as f:
+    f.write(','.join(str(s) for s in LIKERT_EXCLUDED))
+print(f'Excluded-subjects list saved for exp_data pipeline: {list_out}')
+OUTPUT:
+Excluded (dominant% > 75 AND range <= 0.5): [18, 23]
+Remaining: 50 subjects, 7200 rows (50 x 144 = 7200)
+Saved: C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\questions\03_excl_likert.xlsx
+Excluded-subjects list saved for exp_data pipeline: C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\questions\03_likert_excluded_subjects.txt
+
+
+=== CELL 11 ===
+df = pd.read_excel(f'{base}\\03_excl_likert.xlsx')
+print(f'Loaded: {df.shape[0]} rows × {df.shape[1]} cols')
+
+cond_map = {'actionC': 'consistent', 'actionNC': 'inconsistent',
+            'controlLeft': 'control', 'controlRight': 'control'}
+df['action_consistency'] = df['condition'].map(cond_map)
+print('action_consistency:', df['action_consistency'].value_counts().to_dict())
+
+agg = df.groupby(['Subject', 'action_consistency', 'question_type'])['QControl.RESP'].mean().reset_index()
+agg = agg.rename(columns={'Subject': 'sub', 'QControl.RESP': 'rating_mean'})
+n_subs = agg['sub'].nunique()
+print(f'Long format: {len(agg)} rows ({n_subs} subjects x 9 conditions = {n_subs*9})')
+
+wide = agg.pivot(index='sub', columns=['action_consistency', 'question_type'], values='rating_mean')
+wide.columns = [f'{a}_{q}' for a, q in wide.columns]
+wide = wide.reset_index()
+
+demo = df.groupby('Subject')[['Age', 'Sex', 'Handedness']].first().reset_index().rename(columns={'Subject': 'sub'})
+wide = wide.merge(demo, on='sub', how='left')
+
+print(f'Wide format: {wide.shape[0]} subjects x {wide.shape[1]} columns')
+print(list(wide.columns))
+
+out = f'{base}\\04_aggregated.xlsx'
+with pd.ExcelWriter(out, engine='openpyxl') as writer:
+    agg.to_excel(writer, sheet_name='long', index=False)
+    wide.to_excel(writer, sheet_name='wide', index=False)
+print(f'Saved: {out}  (sheets: long, wide)')
+OUTPUT:
+Loaded: 7200 rows × 12 cols
+action_consistency: {'consistent': 2400, 'inconsistent': 2400, 'control': 2400}
+Long format: 450 rows (50 subjects x 9 conditions = 450)
+Wide format: 50 subjects x 13 columns
+['sub', 'consistent_caused', 'consistent_control', 'consistent_predict', 'control_caused', 'control_control', 'control_predict', 'inconsistent_caused', 'inconsistent_control', 'inconsistent_predict', 'Age', 'Sex', 'Handedness']
+Saved: C:\Users\Kaloyan Zdravkov\Desktop\Congitive Science\MasterThesis\GC + agency\experiment1\data_processing3\questions\04_aggregated.xlsx  (sheets: long, wide)
+
+
+=== CELL 12 ===
+
+

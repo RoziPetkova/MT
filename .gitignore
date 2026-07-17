@@ -1,0 +1,26 @@
+# --- Screen recordings (too large for git; keep local only) ---
+**/Запис/
+
+# --- E-Prime raw/merged exports (too large for git; source of truth stays on disk) ---
+*.edat2
+*.emrg
+*.emrg2
+Untitled.txt
+Untitled1.emrg2
+Untitled2.emrg
+
+# --- Raw / unfiltered pipeline checkpoints (large, regenerable from E-Prime source) ---
+00_raw.xlsx
+raw_data.xlsx
+raw+processed.xlsx
+all_data_raw.xlsx
+allData_exp*.xlsx
+real_exp_data.xlsx
+
+# --- Office lock files ---
+~$*.doc
+~$*.docx
+~$*.xlsx
+
+# --- Notebook checkpoints ---
+.ipynb_checkpoints/

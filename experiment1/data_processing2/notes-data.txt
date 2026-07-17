@@ -1,0 +1,32 @@
+Data notes
+-----------------------------------
+ - 55 ss in total 
+ - 168 trials per subject (28 trials per condition if 6 conditions, but the control should be counted as one.)
+ - 3 participant removed because of thechnical problems (1,17,45)
+ - 7 removed because their ACC < 80% or 85% - ASK ARMINA (3,6,8,10,15,19,21)
+ - this leads to data from 45 participants (45 x 168 = 7560 trials in total) 
+
+ - ACC = 1 -> 7088 trials 
+ - ACC = 0 -> 472
+
+FROM SPSS
+ Valid N
+ N=7088
+ N=6750 (trials after cut outliers) 
+
+-----------------------
+from Q_data:
+ - 3 ss excluded (cliched more than 75% one and the same button - 18,23,25,55)
+
+-----------------------
+Calculating mean and SD 
+	Grand mean =	525.9103466
+	SD=	92.19582555
+	remove above	710.3019977
+	
+	- removed 2 ss - 2 and 51
+
+
+
+ 
+ 

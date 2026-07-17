@@ -1,0 +1,206 @@
+PROCEDURE NOTES - DATA PROCESSING ROADMAP
+==========================================
+Applies to: Experiment 2 (and future experiments following the same structure)
+For data results and exclusion outcomes, see: data_notes.txt
+
+==========================================================================
+STEP 0 — RAW DATA EXTRACTION (human, one-time)
+==========================================================================
+1. Collect individual .edat2 files from experiment folder
+2. Merge in E-DataAid -> save as .emrg2
+3. Export as .txt (UTF-16 LE encoding, tab-delimited)
+   NOTE: first line of the exported .txt is the file path, not the header — skip row 0 when reading in Python
+4. Run remap_alldata.py to assign correct participant IDs:
+   - Two E-Prime scripts (A and B) both number subjects 1-31 internally
+   - A script participants keep their E-Prime numbers
+   - B script participants are remapped to 40-70 range by matching names from the data collection log
+   - Save result as allData_exp2.xlsx
+
+5. Split allData_exp2.xlsx into two source files:
+   - exp_data/00_raw.xlsx   — experimental trial rows only
+     Filter: Procedure[SubTrial] != NaN (or use ExperimentName / Running columns to isolate trial rows)
+   - questions/00_raw.xlsx  — question response rows only
+     Filter: Running[SubTrial] = 'QuestionsList'
+
+==========================================================================
+PROCESSING ORDER — READ BEFORE STARTING (changed 2026-07-16)
+==========================================================================
+The two pipelines are now independent except for one file. questions no longer needs anything
+from exp_data (the accuracy-exclusion dependency was removed — see Step 01 below), so the clean
+order is:
+
+  1. questions/pipeline.ipynb  Steps 00-04, run to completion — produces
+                                03_likert_excluded_subjects.txt and 04_aggregated.xlsx
+  2. exp_data/pipeline.ipynb   Steps 00-11, run to completion — Step 03 reads questions'
+                                03_likert_excluded_subjects.txt; Step 10 reads questions'
+                                04_aggregated.xlsx
+
+==========================================================================
+QUESTIONS PIPELINE — questions/pipeline.ipynb
+==========================================================================
+
+Step 01 — Select columns, clean condition names
+  - Keep columns: Subject, Age, Sex, Handedness, Procedure[Trial], QuestionsList,
+                  QuestionsList.Cycle, Qs, QControl.RESP, QControl.RT
+  - Strip '1' suffix from Procedure[Trial] values (e.g. 'actionC1' -> 'actionC')
+  - NO accuracy exclusion here (changed 2026-07-16, was: hardcoded `EXCLUDED = [1, 2, 45, 59]`
+    list matching exp_data's Step 02) — accuracy can only be computed in exp_data, and low-accuracy
+    subjects naturally disappear from the final merged analysis (exp_data Step 10's left join keeps
+    only exp_data's subjects). This pipeline now has no dependency on exp_data at all.
+  - Save: 01_cleaned.xlsx
+
+Step 02 — Likert response quality check
+  - Flag subjects whose dominant response (most frequent rating) exceeds 75% of all their responses
+  - Compute mean rating per subject per condition (actionC, actionNC, controlLeft, controlRight)
+  - Compute range = max(condition mean) - min(condition mean) per subject
+  - Save report: 02_likert_report.xlsx (two sheets: scale_distribution, condition_means)
+  - Do NOT exclude yet — decisions are made in Step 03
+
+Step 03 — Exclude careless Likert responders + write the excluded-subjects list
+  - Reads from 02_likert_report.xlsx
+  - Exclusion rule: dominant_% > 75 AND range <= 0.5  ->  EXCLUDE
+  - Keep rule:      dominant_% > 75 AND range >  0.5  ->  KEEP (still discriminates conditions)
+  - Reference: Meade & Craig (2012) — LongString approach; same threshold as Experiment 1
+  - Save: 03_excl_likert.xlsx
+  - Save: 03_likert_excluded_subjects.txt (plain comma-separated IDs) — this is the ONE file
+    exp_data reads from this pipeline, read dynamically there (never hardcoded). Replaces the
+    previous approach where exp_data recomputed the same dominant_%/range formula itself from
+    02_likert_report.xlsx.
+
+Step 04 — Aggregate ratings per subject x condition x question type
+  - Map Procedure[Trial] -> action_consistency (actionC=consistent, actionNC=inconsistent,
+    controlLeft/controlRight=control)
+  - Map QuestionsList number -> question_type:
+      1 = predict  (предвидихте)
+      2 = control  (контролирахте)
+      3 = caused   (предизвикахте)
+  - Aggregate: mean(QControl.RESP) per subject x action_consistency x question_type
+  - Save: 04_aggregated.xlsx (sheets: long, wide)
+    - long:  sub, action_consistency, question_type, mean_rating
+    - wide:  sub, Age, Sex, Handedness, + one column per condition x question combination
+
+==========================================================================
+EXP DATA PIPELINE — exp_data/pipeline.ipynb
+==========================================================================
+
+Step 01 — Filter to one row per experimental trial, select columns, add acc/rt
+  - Filter 1: Procedure[SubTrial] = 'pro'   (keeps only experimental sub-trial rows)
+  - Filter 2: Running[Trial] = 'Exp'         (excludes practice trials)
+  - Filter 3: pic in ['6L', '6R']            (keeps only last slide per trial, where response was captured)
+  - acc/rt: merge from ColorSlideLeft or ColorSlideRight depending on Running[SubTrial]
+  - Save: 01_filtered.xlsx
+  - Expected: 60 subjects x 168 trials = 10080 rows
+
+Step 02 — Exclude subjects below accuracy threshold
+  - Threshold: 85% (same as Experiment 1)
+  - Compute acc per subject across all 168 trials
+  - Exclude below threshold; save: 02_excl_acc.xlsx
+  - No longer writes a subject list for questions to read (changed 2026-07-16) — questions doesn't
+    need it, see questions pipeline Step 01 note
+
+Step 03 — Exclude careless Likert responders
+  *** REQUIRES questions/pipeline.ipynb Steps 00-03 to be completed first ***
+  - Reads the excluded-subject list questions Step 03 writes directly
+    (questions/03_likert_excluded_subjects.txt) — no recomputation from the report, no hardcoded
+    list (changed 2026-07-16, was: recompute dominant_%/range from questions/02_likert_report.xlsx)
+  - Save: 03_excl_likert.xlsx
+
+Step 04 — Remove error trials
+  - Remove rows where acc = 0
+  - Save: 04_excl_errors.xlsx
+
+Step 05 — Calculate gaze_congruency, action_consistency, initiation_time
+  - actual_color_location: colorLeft == 'white' -> 'right', else 'left'
+  - actual_gaze_dir: Running[SubTrial] == 'ListLeft' -> 'left', else 'right'
+  - wanted_gaze_dir: from Choice[Trial] (action trials) or condition name (control) — computed but
+    unused downstream (action_consistency uses the direct map below instead). Kept as-is because
+    Exp2/3 have Choice[Trial] and it's genuinely easy to compute here — this is NOT unified with
+    Exp1 (which lacks the column and skips this computation entirely); that's an intentional
+    per-experiment difference, not an inconsistency to fix.
+  - gaze_congruency: actual_color_location == actual_gaze_dir -> 'congruent', else 'incongruent'
+    (do NOT use E-Prime's GazeColorConsistency column — it has an 'offline' category and a typo)
+  - action_consistency: direct map from Procedure[Trial]:
+      actionC       -> consistent
+      actionNC      -> inconsistent
+      controlLeft   -> control
+      controlRight  -> control
+  - initiation_time (renamed from timing_covariate 2026-07-16): SlideXeroA.RT.fillna(XeroDur)
+      action trials: SlideXeroA.RT (when participant made directional response; NaN in control)
+      control trials: XeroDur (random delay 350-550ms assigned by E-Prime; NaN in action)
+  - Save: 05_gaze_congruency.xlsx
+
+Step 06 — RT outlier trimming (Python ±2SD)
+  - For each Subject x gaze_congruency x action_consistency cell: drop trials outside cell mean
+    +/- 2SD, then take the cell mean of what remains
+  - No SPSS, no numeric w1/w2 recoding — grouping is done directly on the string labels
+  - Save: 06_trimmed.xlsx (columns: sub, gaze_congruency, action_consistency, rt_mean)
+  - SPSS's 2w.SPS script is NOT used — confirmed bug, see SPSS_2w_script_bug_summary.txt in the
+    project root (it under-trims by silently keeping RT=0 trials its own filter logic flags for
+    exclusion, because SPSS treats SYSMIS*0 as 0 in `FiltRT = filt*rt`)
+
+Step 07 — Participant-level mean RT outlier removal (automated)
+  - Reads: 06_trimmed.xlsx
+  - Computes: mean of rt_mean across all 6 cells per subject (= overall mean RT)
+  - Criterion: overall mean RT > grand mean + 2 SD -> exclude
+  - Save: 07_no_outliers.xlsx
+
+Step 08 — Reshape to long + wide (automated)
+  - Reads: 07_no_outliers.xlsx — already string-labeled and one-row-per-cell, just a pivot
+  - Save: 08_ranova_input.xlsx (sheets: long, wide)
+    - long:  sub, gaze_congruency, action_consistency, rt_mean
+    - wide:  sub, incong_incons, incong_cons, incong_ctrl, cong_incons, cong_cons, cong_ctrl
+
+Step 09 — Mean initiation time per subject (ANCOVA covariate)
+  - initiation_time is SlideXeroA.RT on action trials (real behavioral measure) but XeroDur on
+    control trials (arbitrary experimenter delay) — averaging across both would mix a genuine
+    measure with noise, and there's no comparable "prediction" construct for control trials
+  - Mean computed ONLY across action trials (consistent + inconsistent), reading 05_gaze_congruency.xlsx
+  - Save: 09_initiation_time.xlsx (columns: sub, mean_initiation_time)
+  - Any ANCOVA using this covariate should itself be restricted to the 4 action-condition cells
+    (cong_cons, cong_incons, incong_cons, incong_incons) — do not include the *_ctrl columns
+
+Step 10 — Merge question ratings + initiation time into wide RT data (automated)
+  *** Requires questions/pipeline.ipynb Step 04 to be completed first ***
+  - Reads: 08_ranova_input.xlsx (sheet: wide) — exp data, 48 subjects
+  - Reads: questions/04_aggregated.xlsx (sheet: wide) — question ratings, 53 subjects (questions no
+    longer pre-filters by accuracy, see questions Step 01 note — doesn't matter here, left join
+    only keeps the 48 exp_data subjects anyway)
+  - Reads: 09_initiation_time.xlsx — covariate
+  - Left join on sub: keeps only subjects present in exp data
+  - Save: 10_questions_data_added.xlsx
+    One row per subject: RT means per condition + question ratings per condition x question type +
+    demographics + mean_initiation_time
+
+Step 11 — Export to JASP
+  - Save: jasp/analysis.csv (canonical, overwritten every run)
+  - Save: 11_merged_initTime_for_ANCOVA.xlsx (in exp_data/, not jasp/ — follows the numbered
+    checkpoint naming convention; identical content to jasp/analysis.csv, kept as a stable xlsx
+    copy for opening in JASP or continuing a Python analysis without worrying it'll change if the
+    pipeline re-runs)
+
+==========================================================================
+VARIABLE REFERENCE
+==========================================================================
+Subject          participant ID (A script: 1-30, B script: 40-70)
+Procedure[Trial] condition: actionC, actionNC, controlLeft, controlRight
+Running[Trial]   'Exp' for experimental trials, 'Questions' for question trials
+Running[SubTrial]last slide shown: ListLeft or ListRight (determines which ACC/RT column to use)
+                 also 'QuestionsList' for question response rows
+pic              '6L' or '6R' = last slide per experimental trial (where response was captured)
+ColorSlideLeft.ACC/RT  response data when Running[SubTrial] = ListLeft
+ColorSlideRight.ACC/RT response data when Running[SubTrial] = ListRight
+SlideXeroA.RT    initiation time (action conditions only; NaN in control)
+XeroDur          random delay duration (control conditions only; NaN in action)
+QControl.RESP    Likert rating response (1-7)
+QuestionsList    which question (1=predict/предвидихте, 2=control/контролирахте, 3=caused/предизвикахте)
+
+==========================================================================
+CARELESS RESPONDING CRITERIA (Likert quality check)
+==========================================================================
+Reference: Meade & Craig (2012) — Psychological Methods, 17(3), 437-455
+
+Flag:    dominant_% > 75  (same response used in more than 75% of all question rows)
+Exclude: flagged AND range <= 0.5  (condition means all near-identical; no discrimination)
+Keep:    flagged AND range >  0.5  (still differentiates between conditions)
+
+range = max(condition mean) - min(condition mean) across actionC, actionNC, controlLeft, controlRight
