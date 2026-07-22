@@ -96,7 +96,14 @@
       "Bash(mkdir -p /tmp/palette_check)",
       "Bash(echo '{\"type\":\"module\"}')",
       "Bash(cp \"/c/Users/KALOYA~1/AppData/Local/Temp/claude/bundled-skills/2.1.212/0571efd68212b3108648981f0a0df951/dataviz/scripts/validate_palette.js\" .)",
-      "Bash(node validate_palette.js \"#2a78d6,#008300,#e87ba4\" --mode light --pairs all)"
+      "Bash(node validate_palette.js \"#2a78d6,#008300,#e87ba4\" --mode light --pairs all)",
+      "Bash(rm -f behavior_soa_corr.txt behavior_soa_corr2.txt behavior_soa_corr3.txt effectsize_anova_dump.txt experiment1/data_processing3/exp_data/jasp/mixed_full.json)",
+      "Bash(rm -f experiment1/data_processing3/exp_data/jasp/mixed_dump.txt)",
+      "Bash(powershell -Command \"Get-Item 'interim-layout.docx' | Select-Object Name,Length,Attributes\")",
+      "Bash(rm -f \"Report_Roz_Exp1.docx\" \"Report_Roz_Exp1 - Copy.docx\" \"interim-layout - Copy - Copy - Copy - Copy.docx\")",
+      "Bash(rm -rf \"wetransfer_interim-layout-copy-copy-copy-copy-docx_2025-09-05_1902\")",
+      "Bash(grep -oP '^@\\\\w+\\\\{\\\\K[^,]+' \"/c/Users/Kaloyan Zdravkov/Desktop/Congitive Science/MasterThesis/GC + agency/literature/Agency and CG - merged.bib\")",
+      "Bash(unzip -l \"experiment1/data_processing3/exp_data/jasp/mixed_anova_all_experiments.jasp\")"
     ]
   }
 }

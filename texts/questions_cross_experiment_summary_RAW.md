@@ -1,8 +1,10 @@
 # Cross-Experiment Summary — Questionnaire (SoA Ratings) Results
 
-[NOTE TO SELF — working document. This consolidates the questionnaire-data trends flagged separately in each experiment's Analyses section (see the [NOTE TO SELF] markers in `_03.exp1_full_RAW.md`, `_03.exp2_full_RAW.md`, `_03.exp3_full_RAW.md`). Intended destination: the cross-experiment / General Discussion chapter (see `2.structure.md`, Chapter 6) — this file is raw material for that section, not finished prose, and it is a candidate for absorbing the "Question type within each Consistency level" decomposition that is currently repeated in full in each experiment's chapter.]
+[Working notes for the cross-experiment / General Discussion chapter — not finished prose.]
 
-All three experiments used the same 3 (Question type: caused, controlled, predicted) × 3 (Action Consistency: consistent, inconsistent, control) repeated-measures ANOVA on the questionnaire ratings, with Greenhouse–Geisser correction throughout. Final samples: Experiment 1, N = 40; Experiment 2, N = 48; Experiment 3, N = 49.
+All three experiments used the same 3 (Question type: caused, controlled, predicted) × 3 (Action Consistency: consistent, inconsistent, control) repeated-measures ANOVA on the questionnaire ratings, with Greenhouse–Geisser correction throughout. Final samples: Experiment 1, N = 41; Experiment 2, N = 48; Experiment 3, N = 49.
+
+[OPEN TASK — Experiment 1's questionnaire ANOVA (this table, and the matching one in `_03.exp1_full_RAW.md`) was run on N=40. Experiment 1's final RT sample is N=41 (ss2 excluded); if the questionnaire sample is meant to track the same final RT sample, this needs rerunning on N=41. Experiment 3's questionnaire sample is N=49, matching the RT sample, but its two RT-outlier-excluded subjects are ss11/ss32 specifically — worth confirming the questionnaire analysis used the same two.]
 
 ## Omnibus effects across experiments
 
@@ -12,11 +14,11 @@ All three experiments used the same 3 (Question type: caused, controlled, predic
 | Question type | F(1.70, 66.47) = 20.36, *p* < .001, η²ₚ = .343 | F(1.64, 77.01) = 3.52, *p* = .043, η²ₚ = .070 | F(1.87, 89.85) = 1.93, *p* = .153, η²ₚ = .039 (n.s.) |
 | Consistency × Question type | F(2.33, 90.76) = 26.31, *p* < .001, η²ₚ = .403 | F(2.18, 102.31) = 11.14, *p* < .001, η²ₚ = .192 | F(2.41, 115.46) = 6.27, *p* = .001, η²ₚ = .116 |
 
-**Action Consistency** — the manipulation check — holds in all three experiments; the paradigm reliably shifts explicit SoA ratings regardless of response modality. The effect size roughly halves from Experiment 1 to Experiment 2, then stays essentially flat into Experiment 3 (.673 → .394 → .378). This is not a smooth three-point gradient — it looks like a single step down after Experiment 1, followed by a plateau, rather than a continuous decline tracking the keypress → mouse → touch embodiment progression.
+**Action Consistency** (the manipulation check) holds in all three experiments — the paradigm reliably shifts explicit SoA ratings regardless of response modality. Effect size roughly halves from Experiment 1 to Experiment 2, then stays flat into Experiment 3 (.673 → .394 → .378): a step down after Experiment 1, then a plateau, not a smooth decline tracking the keypress → mouse → touch progression.
 
-**Question type** — the questions' overall differences in endorsement, collapsed across condition — shows the cleanest monotonic trend in the whole dataset: strongly significant in Experiment 1, weak but still significant in Experiment 2, and gone entirely by Experiment 3. Taken at face value, this says the three questions become *less distinguishable from one another in general level* as the direction-selection response becomes more embodied — the opposite of what an embodiment-amplifies-everything account would predict, and worth flagging explicitly rather than glossing over.
+**Question type** — how much the three questions differ from each other overall — shows the cleanest monotonic trend in the dataset: strongly significant in Experiment 1, weak but still significant in Experiment 2, gone by Experiment 3. The three questions become *less* distinguishable from one another as the direction-selection response becomes more embodied — the opposite of what a simple "embodiment amplifies everything" account would predict.
 
-**Interaction** — also shrinks monotonically (.403 → .192 → .116) but stays significant throughout, meaning the two decompositions below remain worth reporting in every experiment even as the effect gets smaller.
+**Interaction** — also shrinks monotonically (.403 → .192 → .116) but stays significant throughout, so both decompositions below are worth reporting in every experiment even as the effect shrinks.
 
 ## Direction A: does Action Consistency affect each question differently?
 
@@ -28,13 +30,13 @@ Simple main effects of Consistency, within each question:
 | Controlled | F(2,78) = 54.29, *p* < .001 | F(2,94) = 23.40, *p* < .001 | F(2,96) = 25.86, *p* < .001 |
 | Predicted | F(2,78) = 44.77, *p* < .001 | F(2,94) = 8.32, *p* < .001 | F(2,96) = 13.44, *p* < .001 |
 
-The **ranking of item sensitivity is identical in all three experiments** (causation ≈ control > prediction) — a genuinely robust pattern. But the pairwise structure underneath it is *not* a monotonic gradient:
+The **ranking of item sensitivity is identical in all three experiments** (causation ≈ control > prediction) — a robust pattern. But the pairwise structure underneath it is not a monotonic gradient:
 
 - **Experiment 1**: causation and control fully separate all three consistency levels (consistent > inconsistent > control, all pairwise *p* < .001); prediction separates consistent from the other two but not inconsistent from control.
-- **Experiment 2**: for *all three* questions, consistent and inconsistent no longer differ from each other — only the active-vs-control distinction survives. Participants register "I made a choice," not "my choice matched the outcome."
-- **Experiment 3**: the consistent-vs-inconsistent distinction *returns* for all three questions (all *p* ≤ .003) — closer to Experiment 1 than to Experiment 2. The one exception that survives unchanged from Experiment 1 is prediction's failure to separate inconsistent from control {note to self - make sence .... they "predicted the opposite direction) (Exp1 *p* = .660; Exp3 *p* = .159).
+- **Experiment 2**: for all three questions, consistent and inconsistent no longer differ from each other — only the active-vs-control distinction survives. Participants register "I made a choice," not "my choice matched the outcome."
+- **Experiment 3**: the consistent-vs-inconsistent distinction returns for all three questions (all *p* ≤ .003) — closer to Experiment 1 than to Experiment 2. One thing stays unchanged from Experiment 1: prediction still fails to separate inconsistent from control (Exp1 *p* = .660; Exp3 *p* = .159). This makes sense — in the inconsistent condition participants effectively predicted the wrong (opposite) direction, so their sense of having predicted correctly is about as low as in control, where there was nothing to predict at all.
 
-So this is a dip, not a trend: Exp2 is the outlier here, not the midpoint of a straight line from Exp1 to Exp3. Whatever caused the loss of graded consistent/inconsistent discrimination in the mouse-based experiment did not persist into the touchscreen version.
+So this is a dip, not a trend: Experiment 2 is the outlier, not the midpoint of a line from Experiment 1 to Experiment 3. Whatever caused the loss of graded consistent/inconsistent discrimination in the mouse-based experiment didn't carry over into the touchscreen version.
 
 ## Direction B: do the three questions differ from each other within a condition?
 
@@ -46,11 +48,13 @@ Simple main effects of Question type, within each consistency level:
 | Inconsistent | F(2,78) = 28.74, *p* < .001 | F(2,94) = 4.23, *p* = .017 | F(2,96) = 0.32, *p* = .725 (n.s.) |
 | Control | F(2,78) = 23.05, *p* < .001 | F(2,94) = 13.17, *p* < .001 | F(2,96) = 11.82, *p* < .001 |
 
-**This is the cleanest monotonic trend across the whole questionnaire dataset.** In the two active conditions, the ability of the three questions to differentiate from one another declines in a straight line across the embodiment gradient — strong in Experiment 1, weakening in Experiment 2, gone by Experiment 3 — while staying essentially constant and highly significant in the control condition throughout. In other words, the more effortful/embodied the direction-selection response becomes, the less participants seem to separate causation from control from prediction *while they are actively doing something*, even though they still separate them clearly *when they are not*.
+**This is the cleanest monotonic trend in the whole questionnaire dataset.** In the two active conditions, the questions' ability to differentiate from one another declines in a straight line across the embodiment gradient — strong in Experiment 1, weakening in Experiment 2, gone by Experiment 3 — while staying constant and highly significant in the control condition throughout. The more embodied the direction-selection response, the less participants separate causation from control from prediction *while actively doing something*, even though they still separate them clearly *when they're not*.
 
 ## The one finding that replicates without exception
 
-In the control (passive) condition, **prediction is rated higher than both causation and control in all three experiments**, with causation and control never differing significantly from each other:
+Control is the only one of the three conditions where this question-type effect is significant in **all three** experiments (see the table above — Consistent is only significant in Experiment 1; Inconsistent only in Experiments 1–2). That's why the pairwise breakdown below is shown for control only: it's the one condition where decomposing the effect is justified in every experiment.
+
+In the control (passive) condition, **prediction is rated higher than both causation and control in all three experiments**, and causation and control never differ significantly from each other:
 
 | | Experiment 1 | Experiment 2 | Experiment 3 |
 |---|---|---|---|
@@ -58,20 +62,224 @@ In the control (passive) condition, **prediction is rated higher than both causa
 | Controlled vs. Predicted | *p* < .001, *d* = −0.77 | *p* = .003, *d* = −0.52 | *p* = .021, *d* = −0.39 |
 | Caused vs. Controlled | *p* = .048, *d* = 0.15 (marginal) | *p* = .444, *d* = −0.09 (n.s.) | *p* = .075, *d* = −0.16 (marginal) |
 
-(note to self - is this table for contol condition? maibe in additional material we cal also add tables for the other two)
+This is the single most trustworthy cross-experiment claim from the questionnaire data: whenever the gaze movement was externally generated, participants rated it as more *predictable* than either *caused* or *controlled* — and never rated causation and control as different from each other. It survives response modality, sample, and the general shrinkage of every other effect in the dataset. A strong, low-risk claim for the General Discussion.
 
-This is arguably the single most trustworthy cross-experiment claim available from the questionnaire data: whenever the gaze movement was externally generated (no action taken), participants rated it as more *predictable* than either *caused* or *controlled* — and never rated causation and control as different from each other. It survives response modality, sample, and the general shrinkage of every other effect in the dataset. A natural candidate for a strong, low-risk claim in the General Discussion.
+## Theoretical interpretation
 
-## Theoretical interpretation (working notes)
+This isn't a failed replication of a predicted gradient. The original prediction (H3, `2.structure.md`) was that more embodiment would simply *amplify* the action-outcome-consistency effect across experiments. Instead, some parts of the questionnaire structure collapse across the embodiment gradient while others stay fully intact.
 
-This is not treated as a failed replication of a predicted gradient. The original prediction (H3, `2.structure.md`) was that increasing embodiment would simply *amplify* the action-outcome-consistency modulation across experiments. What the data show instead is more differentiated, and arguably more informative: some aspects of the questionnaire structure collapse across the embodiment gradient while others stay fully intact.
+**Why the Question-type main effect disappears while the Consistency main effect doesn't.** As the direction-selection response becomes more embodied (keypress → mouse → touch), the experience of having acted seems to become automatic and holistic enough that its sub-components — causation, control, prediction — stop being finely differentiated; they collapse toward a single sense of "I did this." The coarser active-versus-passive distinction survives because it doesn't depend on that finer differentiation: "I acted" versus "I didn't" stays an obvious judgment even once the finer structure within the active conditions has blurred.
 
-**Why the Question-type main effect disappears while the Consistency main effect does not.** As the direction-selection response becomes more embodied (keypress → mouse → touch), the experience of having acted appears to become sufficiently automatic and holistic that its sub-components — causation, control, prediction — stop being finely differentiated from one another; they collapse toward a single undifferentiated sense of "I did this." The coarser active-versus-passive distinction survives throughout because it doesn't depend on that finer differentiation: "I acted" versus "I did not act" remains an obvious judgment even once the finer structure within the active conditions has blurred.
+**Why the consistent-vs-inconsistent gap shrinks.** With a more embodied action, the act itself may carry enough felt responsibility that a mismatched outcome is easy to own regardless — "I moved my hand, so I'm responsible for what happened, whichever direction it went." With a minimal action like a keypress, a mismatched outcome is easier to disown ("that wasn't really me") — consistent with Experiment 1 showing the largest consistent-vs-inconsistent gaps, and Experiments 2/3 showing routinely smaller ones (see the Direction A pairwise *d*s above).
 
-**Why the consistent-vs-inconsistent gap shrinks.** With a more embodied action, the act itself may carry enough felt responsibility that a mismatched outcome is easy to own regardless — "I moved my hand, so I'm responsible for what happened, whichever direction it went." With a minimal action like a keypress, a mismatched outcome is comparatively easy to disown ("that wasn't really me"), which is consistent with Experiment 1 showing the largest consistent-vs-inconsistent gaps of the three experiments, and Experiment 2/3 showing routinely smaller ones (see the Direction A pairwise *d*s above).
-
-**Important scope restriction — no cross-experiment comparison of absolute rating level.** This account must be stated purely in terms of *relative, within-experiment structure* (how much conditions differ from one another; how much items differ from one another), not in terms of absolute SoA intensity rising or falling across experiments. Each experiment is an independent between-subjects sample, and no participant ever rated more than one response modality — there is no shared calibration point across experiments, so a given numeral on the 7-point scale is not guaranteed to mean the same subjective intensity in Experiment 1 as in Experiment 2 or 3. The raw means happen to be lower in Experiments 2 and 3 than in Experiment 1, but this is not usable as evidence either — the comparison itself is not licensed by the design. What *is* legitimately comparable across experiments is the relative structure computed independently within each sample: effect sizes, simple-effects patterns, and pairwise differentiation — which is exactly what the tables above report, and exactly what this interpretation should be restricted to.
+**Scope restriction — no cross-experiment comparison of absolute rating level.** This account has to stay in terms of *relative, within-experiment structure* (how much conditions differ from each other; how much items differ from each other), not absolute SoA intensity rising or falling across experiments. Each experiment is an independent sample, and no participant rated more than one response modality — there's no shared calibration point, so a given number on the 7-point scale isn't guaranteed to mean the same thing in Experiment 1 as in Experiment 2 or 3. The raw means are lower in Experiments 2 and 3 than in Experiment 1, but that isn't usable evidence either — the comparison itself isn't licensed by the design. What is legitimately comparable across experiments is relative structure computed independently within each sample — effect sizes, simple-effects patterns, pairwise differentiation — which is what the tables above report, and what this interpretation is restricted to.
 
 ## Methodological note on data quality
 
-Normality (Shapiro–Wilk) does **not** track the embodiment gradient cleanly: Experiment 1 was worst (8 of 9 cells violated), Experiment 2 was best (3 of 9), Experiment 3 intermediate (5 of 9). This is presumably driven by how close each experiment's control-condition ratings sit to the scale floor (lowest in Exp1, closer to the scale midpoint in Exp2/3) rather than by anything about the response modality itself — worth a one-line caveat if the cross-experiment section leans on effect-size comparisons, since floor effects can themselves shrink measured effect sizes independent of any real psychological change.
+Normality (Shapiro–Wilk) doesn't track the embodiment gradient cleanly: Experiment 1 was worst (8 of 9 cells violated), Experiment 2 best (3 of 9), Experiment 3 in between (5 of 9). This is presumably driven by how close each experiment's control-condition ratings sit to the scale floor (lowest in Exp1, closer to the scale midpoint in Exp2/3), not by the response modality itself — worth a one-line caveat if the cross-experiment section leans on effect-size comparisons, since floor effects can shrink measured effect sizes on their own.
+
+## Between-experiment comparison of question ratings, per action condition
+
+Everything above compares conditions and questions *within* each experiment separately. This section instead asks the reverse question directly: for a given question and a given action condition, do the raw rating levels themselves differ across Experiment 1/2/3? Nine one-way ANOVAs (`Experiment` as a between-subjects factor, one per question × condition combination), computed on `mixed_anova_all_experiments.csv` (raw 1–7 Likert points, subject-level means, not standardized — standardizing within each experiment separately would remove the exact between-experiment differences this test is designed to detect).
+
+| | Caused | Controlled | Predicted |
+|---|---|---|---|
+| Consistent | F(2,135)=25.98, *p*<.001, η²ₚ=.278 | F(2,135)=5.53, *p*=.005, η²ₚ=.076 | F(2,135)=10.45, *p*<.001, η²ₚ=.134 |
+| Inconsistent | F(2,135)=7.99, *p*=.001, η²ₚ=.106 | F(2,135)=3.35, *p*=.038, η²ₚ=.047 | F(2,135)=3.59, *p*=.030, η²ₚ=.051 |
+| Control | F(2,135)=1.92, *p*=.150 (n.s.), η²ₚ=.028 | F(2,135)=5.46, *p*=.005, η²ₚ=.075 | F(2,135)=0.93, *p*=.397 (n.s.), η²ₚ=.014 |
+
+Six of the nine cells are significant. Descriptively, Experiment 1 is higher than Experiments 2 and 3 on all three questions in the **consistent** condition (caused: 5.70 vs. 3.88 vs. 3.56; controlled: 4.39 vs. 3.32 vs. 3.55; predicted: 4.84 vs. 3.69 vs. 3.67), and the direction reverses for the *controlled* question in the **control** condition, where Experiment 1 is lower than Experiments 2 and 3 (1.52 vs. 2.30 vs. 2.29). Experiment 2 and Experiment 3 are close to each other almost everywhere — Holm-corrected post hoc comparisons find only one significant Experiment 2-vs-3 pairwise difference across all nine cells (in `inconsistent_caused`, and only at the uncorrected level, not surviving correction), while Experiment 1 differs from at least one of the other two in every significant cell.
+
+Pairwise breakdown (Holm-corrected) for the six significant cells:
+
+| | Exp1 vs Exp2 | Exp1 vs Exp3 | Exp2 vs Exp3 |
+|---|---|---|---|
+| consistent_caused | *p*<.001, *g*=1.27 | *p*<.001, *g*=1.47 | n.s. |
+| consistent_control | *p*=.006, *g*=0.69 | *p*=.045, *g*=0.49 | n.s. |
+| consistent_predict | *p*<.001, *g*=0.87 | *p*<.001, *g*=0.79 | n.s. |
+| inconsistent_caused | *p*=.067 (n.s.) | *p*=.001, *g*=0.82 | *p*=.053 (n.s.) |
+| inconsistent_control | *p*=.056 (n.s.) | *p*=.113 (n.s.) | n.s. |
+| control_control | *p*=.005, *g*=−0.67 | *p*=.005, *g*=−0.63 | n.s. |
+
+**Because ratings flip sign depending on condition, this is unlikely to be a pure response-style artifact.** If Experiment 1's participants simply used higher numbers throughout regardless of condition, the direction would be the same everywhere; instead it's higher than Exp2/3 in the consistent condition and lower in the control condition specifically for the *controlled* question. That argues for a genuine difference in subjective experience tied to whatever differs procedurally between Experiment 1 and Experiments 2/3, rather than a scale-usage bias.
+
+**Theoretical framing.** This maps onto the same keypress-vs-spatial-response split already established for the RT interaction and the initiation-time correlation (see the RT summary, Part 3 and its Theoretical interpretation below): Experiment 1 used a keyboard button for the direction-selection response, while Experiments 2 and 3 used a mouse click and a touchscreen tap, respectively. If the more embodied response modality changes how tightly action monitoring is coupled to the outcome, that would plausibly show up in explicit ratings too, not only in RT.
+
+**Open questions:**
+- Does the specific direction of the Exp1 vs. Exp2/3 difference (higher in consistent, lower in control-condition "controlled" ratings) have a principled account, or does it need a bespoke explanation per question/condition?
+- Per-subject centering (subtracting each subject's own mean across all nine ratings before running these ANOVAs) would be a direct test of the response-style-bias alternative raised above — not yet run.
+- A single omnibus mixed ANOVA (Experiment × Question × Condition) would formally test whether the effect summarized here as "6 separate one-way ANOVAs" is really one coherent interaction, rather than a family of related but distinct tests — not yet run.
+
+---
+
+# Cross-Experiment Summary — Reaction Time (Gaze Cueing) Results
+
+All three experiments used the same 2 (Gaze Congruency: congruent, incongruent) × 3 (Action Consistency: consistent, inconsistent, control) repeated-measures ANOVA on mean RT, Greenhouse–Geisser corrected, plus a follow-up 2 × 2 ANCOVA (consistent vs. inconsistent only, initiation time as covariate, control excluded because initiation time isn't a meaningful measure there). Final samples: Experiment 1, N = 41; Experiment 2, N = 48; Experiment 3, N = 49.
+
+RT trial-level data across all three experiments is floor-cut at 200ms before the ±2SD trim: a cluster of near-zero-RT trials — mostly exact zeros, a data-handling artifact rather than genuine fast responses — was large enough in each cell to inflate that cell's own SD past the point where the trim's ±2SD window still excluded them. Experiment 1's participant-level RT-outlier exclusion is ss2; Experiment 3's are ss11 and ss32.
+
+# Part 1 — Summary of ANOVAs (per experiment)
+
+## Omnibus rANOVA effects across experiments
+
+| Effect | Experiment 1 | Experiment 2 | Experiment 3 |
+|---|---|---|---|
+| Gaze congruency | F(1,40)=14.25, *p*<.001, η²ₚ=.263 | F(1,47)=17.37, *p*<.001, η²ₚ=.270 | F(1,48)=13.72, *p*<.001, η²ₚ=.222 |
+| Action consistency | F(1.45,58.15)=5.38, *p*=.014, η²ₚ=.119 | F(1.29,60.56)=13.28, *p*<.001, η²ₚ=.220 | F(1.49,71.40)=3.97, *p*=.034, η²ₚ=.076 |
+| Gaze × Action | F(1.98,79.38)=1.09, *p*=.341, η²ₚ=.027 (n.s.) | F(1.90,89.38)=12.17, *p*<.001, η²ₚ=.206 | F(1.71,82.23)=13.43, *p*<.001, η²ₚ=.219 |
+
+**Gaze congruency** — the basic gaze-cueing effect — replicates cleanly across all three experiments with no clear gradient (η²ₚ = .26 → .27 → .22); the manipulation works regardless of response modality.
+
+**Action consistency** is robust in all three, but not monotonic: strongest in Experiment 2, weaker and roughly comparable in Experiments 1 and 3 (.119, .220, .076). Unlike the questionnaire's Action Consistency effect (a clean step-down-then-plateau), the RT version peaks in the middle experiment.
+
+**Gaze × Action — the key divergence.** Not significant in Experiment 1 (keypress), but highly significant and nearly identical in size in Experiments 2 and 3 (mouse, touch: η²ₚ = .206 vs. .219). This looks like a step change between response modalities rather than a gradient — keypress on one side, the two spatially-extended direction-selection responses (mouse click, touchscreen point) on the other. (This is a description of three separate per-experiment tests, not yet a formal cross-experiment comparison — see Part 3.)
+
+## Decomposition: simple congruency effect within each consistency condition
+
+The congruency effect (incongruent − congruent RT, ms) was examined within each level of Action Consistency, Bonferroni-corrected as its own family of three comparisons per experiment (exploratory in Experiment 1, since its omnibus interaction wasn't significant; the interaction's proper decomposition in Experiments 2 and 3, where it was):
+
+| Condition | Experiment 1 | Experiment 2 | Experiment 3 |
+|---|---|---|---|
+| Consistent | 15.04 ms, t(40)=3.50, *p*=.001, *d*=0.18 | 27.92 ms, t(47)=5.86, *p*<.001, *d*=0.30 | 25.08 ms, t(48)=5.32, *p*<.001, *d*=0.27 |
+| Control | 14.13 ms, t(40)=2.34, *p*=.024, *d*=0.15 | 12.87 ms, t(47)=2.66, *p*=.011, *d*=0.13 | 18.94 ms, t(48)=4.21, *p*<.001, *d*=0.23 |
+| Inconsistent | 4.99 ms, t(40)=0.93, *p*=.360, *d*=0.06 (n.s.) | −10.76 ms, t(47)=1.85, *p*=.070, *d*=0.12 (n.s., reversed) | −12.79 ms, t(48)=1.96, *p*=.056, *d*=0.14 (n.s., reversed) |
+
+**This is a genuinely graded pattern, even though the omnibus interaction test is a step function.** In every experiment, consistent shows the clearest, most reliable congruency effect, and inconsistent shows the weakest — the difference between experiments is a matter of degree, not kind: Experiment 1's inconsistent-condition effect is small but still positive, while Experiments 2 and 3 both push it into a non-significant reversal. Control is significant in all three experiments, so the ordering "consistent > control > inconsistent" in effect reliability holds across all three experiments — only the exact reversal threshold shifts.
+
+A between-experiment breakdown of this same congruency-effect contrast (one-way ANOVA per condition, `Experiment` as the between-subjects factor, computed on the log-RT scale) localizes exactly where the three experiments diverge: the **consistent** (F(2,135)=2.14, *p*=.122, n.s.) and **control** (F(2,135)=0.72, *p*=.489, n.s.) conditions show no reliable cross-experiment difference in the size of the congruency effect, but the **inconsistent** condition does (F(2,135)=3.55, *p*=.031). Holm-corrected post hoc comparisons on this inconsistent-condition contrast show Experiment 1 differs from Experiment 3 specifically (*p*=.042), while Experiment 1 vs. Experiment 2 is only a trend (*p*=.068) and Experiment 2 vs. Experiment 3 do not differ (*p*=.725). See Part 3 for the full cross-experiment mixed-ANOVA test this decomposes.
+
+# Part 2 — Summary of ANCOVAs (per experiment)
+
+[OPEN TASK — every number in Part 2 (ANCOVA) and the Correlation section below it still reflects the pre-floor-cut samples and needs rerunning on the current data. This is also where Armina's question about the centered-initiation-time covariate not running on her end still needs resolving.]
+
+## ANCOVA (initiation time as covariate, active conditions only)
+
+Initiation time was mean-centered before entering the model, so that the lower-order terms (Gaze, Action, Gaze × Action) are evaluated at a typical participant's value rather than at the uninterpretable value of zero (see the pipelines' Step 10b).
+
+| Term | Experiment 1 | Experiment 2 | Experiment 3 |
+|---|---|---|---|
+| Gaze | F(1,38)=15.25, *p*<.001 | F(1,46)=7.80, *p*=.008 | F(1,47)=3.21, *p*=.080 (marginal) |
+| Gaze × initiation time | F(1,38)=0.03, *p*=.875 (n.s.) | F(1,46)=1.63, *p*=.208 (n.s.) | F(1,47)=4.40, *p*=.041 |
+| Action | F(1,38)=2.11, *p*=.154 (n.s.) | F(1,46)=3.03, *p*=.088 (marginal) | F(1,47)=0.46, *p*=.501 (n.s.) |
+| Action × initiation time | F(1,38)=0.32, *p*=.573 (n.s.) | F(1,46)=0.58, *p*=.450 (n.s.) | F(1,47)=0.01, *p*=.919 (n.s.) |
+| **Gaze × Action** | F(1,38)=1.40, *p*=.243 (n.s.) | F(1,46)=21.21, *p*<.001 | F(1,47)=18.25, *p*<.001 |
+| Gaze × Action × initiation time | F(1,38)=4.43, *p*=.042 | F(1,46)=0.03, *p*=.864 (n.s.) | F(1,47)=2.76, *p*=.103 (n.s.) |
+
+The ANCOVA matches the plain rANOVA's keypress-vs-spatial split exactly: the Gaze × Action interaction is absent in Experiment 1 and significant and similarly sized in Experiments 2 and 3.
+
+- **Experiment 1**: the interaction isn't significant on average, but the 3-way Gaze × Action × initiation-time term is — the congruency-by-consistency interaction only shows up as a function of how quickly participants initiated their action, not as a fixed effect.
+- **Experiment 2**: the interaction is robust and doesn't depend on initiation time (non-significant 3-way term) — a fixed effect, not covariate-moderated.
+- **Experiment 3**: same profile as Experiment 2 (robust interaction, non-significant 3-way term), but also shows a significant plain Gaze × initiation-time relationship that Experiment 2 lacks — the basic congruency effect itself (independent of consistency) scales with initiation time here specifically.
+
+So Experiments 2 and 3 share the same ANCOVA profile (robust, covariate-independent interaction), while Experiment 1 is the odd one out — reinforcing the keypress-vs-spatial-response split already seen in the plain rANOVA and in the questionnaire's Question-type effect.
+
+Experiment 1 also has a supplementary, non-primary check: re-running the ANCOVA with the control condition included, despite the conceptual problem that initiation time isn't a real measure there. Correctly centered: Action consistency (GG) significant, F(1.54,58.54)=6.15, *p*=.007; Action × initiation time (GG) significant, F(1.54,58.54)=6.89, *p*=.004; Gaze × Action (GG) not significant, F(2.00,75.92)=0.85, *p*=.430; 3-way (GG) not significant, F(2.00,75.92)=2.27, *p*=.110. Included for continuity, not as the primary analysis.
+
+## Correlation
+
+All three experiments show the same pattern for the RT cells themselves: they intercorrelate strongly and positively within each experiment (Exp1 *r*=.78–.94; Exp2 *r*=.79–.95; Exp3 *r*=.77–.91; all *p*<.001) — stable individual differences in general response speed.
+
+**Initiation time's relationship with RT differs sharply by experiment**, and this maps directly onto the ANCOVA split above:
+
+| | Experiment 1 | Experiment 2 | Experiment 3 |
+|---|---|---|---|
+| initiation time × RT cells | *r*=.11–.39 (only 2/6 cells significant) | *r*=.50–.67 (all 6/6 significant, *p*<.001) | *r*=.51–.69 (all 6/6 significant, *p*<.001) |
+
+In Experiment 1 (keypress), initiation time only weakly and inconsistently relates to RT. In Experiments 2 and 3 (mouse click, touchscreen point), it's a strong, robust predictor of RT in every condition. Plausible account: a keypress-initiation decision is a fast, discrete motor act largely decoupled from general responsiveness, while a reach-and-click or point-and-tap action shares much more of the same psychomotor speed that also governs the later target-discrimination response. This is also why the initiation-time covariate does more work in Experiments 2/3's ANCOVA than in Experiment 1's — it's capturing real shared variance there, not just noise. Because this relationship differs so much by experiment, a single mixed ANCOVA (with `Experiment` as a between-subjects factor and initiation time as covariate) would violate the homogeneity-of-regression-slopes assumption — which is why Part 3 below uses a plain ANOVA instead.
+
+**Behavior–SoA correlation (brief):** the RT congruency effect was also checked against the matching explicit SoA ratings, condition by condition, in each experiment. No reliable relationship anywhere — Experiment 1 shows nothing at all, and the handful of nominally significant hits in Experiments 2/3 don't survive correction or replicate across experiments. Implicit (RT) and explicit (rating) measures of SoA appear dissociated.
+
+# Part 3 — Mixed ANOVA across experiments
+
+The per-experiment tests above are each within their own sample — Experiment is never itself a factor, so "Exp1 n.s., Exp2/3 sig." is a pattern across three separate tests, not a formally tested difference. To test it directly, all three experiments' data were merged (`analysis_outputs/mixed_anova_all_experiments.csv`; N=138, `Experiment` 1/2/3 as a between-subjects factor) and submitted to a mixed ANOVA: Experiment (between) × Gaze Congruency (2, within) × Action Consistency (3, within), on raw RT.
+
+| Term | Result |
+|---|---|
+| Experiment (between) | F(2,135)=0.06, *p*=.939 (n.s.) — overall RT level doesn't differ by experiment |
+| Gaze | F(1,135)=44.74, *p*<.001, η²ₚ=.249 |
+| Gaze × Experiment | F(2,135)=0.06, *p*=.939 (n.s.) — the size of the basic cueing effect doesn't differ across experiments |
+| Action (GG) | F(1.41,190.79)=20.20, *p*<.001, η²ₚ=.130 |
+| Action × Experiment (GG) | F(2.83,190.79)=1.24, *p*=.298 (n.s.) |
+| Gaze × Action (GG) | F(1.88,253.95)=22.00, *p*<.001, η²ₚ=.140 |
+| **Gaze × Action × Experiment (GG)** | F(3.76,253.95)=2.33, ***p*=.061** (marginal, not significant at α=.05) |
+
+On the raw-ms scale, the three-way interaction sits at a marginal p≈.06, directionally consistent with the per-experiment split (Exp1 flat, Exp2/Exp3 both significant and similarly sized) but not conventionally significant on its own.
+
+## Sphericity check and the log-RT version
+
+Mauchly's test flags every `action`-involving term above (all footnoted ᵃ in the JASP output) — expected, since sphericity only applies to factors with 3+ levels, and `action` (consistent/inconsistent/control) is the only such factor here. The Greenhouse-Geisser epsilon values (≈0.65–0.94 across terms) indicate a real but mild-to-moderate violation, and the GG-corrected p-values above already account for it — correcting changes no conclusion here relative to the uncorrected test.
+
+As a further check, the entire mixed ANOVA was re-run on log(RT) instead of raw RT (natural log of trial-level RT in ms, averaged per cell — mean of the logs, not log of the mean). A log transform addresses a different problem than sphericity (it targets the right-skew and mean-scaling variance typical of RT, not the covariance structure between condition levels), so it was not expected to resolve the sphericity violation, and it didn't — GG epsilons on the log scale are close to the raw-RT ones. What it did change is the three-way interaction specifically:
+
+| Term | Raw RT (GG) | log(RT) (GG) |
+|---|---|---|
+| Gaze | *p*<.001 | *p*<.001 |
+| Action | *p*<.001 | *p*<.001 |
+| Gaze × Action | *p*<.001 | *p*<.001 |
+| Gaze × Action × Experiment | *p*=.061 (n.s.) | ***p*=.018** |
+
+Every other term keeps the same conclusion on both scales. The three-way interaction is the one place raw RT and log RT disagree: non-significant on raw ms, significant on log RT (F(3.77,254.47)=3.11 uncorrected, *p*=.016; GG-corrected *p*=.018, ε=.943 — barely moved by correction, since this particular term's sphericity violation is mild). This is a plausible consequence of log-transforming in the first place: RT variability scales with the mean (someone averaging 800ms has proportionally similar noise to someone at 400ms, but much larger noise in raw ms), so a raw-ms test can have unequal variance across cells/experiments that masks a real pattern; log-RT equalizes this. It converges with the standardized-effect-size check below, which found the same term significant using a completely different method (Cohen's d instead of a log transform).
+
+**Where the three-way interaction comes from.** Per-subject, per-condition gaze effects (log(incongruent RT) − log(congruent RT)) were compared across experiments with a one-way ANOVA per action condition (reported already in Part 1's decomposition table above): significant only for the inconsistent condition (F(2,135)=3.55, *p*=.031), not consistent or control. Holm-corrected post hoc on the inconsistent-condition contrast: Experiment 1 differs from Experiment 3 (*p*=.042); Experiment 1 vs. Experiment 2 is a trend (*p*=.068, not significant after correction); Experiment 2 and Experiment 3 do not differ (*p*=.725). So the three-way interaction is not "Experiment 1 differs from both 2 and 3" — it's specifically an Experiment 1-vs-3 difference in the inconsistent condition, with Experiment 2 in between but not reliably separable from either.
+
+**Linear mixed model, as an alternative that avoids the sphericity assumption by construction.** A mixed model (log RT ~ gaze × action × Experiment, random intercept for subject, fit on trial-level data rather than aggregated cell means) was attempted as a fully sphericity-free alternative. A clean omnibus likelihood-ratio test for the three-way term could not be obtained — `statsmodels`' optimizer failed to reach a valid nested comparison for this model regardless of optimizer or random-effects structure tried (R's `lme4`, not available in this environment, generally handles this specific situation more reliably). However, the individual fixed-effect coefficients from the model — which don't depend on the broken model comparison — are stable across every optimizer and random-effects specification tried, and agree with the JASP result: the `gaze × inconsistent × Experiment3` coefficient is significant (*p*=.004–.005 across fitting attempts), matching the Exp1-vs-Exp3 post hoc finding above.
+
+## Confirmatory test: Cohen's d (noise-standardized effect size)
+
+[OPEN TASK — the numbers in this subsection need recomputing from the current `13_cohens_d_per_subject.xlsx` per experiment. Kept here because the qualitative story is expected to hold and because it already anticipates the log-RT finding above — worth confirming, not assuming.]
+
+Raw ms may understate a real cross-experiment difference if the three response modalities carry different amounts of RT noise — a keypress, a mouse click, and a touchscreen tap aren't guaranteed to have the same baseline variability. To check this, the congruency effect was also computed per subject as a standardized effect (pooling that subject's own congruent- and incongruent-trial RTs into one SD, then dividing the mean difference by it — the same logic as a two-sample Cohen's d, applied within one subject instead of across a sample; see the pipelines' Step 10c for the trial-level computation, `d_cons`/`d_incons`/`d_ctrl`). The same mixed ANOVA was then re-run on this standardized DV instead of raw ms.
+
+| Term | Result (needs rerun on current data) |
+|---|---|
+| Experiment (between) | F(2,134)=0.84, *p*=.432 (n.s.) — overall d level doesn't differ by experiment |
+| d main effect (GG) | F(1.84,246.99)=30.04, *p*<.001, η²ₚ=.183 |
+| **d × Experiment (GG)** | F(3.69,246.99)=3.20, **p=.016**, η²ₚ=.046 |
+
+Descriptive means (per experiment, per condition) show where this came from:
+
+| | Consistent | Control | Inconsistent |
+|---|---|---|---|
+| Experiment 1 | 0.193 | 0.166 | 0.075 |
+| Experiment 2 | 0.294 | 0.127 | −0.131 |
+| Experiment 3 | 0.293 | 0.184 | −0.180 |
+
+Consistent and control stay positive and similarly sized across all three experiments (0.13–0.29). Inconsistent is where the experiments split: small but still positive in Experiment 1, clearly negative in both Experiment 2 and Experiment 3 — matching the log-RT finding above (driven by the inconsistent condition) even though this check uses a completely different method (per-subject noise-standardization rather than a log transform). Two independent methods landing on the same condition as the source of the cross-experiment split is a reasonably strong convergence, pending the rerun on current data.
+
+## Theoretical interpretation (possible explanation, not directly tested)
+
+Why would the physical form of the direction-selection response — keypress vs. mouse-click vs. touchscreen-point — change whether the inconsistent condition produces a normal or a reversed congruency effect? One plausible account, built from several pieces of evidence already in this document rather than a new test:
+
+**The action and the later response may share more processing machinery in Experiments 2/3 than in Experiment 1.** The initiation-time correlation table above already shows this directly: initiation time barely relates to the later target-discrimination RT in Experiment 1, but strongly predicts it in Experiments 2 and 3. A keypress is a fast, symbolic, discrete motor decision, largely separate from whatever comes after it. A mouse-move-and-click or a reach-and-tap is a spatially extended movement toward one of the same two screen locations the target later appears in, and plausibly recruits the same spatial/motor-planning system that then also has to process the target. Once the initiating action and the later response run through more of the same system, there's more room for one to affect the other.
+
+**That shared machinery is what could let a prediction-error mismatch reach RT at all.** In the inconsistent condition, what the participant selected and what the gaze actually did diverge — a real prediction error. If the direction-selection and the later response are largely independent systems (Experiment 1), that mismatch has nowhere obvious to go — it stays contained to how the participant *feels* about the outcome, which is what the questionnaire measures. If they share resources (Experiments 2/3), the same mismatch can plausibly spill over and change how fast the participant responds to the target — a candidate explanation for why the inconsistent condition specifically is where the RT reversal appears, and not the other two conditions.
+
+**This complements the questionnaire pattern rather than sitting apart from it.** There, more embodiment blurred the fine-grained distinctions among causation, control, and prediction while leaving the coarse active-vs-passive distinction intact (see the Questionnaire section above). Here, the same idea would say: embodiment doesn't only change how the mismatch is *felt* — it changes whether the mismatch leaves a measurable trace in behavior at all. A minimal action (keypress) keeps this kind of action-monitoring contained to something only detectable by asking; a more embodied action (reach, point) lets the same monitoring process spill into observable RT.
+
+This is offered as the most parsimonious account consistent with everything found so far (the RT interaction, the ANCOVA, the initiation-time correlation, and the questionnaire dissociation) — not as a directly tested mechanism, and it should be framed that way if it goes into the Discussion chapter.
+
+# Part 4 — Bin analysis (RT distribution)
+
+All three experiments checked.
+
+Following the method used in an earlier pilot study on this paradigm (Petkova & Janyan poster), congruent- and incongruent-trial RTs were Vincentized separately within each action-consistency condition — sorted and split into 5 equal-size quantile bins per participant — and submitted to a 2 (Gaze) × 5 (bin) repeated-measures ANOVA, run separately per condition.
+
+| | Gaze | Gaze × Bin |
+|---|---|---|
+| Exp1 — Consistent | F(1,40)=11.56, *p*=.002, η²ₚ=.224 | GG F(1.96,78.50)=0.41, *p*=.661 (n.s.) |
+| Exp1 — Inconsistent | F(1,40)=0.86, *p*=.358 (n.s.) | GG F(1.72,68.88)=0.87, *p*=.411 (n.s.) |
+| Exp1 — Control | F(1,40)=5.98, *p*=.019, η²ₚ=.130 | GG F(2.01,80.54)=0.75, *p*=.476 (n.s.) |
+| Exp2 — Consistent | F(1,47)=32.02, *p*<.001, η²ₚ=.405 | GG F(1.97,92.51)=0.68, *p*=.508 (n.s.) |
+| Exp2 — Inconsistent | F(1,47)=3.19, *p*=.080 (marginal) | GG F(1.65,77.32)=0.33, *p*=.678 (n.s.) |
+| Exp2 — Control | F(1,47)=6.93, *p*=.011, η²ₚ=.128 | GG F(2.00,93.87)=0.23, *p*=.792 (n.s.) |
+| Exp3 — Consistent | F(1,48)=26.37, *p*<.001, η²ₚ=.355 | GG F(1.79,86.11)=2.11, *p*=.132 (n.s., closest of all nine) |
+| Exp3 — Inconsistent | F(1,48)=4.64, *p*=.036, η²ₚ=.088 | GG F(1.71,82.23)=0.56, *p*=.545 (n.s.) |
+| Exp3 — Control | F(1,48)=17.81, *p*<.001, η²ₚ=.271 | GG F(1.89,90.64)=0.94, *p*=.389 (n.s.) |
+
+The Gaze main effect replicates the pattern seen everywhere else in all three experiments (reliable in consistent and control everywhere, and now also reliable in Experiment 3's inconsistent condition specifically, marginal in the other two). **The Gaze × Bin interaction — whether the congruency effect is concentrated in a particular part of the RT distribution — is non-significant in all nine condition × experiment combinations.** The closest any of them comes to significance is Experiment 3's consistent condition (p=.132), still well short of conventional significance.
+
+**This is a non-replication of the pilot's descriptive pattern**, not just a weaker version of it. The pilot (N=24, a different stimulus/response setup) described the consistent condition as showing an early, large effect that fades by the slowest bin. None of the three experiments shows that shape: Experiment 1's consistent-condition gap runs the other way (smallest in the fastest bin, growing toward the slowest, 11→18 ms); Experiment 2's declines gradually (34, 28, 27, 26, 25 ms); Experiment 3's declines across the first four bins before jumping back up in the slowest one (28, 25, 20, 17, 34 ms) — three different shapes, none matching the pilot's, and none statistically reliable.
+
+The inconsistent condition's reversal (documented in Part 1) holds steady across the whole RT distribution in both Experiment 2 (−12, −8, −7, −11, −13 ms) and Experiment 3 (−13, −10, −10, −17, −19 ms) — so the reversal is not concentrated in fast or slow trials specifically; it's present throughout, in both experiments that show it. Control shows a decline in all three experiments (Exp1: 21→11 ms; Exp2: 13→8 ms, fairly flat until the last bin; Exp3: 24→13 ms) — the only direction that's at all consistent across experiments, and the closest any condition comes to resembling the pilot's pattern, but in the condition the pilot didn't highlight, and not statistically reliable in any of the three.
+
+**Overall verdict:** unlike almost every other analysis in this document, the bin analysis does *not* split along the keypress-vs-spatial-response line — all three experiments agree on a null Gaze × Bin result. The congruency effect (and its reversal, where present) appears to be a fairly uniform shift across the RT distribution rather than something concentrated in fast or slow responses, in all three experiments and all three consistency conditions.

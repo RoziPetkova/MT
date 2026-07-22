@@ -24,3 +24,12 @@ real_exp_data.xlsx
 
 # --- Notebook checkpoints ---
 .ipynb_checkpoints/
+
+# --- Manual folder-backup zips (large, redundant with tracked pipeline files) ---
+experiment1/exp1.zip
+experiment1/data_processing3/exp1.zip
+experiment2/exp2 (2).zip
+experiment3/exp3.zip
+analysis_outputs/all_exp.zip
+texts/previous/previous.zip
+texts/texts.zip
