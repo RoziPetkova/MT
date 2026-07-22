@@ -103,7 +103,8 @@
       "Bash(rm -f \"Report_Roz_Exp1.docx\" \"Report_Roz_Exp1 - Copy.docx\" \"interim-layout - Copy - Copy - Copy - Copy.docx\")",
       "Bash(rm -rf \"wetransfer_interim-layout-copy-copy-copy-copy-docx_2025-09-05_1902\")",
       "Bash(grep -oP '^@\\\\w+\\\\{\\\\K[^,]+' \"/c/Users/Kaloyan Zdravkov/Desktop/Congitive Science/MasterThesis/GC + agency/literature/Agency and CG - merged.bib\")",
-      "Bash(unzip -l \"experiment1/data_processing3/exp_data/jasp/mixed_anova_all_experiments.jasp\")"
+      "Bash(unzip -l \"experiment1/data_processing3/exp_data/jasp/mixed_anova_all_experiments.jasp\")",
+      "Bash(git add *)"
     ]
   }
 }

@@ -105,10 +105,23 @@ Pairwise breakdown (Holm-corrected) for the six significant cells:
 
 **Theoretical framing.** This maps onto the same keypress-vs-spatial-response split already established for the RT interaction and the initiation-time correlation (see the RT summary, Part 3 and its Theoretical interpretation below): Experiment 1 used a keyboard button for the direction-selection response, while Experiments 2 and 3 used a mouse click and a touchscreen tap, respectively. If the more embodied response modality changes how tightly action monitoring is coupled to the outcome, that would plausibly show up in explicit ratings too, not only in RT.
 
+**Omnibus mixed ANOVA confirmation.** A single mixed ANOVA (Question type [caused/controlled/predicted] × Action Consistency [consistent/inconsistent/control] × Experiment, all nine cells in one model, `Q-data_mixed_anova_all_experiments.jasp`) confirms this isn't just a pattern across nine separate one-way tests — the three-way interaction is itself significant:
+
+| Term | Result |
+|---|---|
+| Question type | F(2,270)=15.30, *p*<.001, η²ₚ=.102 |
+| Question type × Experiment | F(4,270)=6.39, *p*<.001, η²ₚ=.086 |
+| Action consistency | F(2,270)=145.15, *p*<.001, η²ₚ=.518 |
+| Action consistency × Experiment | F(4,270)=18.26, *p*<.001, η²ₚ=.213 |
+| Question type × Action consistency | F(4,270)=44.25, *p*<.001, η²ₚ=.247 |
+| **Question type × Action consistency × Experiment** | **F(8,540)=5.61, *p*<.001, η²ₚ=.077** |
+| Experiment (between) | F(2,135)=2.41, *p*=.093 (n.s.) — overall rating level doesn't differ by experiment |
+
+Every term in the model is significant except the plain between-subjects effect of Experiment, meaning the three experiments don't differ in their overall rating level, only in the shape of the Question×Condition profile. The nine one-way ANOVAs above are read correctly as a decomposition of this single, formally-confirmed three-way effect, not as a loose family of related tests.
+
 **Open questions:**
 - Does the specific direction of the Exp1 vs. Exp2/3 difference (higher in consistent, lower in control-condition "controlled" ratings) have a principled account, or does it need a bespoke explanation per question/condition?
 - Per-subject centering (subtracting each subject's own mean across all nine ratings before running these ANOVAs) would be a direct test of the response-style-bias alternative raised above — not yet run.
-- A single omnibus mixed ANOVA (Experiment × Question × Condition) would formally test whether the effect summarized here as "6 separate one-way ANOVAs" is really one coherent interaction, rather than a family of related but distinct tests — not yet run.
 
 ---
 
