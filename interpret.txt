@@ -1,0 +1,43 @@
+2×3 rANOVA and main effects
+(Gaze × Action) - tarting with the anovas on RT - they are done to test if GC effect is present, if AOC (action-outcome consisteny) effect is pressent if they somehow influence eachother trough interaction. we found out that 
+ - exp 1. Faster when gaze points to the target, and faster in the active conditions than control — but which active condition you're in doesn't change the size of the GC effect. (report post hoc on action 
+ - exp 2. same thing but also interaction -> GC effect interacts/depends on AOC effect and vice versa
+ - exp 3. the same. 
+ 
+ -> to check where GC effect is present per action condition we did simle main effect tests -> 
+	- in exp 1 - GCE is there on congruent trials when your action matched the outcome, or when there was no action at all; no reliable difference (not enof strong gce to reach significance) when your action didn't match - incnsistent conditions; 
+	- for exp 2 and 3: Same consistent/control pattern, but in the inconsistent condition not just missing gce - a numaricaly reverced pattern (participants were slower when gaze looked at the direction different of the chosen one.) however not significat, but visible in both experiments 2 and 3 that include different movement modality. 
+ -> to chech where action effect is present per gaze condition we did action main effect -> 
+    - exp 1 - Action consistency changes RT about equally whether gaze was congruent or incongruent — no asymmetry.
+	- exp 2 - Action consistency changes RT on both sides, but the effect is clearly stronger on incongruent trials - making GCE dissapearing;
+	- exp 3 - even stonger asumethry than exp 2 - in inconsistent making GCE dissapearing even more
+	- overall a pattern that action metters and tendensy that this movement modalyty also has influence (leads to gratrer asymetry between the two conditions; (the action is more infuential in incngruent conditions whenever there is more movement
+	
+what we know so far: there is GCE, there is SOA in all experiments. in exp 1 thy dont influecne eachother. in exp 2 and 3 however, with the different modality of the movement and interaction between gaze and action starts to persists. the man effects are saing that the gce is present in consistent in consistent and inconsitent conditions. no gce in inconsistent condition. even more (though not sigificant) a reverced numbers of gc eggect if there in the inconsistent condition in the experiments with greater movement modality (2 and 3). regardint the soa, the effect is present in all gaze conditions in all experiments, however its becomming stronger for incongruent conditions (and weaker for congruent) with the greater movement modality. in other words the bigger the movement, the stronger is the acton effect (does this meand the RT is slower) when the gaze is pointing into the opposite direction (when the external cue is contraversial). 
+
+---------------------------
+Effect size ANOVAs
+(per experiment)
+To check the interaction deeper, we did ANOVA on effect size. where effect size in the difference between congruent and incongruent condition. it was expectec to replicate the anova results, but at the same time to let us easily didderentiate which levels differ from which 
+ - exp 1 - confirms the same conclusion as the interaction above: no reliable difference in effect size. Post hoc: none of the three conditions differ from each other (all Holm p≥.63).
+ - exp 2 and 3 has the same pattern of results - significant difference in effect sizes, confirming the already established interacton; in both exp. inconsistent condition differs from consistent and control one. whereas no difference between control and consistent was established. 
+ 
+- this gave us evidence that GCE is not following the same pattern across action conditions and more spcifically, it differes between consistent and comtrolled from one side and inconsistent on the other. the descripive statistics showing the slower RTs (weaker GCE) in inconsistent codition 
+
+---------------------------
+ANCOVA - the action start time (the actual time of direction selection) is used as covariate in ANCOVA; it represents the temporal prediction effect; they press a button/ click with the mouse and expet that after given time period target will appear; so they predict when to expext the target; temporal prediction;  by  maximaly reducing the predictability we are left with only  maximum the intentionality; is this volition part of SoA - yes; by doing ANCOVA, we are testing intentionalyty and volition, excluding temporal prdiction;
+ANCOVA statistically controls for variability associated with action initiation time, allowing us to examine whether the gaze-action interaction remains after accounting for this source of variance
+	- exp 1  - Gaze×Action x initiation time was significant - indicates that the relationship between gaze congruency and action consistency depended on participants' initiation time. Thus, in Experiment 1, temporal factors were not merely a source of nuisance variance but moderated the experimental effects themselves. therefor logicaly Gaze×Action wasnt significant... wtf ?! ( i may not include this ancova ... n the report) 
+	- Experiments 2 and 3 - Initiation time does not change the pattern of results. After accounting for temporal prediction, the gaze-action interaction is still present.This supports the idea that the effect is not explained solely by temporal prediction, related with active trials, but also involves some other cognitive mechanism. 
+	Gaze × Action × Initiation Time → not significant
+	Gaze × Action → significant
+	
+------------------------------
+because of the modality difference that we established earlier, we decide to test if modality of the movement is also influencing the GCE those as well
+
+
+
+
+
+
+

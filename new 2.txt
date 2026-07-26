@@ -1,0 +1,91 @@
+ In statistics, an interaction occurs when the effect of one independent variable on an outcome depends on the level or value of another independent variable. This means the combined influence of the two variables is not simply additive; they work together to modify the final result.
+ 
+ In statistics, correlation is a measure that describes the size and direction of a relationship between two or more variables. It is quantified using a correlation coefficient, which always ranges between -1 and +1. The closer the coefficient is to the extremes, the stronger the relationship
+ 
+ - Bin analysis - shows the time distribution of the effect; not includec in experiment 1 yet, not don either, in the second processing - Armina speeaks about it in one of the recodrcings; She expect stronger effects in the first trials; maybe i can do it just for the experiment where the strongest results are observed (not the first one) 
+ - related with bin analysis - keep in mind that originaly the NFILTERRT colunn is not there. I'm making it by going to transform->rank cases->rank type -> select only Ntiles:5-> select as variable filteredRT and in "by" fielf i select sub,w1,w2. This column is for bin analizys that we re not sure that we are going to do, but, lets have it just in case.  In describing this because i want as exeriment to greate maybe a new pipeline that does that. is it possible? (this was written for claude; its explanation of how to generate the bins for the analisys) 
+ - why do i need the bin analisys? 
+ - check again the participants answers to the questions (for all experiments) even after their exclusion - see if they answered ok to the conditions where they do cause the action. in general if their answers to the questions does not look ok - exclude; (in combination with the otger 75% rule and... whatever else it was)
+ 
+ -for exp. 2 also do the cutting of subjects if their overall time is above +2SD from grand mean
+ 
+ - add mouse movement start time statistics to the experiment 2 data set; chech the raw data to see if the first mouse movement time is recorded; think how to handle longer mouse movements? 
+ 
+ - add action start time in the statistics - in the recording with armina we discuss this; the action start time (the actual time of direction selection) is used as covariate in ANCOVA; it represents the prediction effect; they press a button/ click with the mouse and expet that after given time period target will appear; so they predict when to expext the target; temporal prediction; BY SUBSTRACTING THIS DOESNT WE SUBSTRACT THE SENSE OF AGENCY EFFECT? Armina said that by maximaly reducing the predictability we are left with only only maximum the intentionality; is this volition part of SoA; We can think of this as if we do ANOVA, we are testing SoA, if we do ANCOVA, we are testing intentionalyty and volition; 
+ 
+ - correlation: in exp 1 we dint have correlation between action time (time of direction choise) and rt - armina says its weird; sounds like they dont do action outcone predictions; baybe bin analisys? 
+ 
+ - Add posthoc analisys of ancova for experiment 1. It's missing at that point - is it true for experimet 1 that i Have gaze effect only for consisting actions as it happened in the recording? interpred its results - it's a comparison condition per condition (since it's ancova) minus prediction effect; so intentionalyty and gaze only; it seems that congruent consistent is faster than the most of the others; therefor intentionality (SoA but no prediction) combined with social gues are strongly influencing attentional alocation. 
+ 
+ - do i have gaze effect in control trials - if not explain it by the more variance of rt; its normal to have more variance, and with the more variange is ok to loos the effect. to proove that i can clean the variance just for control trials and check just for the gc effect; (in the pilot experiment armina said that the gc effect was present, because the task was more difficult) 
+ 
+ - analisys on the questions - armina said that she dont know how to include them... maybe just use them as evidence that they know what they did, that they caused/controlled the action; just to relate the real SoA with explicit SoA; but how to relate them with the other data....not sure that we shoudl, if i want I can do correlation, but it sill show strange results; (also they are sepatare blocks of the experiment) - for this big analisys use just the subjects that answered good on questions - exclude more subjects; 
+ 
+ - idea for summary and next study: When self-generated and gaze-based predictions compete, which source exerts greater influence... an experiment that independently manipulates Action->Target and Gaze->Target to test real competition. OR "Self-generated vs social attentional control" suggests two attentional systems competing
+ 
+ - idea for next study - The present findings raise the possibility that the relationship between agency and gaze cueing is bidirectional. Whereas the current study examined whether agency influences gaze cueing, future work should investigate whether processing another person's gaze also shapes the experience of agency, particularly when gaze behaviour is consistent or inconsistent with one's own intentions.
+ 
+ - How do self-generated actions and social gaze cues compete in the control of attention? - if we dont establish SoA manipulation (the paradigm failed and no difference in SoA between experiments or between conditions, we can still talk about SoO sense of ownership (my body parts are moving) vs. social cueing) This places your work within the literature on attentional control rather than agency.
+ 
+ 
+ - check what was used foe action start time in exp 1. check what to use in exp 2. in exp 3 its impossible .... 
+ 
+ - write somewhere about the time interval in intentionl bindig and abou the temporal specifications of GC These results make me rethink the theoretical framing. Rather than asking:"Does agency modulate gaze cueing?" I think your data support a more specific question: "Does action-outcome consistency modulate gaze cueing, primarily through the disruptive effects of action-outcome inconsistency?"
+ 
+ - also what you have to do, probably, is to compare the effects in ms across exp; that's the idea, right? and in cohen's d, too, probably, per action condition; statistically. which means you have to calculate it per subject per exp and then run an anova. we will talk later, for now just finish the standard analyses
+ 
+ - where to talk that the questions measure different think - at the end of results, after the 3 exp ... add diagrams that are dot plots per question/raiting for each experiment - in different colors. 
+ 
+ - the effect of question types dissapears towards the third experiment because the SOA is more and they cannot distingiush between its different components. this explains the dissapearing of effect size of question, but still distinguishing between active and passive. also the lower difference beween sonsistent and inconsistent may be because of the higher SOA the outcome-action consistency is less impoortant (imoved my hand, ofcourse i'm responsible, either it went into the different direction). its easy to discualify the inconsistent outcome if the movement is less.  
+ 
+ - Mixed ANOVA on Q
+
+Between:
+
+Experiment (3)
+
+Within:
+
+Consistency (3)
+
+Question (3)
+
+Now you can directly test
+
+Experiment × Consistency
+
+Experiment × Question
+
+Experiment × Question × Consistency
+
+
+-1. Accuracy analysis (same 2×3 design as the RT ANOVA) — currently missing entirely. I checked: analysis.csv has no accuracy column at all — accuracy was only ever used at the participant-exclusion stage (the 85% threshold), never exported per-condition. This is the classic complement to an RT analysis: run the same Gaze × Action ANOVA on accuracy instead of RT, to rule out (or confirm) a speed-accuracy tradeoff — e.g., is the fast congruent-consistent RT genuinely a facilitation effect, or are people just being less careful in that condition? This needs one new pipeline step (aggregate per-condition accuracy per subject from the already-existing trial-level data — no binning/sorting involved, so noticeably lighter than bin analysis) across all three experiments.
+
+- future studies: To date, it remains unclear why stimulus inversion disrupts social attention cueing. One possible explanation of the inversion effects observed is that domain-specific mechanisms for gaze following are tuned to upright faces and bodies, and are no-longer engaged—or engaged less—by inverted examples. —---------- Doing up-side down with natural posture of the body ( laying in bed, swimming). Is there gonna be an inversion effect? 
+
+-----------------------------------------------------------------------------------------------------------
+Technical items (mine to help execute):
+1. Sphericity violation — Armina suggests trying a log transform. This needs to happen per experiment, on whichever RT measure is failing Mauchly's test.
+2. Outlier cutting — she doesn't expect it to change much but wants it tried "out of curiosity." She also floats doing the log transform without cutting first, as an alternative to combining both — worth trying both and comparing.
+3. Covariate (centered initiation time) — she tried running it on "this file" and it didn't work for her, and separately says she doesn't understand what "centered initiation time" is. Worth (a) explaining what it is in plain terms for her, and (b) checking why the covariate model didn't run — this maps onto the Exp2 ANCOVA covariate setup we nailed down earlier this project (initiation time only).
+4. Cross-experiment comparison — she suggests also comparing each Likert question across experiments, split by action condition, not just the bin/RT stuff.
+
+One thing worth flagging before I touch anything: Armina says she personally prefers JASP's ready-made Bonferroni-adjusted post-hoc p-values over the "unadjusted + hand-calculate a threshold" approach. That's the opposite of what's in the stats-methodology decision from earlier in this project (Holm correction, not Bonferroni). Worth deciding explicitly whether to switch to Bonferroni-as-reported-by-JASP for consistency with what she'll expect to see, or keep Holm and explain the choice to her — I don't want to silently pick one.
+
+---------------------------------------------------------------------------------------------------
+
+Gaze × Experiment in the combined LMM: F(2,22458)=0.22, p=.804 (n.s.). Same conclusion in the plain mixed ANOVA on raw RT: F(2,135)=0.06, p=.939 (n.s.).
+
+So the basic gaze-cueing effect itself — how strongly gaze direction speeds up target detection, independent of what action the participant did — is the same size whether the response was a keypress, a mouse click, or a touchscreen tap. Response modality doesn't touch the core reflexive-orienting phenomenon at all; it replicates cleanly across all three.
+
+What response modality does touch is the interaction — how much the action-consistency manipulation (did your button press match, mismatch, or have nothing to do with the gaze shift) modulates that gaze-cueing effect. That's the Gaze × Action × Experiment term, marginal on raw RT (p=.061) and significant on log-RT/Cohen's d (p=.018/.013) — and it's specifically located in the inconsistent condition, Exp1 (keypress) vs Exp3 (touch).
+
+So the story splits cleanly in two: the gaze-cueing effect is a stable, modality-independent phenomenon; whether your own action feeds back into how strong that effect is depends on how physically embodied the action is. That's a fairly clean theoretical distinction to have data support — the basic attentional mechanism doesn't care how you responded, but the self-monitoring/agency piece does.
+
+--------------------------------------------------------------------------------------------------------
+
+Simple effects (what "GC effect by condition" is): used specifically to decompose an interaction. The question is "does Factor A's effect hold up within this one level of Factor B?" — you hold one factor fixed and test the other. This is the standard, expected follow-up when a 2-way interaction is significant (Exp2/Exp3 here) — you don't just report "the interaction is significant" and stop, you show where it lives. It's also legitimate (as exploratory, clearly labeled) to run even when the interaction isn't significant, as a descriptive check — which is what we did for Exp1.
+
+Post-hoc tests: used to decompose a significant main effect that has 3+ levels, when you don't yet know which levels differ from which. E.g., if the Action main effect (3 levels: consistent/control/inconsistent) is significant, a post-hoc test (Holm, Tukey, Bonferroni) tells you specifically whether consistent differs from control, control from inconsistent, and consistent from inconsistent. This is about pinning down pairwise differences within one factor, not about how two factors combine.
+
+One-way ANOVA: used when there's genuinely only one factor to test — either because the whole design only has one factor, or because you've deliberately restricted/sliced the data to isolate one specific comparison. We used this differently elsewhere: e.g., testing whether the size of the GC effect (already collapsed into one number per subject) differs by Experiment — that's a one-way ANOVA because at that point Experiment is the only factor left; the within-subject structure has already been reduced to a single per-subject value beforehand.
