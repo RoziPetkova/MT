@@ -124,7 +124,9 @@
       "Bash(node \"/c/Users/KALOYA~1/AppData/Local/Temp/claude/c--Users-Kaloyan-Zdravkov-Desktop-Congitive-Science-MasterThesis-GC---agency/01692f7e-bb41-4551-a782-9ba0365f9aca/scratchpad/validate_palette.mjs\" \"#2a78d6,#eb6834\" --mode light)",
       "Bash(echo \"EXIT:$?\")",
       "Bash(tail -40 \"/c/Users/KALOYA~1/AppData/Local/Temp/claude/c--Users-Kaloyan-Zdravkov-Desktop-Congitive-Science-MasterThesis-GC---agency/01692f7e-bb41-4551-a782-9ba0365f9aca/scratchpad/validate_palette.mjs\")",
-      "Bash(grep -n \"argv\\\\|import.meta\\\\|function main\\\\|process.argv\" \"/c/Users/KALOYA~1/AppData/Local/Temp/claude/c--Users-Kaloyan-Zdravkov-Desktop-Congitive-Science-MasterThesis-GC---agency/01692f7e-bb41-4551-a782-9ba0365f9aca/scratchpad/validate_palette.mjs\")"
+      "Bash(grep -n \"argv\\\\|import.meta\\\\|function main\\\\|process.argv\" \"/c/Users/KALOYA~1/AppData/Local/Temp/claude/c--Users-Kaloyan-Zdravkov-Desktop-Congitive-Science-MasterThesis-GC---agency/01692f7e-bb41-4551-a782-9ba0365f9aca/scratchpad/validate_palette.mjs\")",
+      "WebFetch(domain:www.uc.pt)",
+      "WebFetch(domain:web.archive.org)"
     ],
     "additionalDirectories": [
       "C:\\Users\\KALOYA~1\\AppData\\Local\\Temp\\claude\\bundled-skills\\2.1.220\\4340b4434a715c1929716bb384c863c6\\dataviz\\scripts"
