@@ -128,7 +128,8 @@
       "WebFetch(domain:www.uc.pt)",
       "WebFetch(domain:web.archive.org)",
       "Bash(mkdir -p /tmp/jasp_inspect_exp3)",
-      "Bash(unzip -o -q \"C:\\\\Users\\\\Kaloyan Zdravkov\\\\Desktop\\\\Congitive Science\\\\MasterThesis\\\\GC + agency\\\\experiment3\\\\data_processing\\\\exp_data\\\\jasp\\\\Q_3x3_ANCOVA_exp3.jasp\" -d .)"
+      "Bash(unzip -o -q \"C:\\\\Users\\\\Kaloyan Zdravkov\\\\Desktop\\\\Congitive Science\\\\MasterThesis\\\\GC + agency\\\\experiment3\\\\data_processing\\\\exp_data\\\\jasp\\\\Q_3x3_ANCOVA_exp3.jasp\" -d .)",
+      "Bash(PYTHONIOENCODING=utf-8 python3)"
     ],
     "additionalDirectories": [
       "C:\\Users\\KALOYA~1\\AppData\\Local\\Temp\\claude\\bundled-skills\\2.1.220\\4340b4434a715c1929716bb384c863c6\\dataviz\\scripts"
