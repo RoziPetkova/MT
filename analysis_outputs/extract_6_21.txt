@@ -1,0 +1,62 @@
+##### id=6 #####
+ -> GC-effect ANOVA (difference scores in ms)
+/data/rmAnovaContainer/data/assumptionsContainer -> Assumption Checks
+/data/rmAnovaContainer/data/betweenTable -> Between Subjects Effects
+/data/rmAnovaContainer/data/betweenTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/betweenTable/colNames -> colNames
+/data/rmAnovaContainer/data/betweenTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/betweenTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/betweenTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/betweenTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/betweenTable/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/descriptivesContainer -> Descriptives
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerDescriptivesPlots -> Descriptives plots
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerDescriptivesPlots/data//editOptions/xAxis/settings -> JaspExtraOptions_0_Encoded
+/data/rmAnovaContainer/data/ordinalRestrictions -> Order Restricted Hypotheses
+/data/rmAnovaContainer/data/ordinalRestrictions/data/basicInfoContainer -> Syntax information
+/data/rmAnovaContainer/data/simpleEffectsContainer -> Simple Main Effects
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable -> Simple Main Effects - JaspColumn_0_Encoded
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colNames -> colNames
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/withinAnovaTable -> Within Subjects Effects
+/data/rmAnovaContainer/data/withinAnovaTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/withinAnovaTable/colNames -> colNames
+/data/rmAnovaContainer/data/withinAnovaTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/withinAnovaTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/withinAnovaTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/withinAnovaTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/withinAnovaTable/rowTitles -> rowTitles
+
+##### id=21 #####
+ -> ANOVA incons trials
+/data/anovaContainer/data/anovaTable -> ANOVA - JaspColumn_27_Encoded
+/data/anovaContainer/data/anovaTable/colFormats -> colFormats
+/data/anovaContainer/data/anovaTable/colNames -> colNames
+/data/anovaContainer/data/anovaTable/colOvertitles -> colOvertitles
+/data/anovaContainer/data/anovaTable/colTitles -> colTitles
+/data/anovaContainer/data/anovaTable/colTypes -> colTypes
+/data/anovaContainer/data/anovaTable/rowNames -> rowNames
+/data/anovaContainer/data/anovaTable/rowTitles -> rowTitles
+/data/anovaContainer/data/assumptionsContainer -> Assumption Checks
+/data/anovaContainer/data/descriptivesContainer -> Descriptives
+/data/anovaContainer/data/descriptivesContainer/data/containerBarPlots -> Bar plots
+/data/anovaContainer/data/descriptivesContainer/data/containerBarPlots/data//editOptions/xAxis/settings -> JaspColumn_0_Encoded
+/data/anovaContainer/data/descriptivesContainer/data/containerBarPlots/data//editOptions/yAxis/settings -> JaspColumn_27_Encoded
+/data/anovaContainer/data/ordinalRestrictions -> Order Restricted Hypotheses
+/data/anovaContainer/data/ordinalRestrictions/data/basicInfoContainer -> Syntax information
+/data/anovaContainer/data/postHocContainer -> Post Hoc Tests
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer -> Standard
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1 -> Post Hoc Comparisons - JaspColumn_0_Encoded
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1/colFormats -> colFormats
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1/colNames -> colNames
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1/colOvertitles -> colOvertitles
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1/colTitles -> colTitles
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1/colTypes -> colTypes
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1/rowNames -> rowNames
+/data/anovaContainer/data/postHocContainer/data/postHocStandardContainer/data/Experiment1/rowTitles -> rowTitles
+

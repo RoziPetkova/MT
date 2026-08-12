@@ -1,0 +1,72 @@
+ -> Cohen's d analysis (across experiments)
+/data/rmAnovaContainer/data/assumptionsContainer -> Assumption Checks
+/data/rmAnovaContainer/data/betweenTable -> Between Subjects Effects
+/data/rmAnovaContainer/data/betweenTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/betweenTable/colNames -> colNames
+/data/rmAnovaContainer/data/betweenTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/betweenTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/betweenTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/betweenTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/betweenTable/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/descriptivesContainer -> Descriptives
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerBarPlots -> Bar plots
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerBarPlots/data/Cohhen's D on effect size: cons -> JaspExtraOptions_0_Encoded: JaspExtraOptions_1_Encoded
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerBarPlots/data/Cohhen's D on effect size: cons/editOptions/xAxis/settings -> JaspColumn_0_Encoded
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerBarPlots/data/Cohhen's D on effect size: ctrl -> JaspExtraOptions_0_Encoded: JaspExtraOptions_3_Encoded
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerBarPlots/data/Cohhen's D on effect size: ctrl/editOptions/xAxis/settings -> JaspColumn_0_Encoded
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerBarPlots/data/Cohhen's D on effect size: incons -> JaspExtraOptions_0_Encoded: JaspExtraOptions_2_Encoded
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerBarPlots/data/Cohhen's D on effect size: incons/editOptions/xAxis/settings -> JaspColumn_0_Encoded
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerDescriptivesPlots -> Descriptives plots
+/data/rmAnovaContainer/data/descriptivesContainer/data/containerDescriptivesPlots/data//editOptions/xAxis/settings -> JaspExtraOptions_0_Encoded
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives -> Descriptives
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colFormats -> colFormats
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colNames -> colNames
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colTitles -> colTitles
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colTypes -> colTypes
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/rowNames -> rowNames
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/ordinalRestrictions -> Order Restricted Hypotheses
+/data/rmAnovaContainer/data/ordinalRestrictions/data/basicInfoContainer -> Syntax information
+/data/rmAnovaContainer/data/postHocStandardContainer -> Post Hoc Tests
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1 -> Post Hoc Comparisons - JaspColumn_0_Encoded ✻ JaspExtraOptions_0_Encoded - Conditional on JaspColumn_0_Encoded
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1/colFormats -> colFormats
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1/colNames -> colNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1/colTitles -> colTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1/colTypes -> colTypes
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1/rowNames -> rowNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)1/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2 -> Post Hoc Comparisons - JaspColumn_0_Encoded ✻ JaspExtraOptions_0_Encoded - Conditional on JaspExtraOptions_0_Encoded
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2/colFormats -> colFormats
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2/colNames -> colNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2/colTitles -> colTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2/colTypes -> colTypes
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2/rowNames -> rowNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:Standardized GC effect (Cohen's d)2/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1 -> Post Hoc Comparisons - JaspExtraOptions_0_Encoded
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1/colFormats -> colFormats
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1/colNames -> colNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1/colTitles -> colTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1/colTypes -> colTypes
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1/rowNames -> rowNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Standardized GC effect (Cohen's d)1/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/simpleEffectsContainer -> Simple Main Effects
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable -> Simple Main Effects - JaspColumn_0_Encoded
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colNames -> colNames
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/withinAnovaTable -> Within Subjects Effects
+/data/rmAnovaContainer/data/withinAnovaTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/withinAnovaTable/colNames -> colNames
+/data/rmAnovaContainer/data/withinAnovaTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/withinAnovaTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/withinAnovaTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/withinAnovaTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/withinAnovaTable/rowTitles -> rowTitles

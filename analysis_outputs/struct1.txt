@@ -1,0 +1,83 @@
+ -> Repeated Measures ANOVA
+/data/rmAnovaContainer -> 
+/data/rmAnovaContainer/data/anovaResult -> 
+/data/rmAnovaContainer/data/assumptionsContainer -> Assumption Checks
+/data/rmAnovaContainer/data/betweenTable -> Between Subjects Effects
+/data/rmAnovaContainer/data/betweenTable/colCombines -> 
+/data/rmAnovaContainer/data/betweenTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/betweenTable/colNames -> colNames
+/data/rmAnovaContainer/data/betweenTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/betweenTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/betweenTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/betweenTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/betweenTable/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/descriptivesContainer -> Descriptives
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives -> Descriptives
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colCombines -> 
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colFormats -> colFormats
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colNames -> colNames
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colTitles -> colTitles
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/colTypes -> colTypes
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/rowNames -> rowNames
+/data/rmAnovaContainer/data/descriptivesContainer/data/tableDescriptives/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/ordinalRestrictions -> Order Restricted Hypotheses
+/data/rmAnovaContainer/data/ordinalRestrictions/data/basicInfoContainer -> Syntax information
+/data/rmAnovaContainer/data/ordinalRestrictions/data/stateUnrestricted -> 
+/data/rmAnovaContainer/data/postHocStandardContainer -> Post Hoc Tests
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1 -> Post Hoc Comparisons - JaspColumn_0_Encoded ✻ JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded - Conditional on JaspColumn_0_Encoded
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/colCombines -> 
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/colFormats -> colFormats
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/colNames -> colNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/colTitles -> colTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/colTypes -> colTypes
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/rowNames -> rowNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action1/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2 -> Post Hoc Comparisons - JaspColumn_0_Encoded ✻ JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded - Conditional on JaspExtraOptions_0_Encoded
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/colCombines -> 
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/colFormats -> colFormats
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/colNames -> colNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/colTitles -> colTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/colTypes -> colTypes
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/rowNames -> rowNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action2/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3 -> Post Hoc Comparisons - JaspColumn_0_Encoded ✻ JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded - Conditional on JaspExtraOptions_3_Encoded
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/colCombines -> 
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/colFormats -> colFormats
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/colNames -> colNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/colTitles -> colTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/colTypes -> colTypes
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/rowNames -> rowNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/Experiment:gaze:action3/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1 -> Post Hoc Comparisons - JaspExtraOptions_3_Encoded
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/colCombines -> 
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/colFormats -> colFormats
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/colNames -> colNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/colTitles -> colTitles
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/colTypes -> colTypes
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/rowNames -> rowNames
+/data/rmAnovaContainer/data/postHocStandardContainer/data/action1/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/referenceGrid -> 
+/data/rmAnovaContainer/data/simpleEffectsContainer -> Simple Main Effects
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable -> Simple Main Effects - JaspExtraOptions_0_Encoded
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colCombines -> 
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colNames -> colNames
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/simpleEffectsContainer/data/simpleEffectsTable/rowTitles -> rowTitles
+/data/rmAnovaContainer/data/withinAnovaTable -> Within Subjects Effects
+/data/rmAnovaContainer/data/withinAnovaTable/colCombines -> 
+/data/rmAnovaContainer/data/withinAnovaTable/colFormats -> colFormats
+/data/rmAnovaContainer/data/withinAnovaTable/colNames -> colNames
+/data/rmAnovaContainer/data/withinAnovaTable/colOvertitles -> colOvertitles
+/data/rmAnovaContainer/data/withinAnovaTable/colTitles -> colTitles
+/data/rmAnovaContainer/data/withinAnovaTable/colTypes -> colTypes
+/data/rmAnovaContainer/data/withinAnovaTable/rowNames -> rowNames
+/data/rmAnovaContainer/data/withinAnovaTable/rowTitles -> rowTitles

@@ -1,0 +1,6 @@
+=== Within Subjects Effects (GG rows) ===
+JaspExtraOptions_3_Encoded | corr=Greenhouse-Geisser | numDf=1.413290223334671 denDf=190.79418015018058 F=20.203787769982117 p=6.060252771151308e-07 partialEta=0.13017586787201932
+JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=Greenhouse-Geisser | numDf=2.826580446669342 denDf=190.79418015018058 F=1.2361451124549963 p=0.29758092203650677 partialEta=0.01798391676508211
+Residuals | corr=Greenhouse-Geisser | numDf=190.79418015018058 denDf= F= p= partialEta=None
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded | corr=Greenhouse-Geisser | numDf=1.881135517690164 denDf=253.95329488817214 F=21.99964167635594 p=3.828327945079597e-09 partialEta=0.1401254260293581
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=Greenhouse-Geisser | numDf=3.762271035380328 denDf=253.95329488817214 F=2.326010699479293 p=0.06077724140245141 partialEta=0.03331152211301452

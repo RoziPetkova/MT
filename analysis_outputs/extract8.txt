@@ -1,0 +1,15 @@
+=== Within Subjects Effects ===
+JaspExtraOptions_0_Encoded | corr=None | numDf=2.0 denDf=270.0 F=31.147838414152805 p=6.734027069870687e-13 partialEta=0.18747062081247978
+JaspExtraOptions_0_Encoded | corr=Greenhouse-Geisser | numDf=1.8350853807277607 denDf=247.7365263982477 F=31.147838414152805 p=4.951746121585693e-12 partialEta=0.18747062081247978
+JaspExtraOptions_0_Encoded ✻ JaspColumn_0_Encoded | corr=None | numDf=4.0 denDf=270.0 F=3.2787273463981292 p=0.012014262759511672 partialEta=0.04632362673535668
+JaspExtraOptions_0_Encoded ✻ JaspColumn_0_Encoded | corr=Greenhouse-Geisser | numDf=3.6701707614555215 denDf=247.7365263982477 F=3.2787273463981292 p=0.014651695928792945 partialEta=0.04632362673535668
+
+=== Between Subjects Effects ===
+JaspColumn_0_Encoded | corr=None | numDf=2.0 denDf=135.0 F=0.6381643661981979 p=None partialEta=0.009365740508776855
+
+=== Simple Main Effects ===
+colnames: ['modOne', 'SumSq', 'Df', 'MeanSq', 'F', 'p', '.isNewGroup']
+{'modOne': 'JaspExtraOptions_1_Encoded', 'SumSq': 0.321950249724436, 'Df': 2.0, 'MeanSq': 0.160975124862218, 'F': 1.5048799839434996, 'p': 0.22574484271871997, '.isNewGroup': True}
+{'modOne': 'JaspExtraOptions_2_Encoded', 'SumSq': 1.4911229106079311, 'Df': 2.0, 'MeanSq': 0.7455614553039656, 'F': 4.244713353556788, 'p': 0.01629994332760555, '.isNewGroup': False}
+{'modOne': 'JaspExtraOptions_3_Encoded', 'SumSq': 0.10410327865828961, 'Df': 2.0, 'MeanSq': 0.052051639329144805, 'F': 0.5183123505015667, 'p': 0.5967049575119092, '.isNewGroup': False}
+

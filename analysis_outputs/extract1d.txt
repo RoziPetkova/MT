@@ -1,0 +1,19 @@
+=== Within Subjects Effects ===
+JaspExtraOptions_0_Encoded | corr=None | numDf=1.0 denDf=135.0 F=44.736304717785735 p=5.476121017621896e-10 partialEta=0.24889965768478864
+JaspExtraOptions_0_Encoded ✻ JaspColumn_0_Encoded | corr=None | numDf=2.0 denDf=135.0 F=0.06339132958184468 p=0.9386040301618703 partialEta=0.0009382496694491641
+JaspExtraOptions_3_Encoded | corr=None | numDf=2.0 denDf=270.0 F=20.203787769982117 p=6.656502164506377e-09 partialEta=0.13017586787201932
+JaspExtraOptions_3_Encoded | corr=Greenhouse-Geisser | numDf=1.413290223334671 denDf=190.79418015018058 F=20.203787769982117 p=6.060252771151308e-07 partialEta=0.13017586787201932
+JaspExtraOptions_3_Encoded | corr=Huynh-Feldt | numDf=1.423850251956279 denDf=192.21978401409766 F=20.203787769982117 p=5.586136026160264e-07 partialEta=0.13017586787201932
+JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=None | numDf=4.0 denDf=270.0 F=1.2361451124549963 p=0.29582181852011835 partialEta=0.01798391676508211
+JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=Greenhouse-Geisser | numDf=2.826580446669342 denDf=190.79418015018058 F=1.2361451124549963 p=0.29758092203650677 partialEta=0.01798391676508211
+JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=Huynh-Feldt | numDf=2.847700503912558 denDf=192.21978401409766 F=1.2361451124549963 p=0.2976021867362158 partialEta=0.01798391676508211
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded | corr=None | numDf=2.0 denDf=270.0 F=21.99964167635594 p=1.40844367354599e-09 partialEta=0.1401254260293581
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded | corr=Greenhouse-Geisser | numDf=1.881135517690164 denDf=253.95329488817214 F=21.99964167635594 p=3.828327945079597e-09 partialEta=0.1401254260293581
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded | corr=Huynh-Feldt | numDf=1.9068253879193384 denDf=257.4214273691107 F=21.99964167635594 p=3.0839986125710944e-09 partialEta=0.1401254260293581
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=None | numDf=4.0 denDf=270.0 F=2.326010699479293 p=0.05673006974155939 partialEta=0.03331152211301452
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=Greenhouse-Geisser | numDf=3.762271035380328 denDf=253.95329488817214 F=2.326010699479293 p=0.06077724140245141 partialEta=0.03331152211301452
+JaspExtraOptions_0_Encoded ✻ JaspExtraOptions_3_Encoded ✻ JaspColumn_0_Encoded | corr=Huynh-Feldt | numDf=3.813650775838677 denDf=257.4214273691107 F=2.326010699479293 p=0.05987754822361728 partialEta=0.03331152211301452
+
+=== Between Subjects Effects ===
+JaspColumn_0_Encoded | corr=None | numDf=2.0 denDf=135.0 F=0.03575606000246028 p=None partialEta=0.000529438953355207
+
