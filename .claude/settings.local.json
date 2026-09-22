@@ -129,7 +129,12 @@
       "WebFetch(domain:web.archive.org)",
       "Bash(mkdir -p /tmp/jasp_inspect_exp3)",
       "Bash(unzip -o -q \"C:\\\\Users\\\\Kaloyan Zdravkov\\\\Desktop\\\\Congitive Science\\\\MasterThesis\\\\GC + agency\\\\experiment3\\\\data_processing\\\\exp_data\\\\jasp\\\\Q_3x3_ANCOVA_exp3.jasp\" -d .)",
-      "Bash(PYTHONIOENCODING=utf-8 python3)"
+      "Bash(PYTHONIOENCODING=utf-8 python3)",
+      "Bash(pandoc \"_01.5.rationale.md\" -o \"word_exports/Rationale.docx\" --standalone)",
+      "Bash(pandoc \"_02.1.exp1_full.md\" -o \"word_exports/Experiment1_Results.docx\" --standalone)",
+      "Bash(pandoc \"_02.2.exp2_full_RAW.md\" -o \"word_exports/Experiment2_Results.docx\" --standalone)",
+      "Bash(pandoc \"_02.3.exp3_full_RAW.md\" -o \"word_exports/Experiment3_Results.docx\" --standalone)",
+      "Bash(pandoc \"_02.4.q_data_cross_experiment_results_RAW.md\" -o \"word_exports/CrossExperiment_Questionnaire_Results.docx\" --standalone)"
     ],
     "additionalDirectories": [
       "C:\\Users\\KALOYA~1\\AppData\\Local\\Temp\\claude\\bundled-skills\\2.1.220\\4340b4434a715c1929716bb384c863c6\\dataviz\\scripts"

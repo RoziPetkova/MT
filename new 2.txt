@@ -2,12 +2,16 @@
  
  In statistics, correlation is a measure that describes the size and direction of a relationship between two or more variables. It is quantified using a correlation coefficient, which always ranges between -1 and +1. The closer the coefficient is to the extremes, the stronger the relationship
  
+ - Tapal et al. (2017), Sense of Agency Scale (SoAS) — the standard precedent for turning multiple Likert agency items into a composite: they ran EFA/CFA across items and let the data decide the factor structure (they got two correlated factors, not one), rather than assuming all items load equally onto a single "SoA" score. This is your template for the "is it one item, or a weighted sum" question.
+ 
  - Bin analysis - shows the time distribution of the effect; not includec in experiment 1 yet, not don either, in the second processing - Armina speeaks about it in one of the recodrcings; She expect stronger effects in the first trials; maybe i can do it just for the experiment where the strongest results are observed (not the first one) 
  - related with bin analysis - keep in mind that originaly the NFILTERRT colunn is not there. I'm making it by going to transform->rank cases->rank type -> select only Ntiles:5-> select as variable filteredRT and in "by" fielf i select sub,w1,w2. This column is for bin analizys that we re not sure that we are going to do, but, lets have it just in case.  In describing this because i want as exeriment to greate maybe a new pipeline that does that. is it possible? (this was written for claude; its explanation of how to generate the bins for the analisys) 
  - why do i need the bin analisys? 
  - check again the participants answers to the questions (for all experiments) even after their exclusion - see if they answered ok to the conditions where they do cause the action. in general if their answers to the questions does not look ok - exclude; (in combination with the otger 75% rule and... whatever else it was)
  
  - add mouse movement start time statistics to the experiment 2 data set; chech the raw data to see if the first mouse movement time is recorded; think how to handle longer mouse movements? 
+ 
+ - i will skip the part about the difference between correlation in consistent and inconsistent conditions. its becoming too much (exp 2 its present, dont know about the other one) 
  
 - Quick reminder on questions data: you said you'll rerun the reverse-direction simple main effects (Question type within each Action Consistency level) and all the Holm-corrected pairwise d-value breakdowns yourself in JASP, on the current N=41 sample — that's the one open piece left there.
  
@@ -28,6 +32,8 @@
  - where to talk that the questions measure different think - at the end of results, after the 3 exp ... add diagrams that are dot plots per question/raiting for each experiment - in different colors. 
  
  - the effect of question types dissapears towards the third experiment because the SOA is more and they cannot distingiush between its different components. this explains the dissapearing of effect size of question, but still distinguishing between active and passive. also the lower difference beween sonsistent and inconsistent may be because of the higher SOA the outcome-action consistency is less impoortant (imoved my hand, ofcourse i'm responsible, either it went into the different direction). its easy to discualify the inconsistent outcome if the movement is less.  
+ 
+ - to present only the combined analisys at the defense? plus maybe pilot
  
  - Mixed ANOVA on Q
 
@@ -113,3 +119,31 @@ So it's really a dial: fully collapsed = broadest, most averaged-over comparison
 - several changes in the structure and paging size 
 - add SoA and motion 
 - add the fact that agency is well studied, but not how ot influence other prcesse - this is just starting 
+
+
+Correlations — all four datasets
+
+┌──────────────┬──────────────┬──────────────┬────────────────┬────────────────┐
+│              │     Exp1     │     Exp2     │      Exp3      │ Combined (138) │
+├──────────────┼──────────────┼──────────────┼────────────────┼────────────────┤
+│ Consistent   │ r=.13, n.s.  │ r=.16, n.s.  │ r=.09, n.s.    │ r=.02, n.s.    │
+├──────────────┼──────────────┼──────────────┼────────────────┼────────────────┤
+│ Inconsistent │ r=−.08, n.s. │ r=−.18, n.s. │ r=−.29, p=.042 │ r=−.20, p=.019 │
+├──────────────┼──────────────┼──────────────┼────────────────┼────────────────┤
+│ Control      │ r=.14, n.s.  │ r=.12, n.s.  │ r=.02, n.s.    │ r=.09, n.s.    │
+└──────────────┴──────────────┴──────────────┴────────────────┴────────────────┘
+
+Meaningful result: only one cell in this whole table is real — the inconsistent condition, and only once you have enough power to see it (Exp3 alone, or all 138 pooled). Consistent and control are flat null everywhere, across four independent samples, which is itself informative: this isn't a general "some people rate agency high and also show big gaze effects" trait coupling — it's specific to one condition.
+
+Regressions — same story, one variant
+
+For the three individual experiments, thon (single predictor, identical numbers)— so nothing new there beyond the table above. The one place regression differs is the combined analysis, where Experiment was added as a control factor: consistent p=.171, inconsistent p=.049, control p=.256 — same  pattern survives even after accounting fas in, which rules out "this is just anartifact of pooling three different samples together."
+                                                                                                               What it actually means
+
+d_incons is your implicit measure — how much a person's attention still gets captured by the face's gaze       specifically in trials where their own cdirection pointed opposite ways.inconsistent_composite_ipsat is their explicit rating in that same condition, relative to their own personal baseline — positive means "I still felt more in control here than my own average," negative means "I felt less in control here than my own average" (i.tch).
+
+The correlation is negative: people who kept feeling relatively agentic despite the mismatch show a more       reversed gaze-cueing effect (attention pose, away from where the face looked);people whose felt agency dropped in that condition — who noticed something went wrong — show a more normal,    gaze-following attentional pattern.
+
+In plain terms: when someone's conscious sense of "that was my doing" fails to update in response to an actual action-outcome mismatch, that same miscaly as their attention sticking to theirown intended direction instead of following the external social cue. When the conscious system does correctly register the error, attention reverts to the normal, gaze-following default. It's a link between explicit error-monitoring and automatic/reflexivek that only exists when there's an actual error to monitor, which is exactly why it's silent in consistent (nothing violated) and control (no intention to violate).
+
+It also lines up with the modality gradient already running through your whole RT chapter — the link is weakest in Exp1 (keypress), stronger in Exp2 (mouse), strongest in Exp3 (touchscreen). The more spatially concrete and effortful the action, the t coupling gets specifically around themoment it's violated.
