@@ -33,3 +33,9 @@ experiment3/exp3.zip
 analysis_outputs/all_exp.zip
 texts/previous/previous.zip
 texts/texts.zip
+
+# --- Literature full-text corpus (copyrighted paper text; regenerate with literature/build_corpus.py) ---
+literature/_corpus/
+
+# --- Zotero export PDF copies (duplicates of ~/Zotero/storage) ---
+literature/My Library/files/

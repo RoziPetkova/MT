@@ -134,6 +134,21 @@ independently verified against a database — check before treating as final.
 `texts/2.structure.md` is the authoritative thesis outline (chapter/section numbering) — read it
 before restructuring any write-up content.
 
+## Literature & citation checking
+
+- `texts/0.thesis_knowledge_base.md` maps every draft to its thesis section, summarizes the argument and the
+  results, and lists open issues and suspect citations. Read it first when working on the write-up.
+- `literature/_corpus/` is a searchable full-text corpus of the Zotero library (see `literature/README.md`).
+  **Before asserting what a paper says, search it** (`python literature/search_corpus.py --key <author> "<terms>"`)
+  and quote the passage with its PDF page. Never describe a paper's content from memory.
+- `literature/_corpus/citation_report.md` (from `check_citations.py`) lists every in-text citation in the drafts with
+  its corpus status. A MISSING or YEAR? citation is unverified until the user confirms it in Zotero.
+- `_corpus/` is git-ignored and regenerated from the local Zotero library (`python literature/build_corpus.py`).
+- The full check procedure (verify citations, scan for other sources, citation plan) is the `lit-check` skill
+  in `.claude/skills/lit-check/SKILL.md`. Other agents without skill support should follow that file directly.
+- "Where to use which paper" reminders live in `texts/0.thesis_knowledge_base.md` §5 (the citation plan),
+  not in a separate tag file. Zotero `MT_` tags are the user's topic tags; don't duplicate them.
+
 ## JASP file extraction — pitfalls if you script against `.jasp` files directly
 
 `.jasp` files are zip archives: `analyses.json` has the analysis list/options,
