@@ -145,7 +145,8 @@ def main():
         # full text: prefer pdftotext (page markers), fall back to Zotero's own cache
         text, source = None, None
         atts = db.execute("""select i.itemID, i.key, a.path, a.contentType from itemAttachments a
-                             join items i using(itemID) where a.parentItemID=?""", (it["itemID"],)).fetchall()
+                             join items i using(itemID) where a.parentItemID=?
+                             and i.itemID not in (select itemID from deletedItems)""", (it["itemID"],)).fetchall()
         annots = []
         for a in atts:
             folder = ZOTERO / "storage" / a["key"]

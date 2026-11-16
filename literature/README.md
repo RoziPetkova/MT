@@ -25,7 +25,7 @@ python literature/search_corpus.py --key chambon "fluency"              # restri
 
 The parsing is heuristic, so use the report as a checklist.
 
-**Citekeys** come from `Agency and CG - merged.bib`, matched by DOI or title. Items not in the `.bib` get a key in the same Better BibTeX style (`surname_firstword_year`). Re-export the `.bib` after adding papers to Zotero so the keys match what pandoc will use.
+**Citekeys** come from the Better BibTeX export `literature/My Library/My Library.bib`, matched by DOI or title. Items not in the `.bib` get a key in the same Better BibTeX style (`surname_firstword_year`). Re-export the `.bib` after adding papers to Zotero so the keys match what pandoc will use.
 
 **Page numbers** are PDF page indices, not the journal page printed on the page. Check the printed page before quoting.
 
